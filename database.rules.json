@@ -1,0 +1,20 @@
+{
+  "rules": {
+    ".read": true,
+    ".write": false,
+
+    "portfolio": {
+      ".write": "auth != null && auth.token.email == 'banns0104@gmail.com' && auth.token.email_verified == true"
+    },
+
+    "resume": {
+      ".write": "auth != null && auth.token.email == 'banns0104@gmail.com' && auth.token.email_verified == true"
+    },
+
+    "meta": {
+      ".write": "auth != null && auth.token.email == 'banns0104@gmail.com' && auth.token.email_verified == true",
+      "lastEditedAt": { ".validate": "newData.isNumber()" },
+      "lastEditedBy": { ".validate": "newData.isString() && newData.val().length < 200" }
+    }
+  }
+}

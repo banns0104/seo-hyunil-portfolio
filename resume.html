@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>서현일 Hyunil Seo · Resume</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<style>
+:root{
+  --ink:#191919; --body:#333333; --sub:#888888; --line:#EEEEEE; --soft:#F5F6F8;
+  --brand:#3182F6; --accent:#7B61FF; --bg:#FFFFFF; --chip:#F5F5F5; --chip-text:#555555;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{font-family:'Pretendard',-apple-system,BlinkMacSystemFont,sans-serif;font-size:15px;letter-spacing:-0.02em;line-height:1.55;color:var(--body);background:#E8E8E8;}
+.page{max-width:880px;margin:24px auto;background:var(--bg);border-radius:12px;padding:56px 64px;box-shadow:0 4px 24px rgba(0,0,0,0.06);}
+.toolbar{position:sticky;top:0;z-index:50;display:flex;justify-content:flex-end;gap:8px;max-width:880px;margin:0 auto;padding:12px 16px;}
+.btn{border:none;border-radius:10px;padding:10px 16px;font-weight:700;font-family:inherit;font-size:13px;cursor:pointer;letter-spacing:-0.02em;transition:transform .05s ease, opacity .15s ease;}
+.btn:active{transform:translateY(1px);}
+.btn.primary{background:var(--ink);color:#fff;}
+.btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line);}
+header.hero{display:flex;align-items:flex-start;gap:24px;border-bottom:1px solid var(--line);padding-bottom:28px;margin-bottom:28px;}
+.avatar{width:84px;height:84px;border-radius:50%;background:linear-gradient(135deg,#3182F6 0%,#7B61FF 100%);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:28px;flex-shrink:0;}
+.title{font-size:32px;font-weight:800;color:var(--ink);margin-bottom:6px;letter-spacing:-0.03em;}
+.subtitle{font-size:15px;color:var(--sub);margin-bottom:14px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;}
+.tag{background:var(--chip);color:var(--chip-text);padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;}
+.contact-row{display:flex;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--body);}
+.contact-row span{display:inline-flex;align-items:center;gap:6px;}
+.contact-row .dot{width:4px;height:4px;border-radius:50%;background:var(--sub);}
+section{margin-bottom:36px;}
+h2.section{font-size:18px;font-weight:800;color:var(--ink);margin-bottom:16px;letter-spacing:-0.02em;padding-bottom:8px;border-bottom:2px solid var(--ink);}
+.summary{background:var(--soft);border-left:3px solid var(--brand);padding:16px 18px;border-radius:8px;font-size:14px;color:var(--body);}
+.exp{display:flex;flex-direction:column;gap:24px;}
+.exp-item{display:grid;grid-template-columns:160px 1fr;gap:24px;position:relative;}
+.exp-period{font-size:13px;color:var(--sub);font-weight:600;}
+.exp-period .duration{display:block;color:var(--brand);font-weight:700;font-size:12px;margin-top:2px;}
+.exp-body .company{font-size:17px;font-weight:800;color:var(--ink);margin-bottom:2px;}
+.exp-body .role{font-size:13px;color:var(--sub);margin-bottom:10px;}
+.exp-body ul{list-style:none;padding:0;}
+.exp-body li{position:relative;padding-left:14px;margin-bottom:5px;font-size:13.5px;color:var(--body);}
+.exp-body li::before{content:"";position:absolute;left:0;top:9px;width:4px;height:4px;background:var(--ink);border-radius:50%;}
+.role-block{margin-top:10px;}
+.role-block .role-title{display:inline-block;background:var(--ink);color:#fff;font-size:11px;font-weight:700;padding:3px 8px;border-radius:4px;margin-bottom:6px;}
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+.skill-card{border:1px solid var(--line);border-radius:10px;padding:14px 16px;}
+.skill-card h3{font-size:14px;font-weight:800;color:var(--ink);margin-bottom:8px;}
+.skill-list{display:flex;flex-wrap:wrap;gap:5px;}
+.skill-list .pill{background:var(--chip);color:var(--chip-text);font-size:11.5px;padding:3px 8px;border-radius:4px;font-weight:600;}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.metric{border:1px solid var(--line);border-radius:10px;padding:14px;text-align:center;}
+.metric .num{font-size:22px;font-weight:800;color:var(--brand);letter-spacing:-0.03em;}
+.metric .label{font-size:11px;color:var(--sub);margin-top:2px;}
+.edu-row{display:grid;grid-template-columns:160px 1fr;gap:24px;font-size:13.5px;margin-bottom:10px;}
+.edu-row .when{color:var(--sub);font-weight:600;}
+.edu-row .what strong{color:var(--ink);font-weight:700;}
+.philosophy ul{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;}
+.philosophy li{font-size:13px;padding-left:16px;position:relative;color:var(--body);}
+.philosophy li::before{content:"›";position:absolute;left:0;color:var(--brand);font-weight:800;}
+footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:11px;color:var(--sub);text-align:center;}
+@media print{
+  body{background:#fff;}
+  .toolbar{display:none;}
+  .page{box-shadow:none;border-radius:0;margin:0;padding:24px 28px;max-width:100%;}
+  section{page-break-inside:avoid;}
+  .exp-item{page-break-inside:avoid;}
+  h2.section{page-break-after:avoid;}
+}
+@media (max-width:720px){
+  .page{padding:32px 22px;margin:0;border-radius:0;}
+  .exp-item,.edu-row{grid-template-columns:1fr;gap:6px;}
+  .skills-grid,.metrics{grid-template-columns:1fr 1fr;}
+  .philosophy ul{grid-template-columns:1fr;}
+  .title{font-size:26px;}
+}
+</style>
+</head>
+<body data-doc-key="resume">
+
+<div class="toolbar">
+  <button class="btn ghost" onclick="window.location.href='index.html'">← 포트폴리오로</button>
+  <button class="btn primary" onclick="window.print()">PDF 다운로드 / 인쇄</button>
+</div>
+
+<main class="page" id="resume">
+
+  <header class="hero">
+    <div class="avatar">서</div>
+    <div>
+      <div class="title"><span data-edit="hero.name">서현일</span> · <span data-edit="hero.nameEn">Hyunil Seo</span></div>
+      <div class="subtitle" data-edit="hero.subtitle">6년차 PM · PO · CPO · 어바웃피싱 등기이사 · CPO</div>
+      <div class="tags">
+        <span class="tag">#서비스기획</span>
+        <span class="tag">#제품기획</span>
+        <span class="tag">#PM</span>
+        <span class="tag">#PO</span>
+        <span class="tag">#사업기획</span>
+        <span class="tag">#데이터분석</span>
+        <span class="tag">#그로스해킹</span>
+      </div>
+      <div class="contact-row">
+        <span>📩 <span data-edit="hero.email">banns0104@gmail.com</span></span>
+        <span class="dot"></span>
+        <span>📱 <span data-edit="hero.phone">+82 10-3333-3768</span></span>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2 class="section">Summary</h2>
+    <div class="summary" data-edit="summary">
+      <b>제약 안에서 최적해를 설계하는 6년차 PM·PO·CPO입니다.</b> 물리적 제약(오프라인·인력·예산)을 소프트웨어로 푸는 일을 6년 해 왔고, 건설(아키마켓·가다) → 낚시(어바웃피싱)로 도메인이 바뀌어도 같은 패턴 — VOC와 데이터로 페인포인트를 진단하고 MVP로 빠르게 검증해 운영·자금·파트너십을 동시에 확보합니다. 어바웃피싱(2024.08~) 등기이사·CPO로 슈퍼앱 9개 도메인을 총괄하며 <b>2025년 연매출 14.26억(KPI 97.6% 달성)</b>, <b>2026년 4월 단월 매출 1.43억(1월 대비 +10배)</b>, <b>얼라이언스(예약) 4개월 누적 3.63억 · 월 판매 건수 86배 성장</b>, <b>MAU 3배(29.6K → 89.0K)</b>의 성과를 만들고 있습니다. 가다(웍스메이트)에서는 청구·지급 ERP MVP로 운영 인력 50% 절감(6→3인/월), 정부·엑셀러레이터 사업 4건 선정, SK텔레콤 TMAP 협업 본계약으로 자금·신뢰도·파트너십을 확보했습니다.
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section">Highlights</h2>
+    <div class="metrics">
+      <div class="metric"><div class="num" data-edit="hl.h1.num">14.26억</div><div class="label" data-edit="hl.h1.label">2025 연매출 · KPI 97.6%</div></div>
+      <div class="metric"><div class="num" data-edit="hl.h2.num">×10</div><div class="label" data-edit="hl.h2.label">2026 1→4월 매출 성장</div></div>
+      <div class="metric"><div class="num" data-edit="hl.h3.num">3.63억</div><div class="label" data-edit="hl.h3.label">예약 거래 4개월 누적</div></div>
+      <div class="metric"><div class="num" data-edit="hl.h4.num">6→3<span style="font-size:14px;">인/월</span></div><div class="label" data-edit="hl.h4.label">청구·지급 운영 인력 절감</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section">Experience</h2>
+    <div class="exp">
+
+      <div class="exp-item">
+        <div class="exp-period">
+          <span data-edit="exp.e1.period">2024.08 — 현재</span>
+          <span class="duration" data-edit="exp.e1.duration">1년 9개월</span>
+        </div>
+        <div class="exp-body">
+          <div class="company" data-edit="exp.e1.company">어바웃피싱 · AboutFishing</div>
+          <div class="role" data-edit="exp.e1.role">낚시 커뮤니티 × 커머스 슈퍼앱 · 등기이사 · CPO · PO · PM</div>
+          <ul>
+            <li><b>2025 연매출 14.26억 (사업 KPI 97.6% 달성)</b> · 2025 평균 WAU 8,307 · ARPPU 67,020원</li>
+            <li><b>2026 4월 단월 매출 1.43억 (1월 14.5M → 4월 143M, +10×)</b> · MAU 29.6K → 89.0K (3×) · 자사몰 ARPPU 91,001원 (+36%)</li>
+            <li><b>얼라이언스(예약) 4개월 누적 거래액 3.63억</b> · 월 판매 건 86배 (2월 10건 → 3월 865건) · 예약 ARPPU 22.7만원</li>
+            <li>홈 · 예약 · 쇼핑 · 커뮤니티 · 중고장터 · 머니 · 챔피언십 · 마이페이지 · 알림 — 슈퍼앱 9개 도메인 제품 총괄</li>
+            <li>디자인 시스템 v3 정의 및 토큰화 (컬러·타이포·컴포넌트), 도메인별 PM 산출물 일관성 관리</li>
+            <li>중소벤처기업부 창업도약패키지 제안서 작성 및 선정 — 사업 자금 확보</li>
+            <li>SK텔레콤 TMAP 협업 — 위치 기반 낚시 데이터 연동 본계약 / 검색→예약→내비게이션 단일 퍼널 설계</li>
+            <li><b>사내 일정관리 대시보드를 Claude로 직접 빌드</b> — 스케줄(Gantt)·프로젝트·이슈·배포·팀·이력 7개 탭 운영중 (v2026.05.06 기준 11 배포·8 멤버 관리)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-period">
+          <span data-edit="exp.e2.period">2020.12 — 2024.08</span>
+          <span class="duration" data-edit="exp.e2.duration">3년 8개월</span>
+        </div>
+        <div class="exp-body">
+          <div class="company" data-edit="exp.e2.company">웍스메이트 (가다)</div>
+          <div class="role" data-edit="exp.e2.role">건설 구인구직 O2O 플랫폼 · PO / PM</div>
+
+          <div class="role-block">
+            <span class="role-title">PO</span>
+            <ul>
+              <li>PM · PD · QA 4명 그룹 운영 (Daily Scrum · 주간 1:1 · 분기 회고 3Ls 정착)</li>
+              <li>지표 관리, 백로그·프로젝트 우선순위 / 일정 관리, 기획 회고(3Ls)</li>
+              <li>임원진 / 운영·영업 직군 Align, 문제 진단부터 솔루션 도출까지 일괄 책임</li>
+            </ul>
+          </div>
+
+          <div class="role-block">
+            <span class="role-title">PM</span>
+            <ul>
+              <li>가다 근로자앱 / 관리자앱 / 백오피스 v2.0 · 3.0 · 4.0 리뉴얼 100% 기여</li>
+              <li>페르소나 · 타겟고객 분석, VOC 및 Pain Point 분석, FGI 진행</li>
+              <li>AOS / iOS UI · UX 기획 및 정책 수립, TC 작성 / QA, 스토어 심사·배포 담당</li>
+              <li>알림시스템(Noti), 청구·지급 ERP(MVP), B2B 웹페이지, A/B 테스트 프레임 신규 구축</li>
+              <li>건설 근로자 공제회 · 한화 EBC · 피플펀드 외부협업 프로젝트 리드</li>
+            </ul>
+          </div>
+
+          <div class="role-block">
+            <span class="role-title">사업 / 데이터</span>
+            <ul>
+              <li>중소벤처기업부 TIPS 제안서 작성 및 선정</li>
+              <li>NH 디지털챌린지플러스 (엑셀러레이터) 제안서 작성 및 선정</li>
+              <li>NIPA 정보통신산업진흥원 AI 바우처 제안서 작성 및 선정</li>
+              <li>GA · Redash 기반 데이터 분석 및 그로스해킹</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-period">
+          <span data-edit="exp.e3.period">2019.11 — 2020.12</span>
+          <span class="duration" data-edit="exp.e3.duration">1년 1개월</span>
+        </div>
+        <div class="exp-body">
+          <div class="company" data-edit="exp.e3.company">아키마켓</div>
+          <div class="role" data-edit="exp.e3.role">건설인력 매칭 · 자재 커머스 O2O 플랫폼 · 기획자</div>
+          <ul>
+            <li>건설인력 기능공 매칭 O2O 플랫폼 ‘아키맨’ 기획</li>
+            <li>건축·인테리어 자재 O2O 플랫폼 ‘아키마켓’ 기획</li>
+            <li>스마트스토어 / 카페24 자사몰 운영 (B2C), 기업회원 관리 및 운영 (B2B)</li>
+            <li>SEO &amp; 백링크 관리, 상세페이지 카피 / 비주얼 기획</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3 data-edit="rs.s1.h">Product / Strategy</h3>
+        <div class="skill-list">
+          <span class="pill">Product Roadmap</span>
+          <span class="pill">PRD</span>
+          <span class="pill">사업기획</span>
+          <span class="pill">정부과제 제안서</span>
+          <span class="pill">백로그 운영</span>
+          <span class="pill">스프린트 / 회고(3Ls)</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3 data-edit="rs.s2.h">UX Research / UI 기획</h3>
+        <div class="skill-list">
+          <span class="pill">FGI / 1:1 인터뷰</span>
+          <span class="pill">Persona</span>
+          <span class="pill">Journey Map</span>
+          <span class="pill">IA / 정보구조도</span>
+          <span class="pill">와이어프레임</span>
+          <span class="pill">프로토타입</span>
+          <span class="pill">UX writing</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3 data-edit="rs.s3.h">Data / Growth</h3>
+        <div class="skill-list">
+          <span class="pill">GA</span>
+          <span class="pill">Redash</span>
+          <span class="pill">A/B Test</span>
+          <span class="pill">VOC 분석</span>
+          <span class="pill">전환율 / 이탈 분석</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3 data-edit="rs.s4.h">Tools</h3>
+        <div class="skill-list">
+          <span class="pill">Figma</span>
+          <span class="pill">Sketch</span>
+          <span class="pill">Zeplin</span>
+          <span class="pill">InVision</span>
+          <span class="pill">Moqups</span>
+          <span class="pill">Notion</span>
+          <span class="pill">Slack</span>
+          <span class="pill">Monday.com</span>
+          <span class="pill">Photoshop</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section">Education</h2>
+    <div class="edu-row">
+      <div class="when" data-edit="edu.e1.when">2017.03 — 2019.02</div>
+      <div class="what"><strong data-edit="edu.e1.school">경희대학교</strong> · <span data-edit="edu.e1.major">경영학과</span></div>
+    </div>
+    <div class="edu-row">
+      <div class="when" data-edit="edu.e2.when">2008.03 — 2016.02</div>
+      <div class="what"><strong data-edit="edu.e2.school">중앙대학교</strong> · <span data-edit="edu.e2.major">노어학과</span></div>
+    </div>
+  </section>
+
+  <section class="philosophy">
+    <h2 class="section">How I Work</h2>
+    <ul>
+      <li data-edit="philo.p1">제품의 책임자는 24시간 “내 일”이라고 생각합니다 — 단, 팀원들도 그렇게 만들지 않습니다.</li>
+      <li data-edit="philo.p2">PM이 친구여야 팀원이 의견을 자유롭게 냅니다. Daily Scrum + 1:1 + 회고로 의견이 모이는 자리를 매일 만듭니다.</li>
+      <li data-edit="philo.p3">디자인 / 백엔드 / 프론트 / QA를 함께 끌고 가지만, 의사결정은 가장 책임을 지는 사람에게 줍니다.</li>
+      <li data-edit="philo.p4">가설이 틀렸을 때 빠르게 방향을 트는 것이 PM의 본업입니다. ERP MVP·P2P 모두 0.5개월 압축 사이클로 검증한 뒤 진행했습니다.</li>
+      <li data-edit="philo.p5">제약 안에서 최적해를 설계합니다. 일정은 협의해 정한 뒤 반드시 지킵니다.</li>
+      <li data-edit="philo.p6">설계가 틀렸으면 빠르게 인정하고 단순화합니다. 청구 룰을 처음 복잡하게 만들었다 운영 정정이 잦아 3줄 룰로 단순화한 경험이 있습니다.</li>
+      <li data-edit="philo.p7">PM 그룹 운영은 “무엇을 만들지”보다 “무엇을 안 만들지”를 함께 정하는 자리입니다. 후임에게 우선순위 판단 권한을 점진적으로 넘기는 일을 우선합니다.</li>
+      <li data-edit="philo.p8">필요하면 도구를 직접 만듭니다. 팀 일정관리 대시보드를 외부 SaaS 대신 Claude로 직접 빌드해 운영 중입니다.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="section">Press</h2>
+    <ul style="list-style:none;padding:0;">
+      <li style="padding:10px 0;border-bottom:1px solid var(--line);">
+        <strong style="color:var(--ink);">동아일보</strong>
+        — <span data-edit="rpress.r1.title">[스타트업人] 건설 근로자 위한 웍스메이트 ‘기능인등급제 서비스 기획자’ 이야기</span>
+        <div style="font-size:12px;color:var(--sub);margin-top:2px;">
+          <a href="https://www.donga.com/news/article/all/20230914/121180294/1" target="_blank" rel="noopener" style="color:var(--brand);text-decoration:none;">donga.com/news/article/all/20230914/121180294/1 ↗</a>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    © Hyunil Seo · Last updated 2026.05
+  </footer>
+
+</main>
+
+<!-- Firebase + editor -->
+<script src="firebase-config.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
+<script src="assets/editor.js"></script>
+
+</body>
+</html>

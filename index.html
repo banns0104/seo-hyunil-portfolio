@@ -48,7 +48,24 @@ img{max-width:100%;display:block;}
 .stat{border:1px solid var(--line);border-radius:14px;padding:22px;background:#fff;}
 .stat .num{font-size:30px;font-weight:800;color:var(--ink);letter-spacing:-0.04em;}
 .stat .num .unit{font-size:16px;color:var(--brand);margin-left:4px;}
-.stat .label{font-size:12.5px;color:var(--sub);margin-top:4px;}
+.stat .label{font-size:12.5px;color:var(--ink);margin-top:6px;font-weight:700;}
+.stat .sub{font-size:11px;color:var(--sub);margin-top:2px;line-height:1.45;}
+.stat.featured{background:linear-gradient(135deg,rgba(49,130,246,0.06),rgba(123,97,255,0.04));border-color:rgba(49,130,246,0.25);}
+.stat.featured .num{color:var(--brand);}
+
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;}
+.why-text .section-title{font-size:30px;line-height:1.25;}
+.why-body{font-size:14.5px;color:var(--body);line-height:1.7;margin-top:14px;}
+.why-body b{color:var(--ink);font-weight:700;}
+.sig-card{border:1px solid var(--line);border-radius:18px;padding:26px;background:#fff;box-shadow:0 4px 24px rgba(49,130,246,0.06);}
+.sig-label{font-size:11px;font-weight:800;color:var(--brand);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;}
+.sig-title{font-size:18px;font-weight:800;color:var(--ink);letter-spacing:-0.02em;margin-bottom:12px;}
+.sig-chart{width:100%;max-width:320px;display:block;margin:0 auto;}
+.sig-cap{font-size:12px;color:var(--sub);margin-top:10px;line-height:1.6;}
+@media (max-width:760px){
+  .why-grid{grid-template-columns:1fr;gap:24px;}
+  .why-text .section-title{font-size:24px;}
+}
 
 section{max-width:1120px;margin:0 auto;padding:64px 24px;}
 .section-head{margin-bottom:36px;}
@@ -183,17 +200,17 @@ footer.foot{padding:24px;text-align:center;font-size:11px;color:var(--mute);back
 <section class="hero" id="top">
   <div class="hero-eyebrow"><span class="dot"></span><span data-edit="hero.eyebrow">Open to opportunities · 2026</span></div>
   <h1>
-    <span data-edit="hero.title1">가설을 검증하고,</span><br/>
-    <span class="grad" data-edit="hero.title2">제품을 비즈니스로 만듭니다.</span>
+    <span data-edit="hero.title1">제약 안에서 최적해를 설계하는</span><br/>
+    <span class="grad" data-edit="hero.title2">PM · PO · CPO입니다.</span>
   </h1>
   <p class="lead" data-edit="hero.lead">
-    6년차 PM · PO · CPO 서현일입니다. O2O 플랫폼에서 0→1 신규 구축과 1→N 리뉴얼 모두를 리드했고, VOC와 데이터로 페인포인트를 진단해 사업기획부터 운영까지 책임지는 일을 합니다.
+    물리적 제약(오프라인·인력·예산)을 소프트웨어로 푸는 일을 6년 해 왔습니다. 건설 구인구직 → 낚시 슈퍼앱으로 도메인이 바뀌어도 같은 패턴 — VOC와 데이터로 페인포인트를 진단하고, MVP로 빠르게 검증한 뒤, 운영·자금·파트너십을 동시에 확보합니다.
   </p>
 
   <div class="hero-meta">
-    <span><b>경력</b> <span data-edit="hero.meta1">5년 10개월</span></span>
-    <span><b>현재</b> <span data-edit="hero.meta2">어바웃피싱 등기이사 / CPO</span></span>
-    <span><b>전문</b> <span data-edit="hero.meta3">O2O · Marketplace · 모바일 · 백오피스</span></span>
+    <span><b>경력</b> <span data-edit="hero.meta1">6년</span></span>
+    <span><b>현재</b> <span data-edit="hero.meta2">어바웃피싱 등기이사 · CPO</span></span>
+    <span><b>전문</b> <span data-edit="hero.meta3">O2O · 슈퍼앱 · 마켓플레이스</span></span>
   </div>
 
   <div class="hero-actions">
@@ -206,11 +223,64 @@ footer.foot{padding:24px;text-align:center;font-size:11px;color:var(--mute);back
 
 <!-- ============ STATS ============ -->
 <div class="stats">
-  <div class="stat"><div class="num"><span data-edit="stats.s1.num">5y 10m</span></div><div class="label" data-edit="stats.s1.label">총 경력 (PM · PO · CPO)</div></div>
-  <div class="stat"><div class="num"><span data-edit="stats.s2.num">3</span> <span class="unit" data-edit="stats.s2.unit">개</span></div><div class="label" data-edit="stats.s2.label">O2O 플랫폼 리드</div></div>
-  <div class="stat"><div class="num"><span data-edit="stats.s3.num">4</span> <span class="unit" data-edit="stats.s3.unit">건</span></div><div class="label" data-edit="stats.s3.label">정부 / 엑셀러레이터 사업 선정</div></div>
-  <div class="stat"><div class="num"><span data-edit="stats.s4.num">50</span><span class="unit" data-edit="stats.s4.unit">% ↓</span></div><div class="label" data-edit="stats.s4.label">청구·지급 운영 인력 절감</div></div>
+  <div class="stat">
+    <div class="num"><span data-edit="stats.s1.num">14.26</span><span class="unit" data-edit="stats.s1.unit">억</span></div>
+    <div class="label" data-edit="stats.s1.label">2025 연매출 · 사업 KPI 97.6%</div>
+    <div class="sub" data-edit="stats.s1.sub">스마트스토어 10.4억 + 자사몰 2.9억 + 예약·대회·외부 1.0억</div>
+  </div>
+  <div class="stat featured">
+    <div class="num"><span data-edit="stats.s2.num">×10</span></div>
+    <div class="label" data-edit="stats.s2.label">2026 1→4월 단월 매출 성장</div>
+    <div class="sub" data-edit="stats.s2.sub">14.5M(1월) → 143M(4월) · MAU 29.6K → 89.0K (3×)</div>
+  </div>
+  <div class="stat">
+    <div class="num"><span data-edit="stats.s3.num">3.63</span><span class="unit" data-edit="stats.s3.unit">억</span></div>
+    <div class="label" data-edit="stats.s3.label">얼라이언스 예약 4개월 누적</div>
+    <div class="sub" data-edit="stats.s3.sub">판매 건 86× (2월 10 → 3월 865) · ARPPU 22.7만원</div>
+  </div>
+  <div class="stat">
+    <div class="num"><span data-edit="stats.s4.num">6→3</span><span class="unit" data-edit="stats.s4.unit">인/월</span></div>
+    <div class="label" data-edit="stats.s4.label">청구·지급 운영 인력 절감 (가다)</div>
+    <div class="sub" data-edit="stats.s4.sub">SCM 풀빌드 대신 MVP · 0.5개월 압축</div>
+  </div>
 </div>
+
+<!-- ============ WHY THIS WORK / SIGNATURE ============ -->
+<section id="why" style="padding-top:24px;padding-bottom:48px;">
+  <div class="why-grid">
+    <div class="why-text">
+      <div class="section-eyebrow" data-edit="why.eyebrow">Why this work</div>
+      <h2 class="section-title" data-edit="why.title">건설에서 낚시로,<br/>같은 패턴의 다른 시장.</h2>
+      <p class="why-body" data-edit="why.body">
+        아키마켓·가다에서 다룬 건설 일용직 페인포인트는 “일감과 인력의 매칭”, 어바웃피싱의 낚시 페인포인트는 “경험(예약·조황·커뮤니티)과 거래의 통합”입니다. 도메인은 다르지만 둘 다 <b>물리적 제약을 소프트웨어로 녹이는 O2O</b>이고, 가다에서 얻은 <b>‘구인구직 플랫폼의 신뢰 설계’ 경험을 예약·결제·커뮤니티 보상</b>으로 그대로 옮겼습니다.
+      </p>
+      <p class="why-body" data-edit="why.body2">
+        낚시 시장은 시즌성·대회 문화·고관여 장비·세대별 락인이 모두 작용하는 독특한 도메인이라, 단순 커머스 플랫폼이나 단순 커뮤니티가 아닌 <b>슈퍼앱</b>으로 묶을 때만 임팩트가 납니다. 그래서 등기이사·CPO로서 9개 도메인을 동시에 총괄합니다.
+      </p>
+    </div>
+    <div class="why-chart">
+      <div class="sig-card">
+        <div class="sig-label">Signature Impact</div>
+        <div class="sig-title">청구·지급 운영 인력</div>
+        <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" class="sig-chart">
+          <!-- before bar -->
+          <rect x="40" y="30" width="64" height="140" rx="6" fill="#FF5050" opacity="0.85"/>
+          <text x="72" y="195" text-anchor="middle" font-size="12" font-weight="700" fill="#191919">Before</text>
+          <text x="72" y="20" text-anchor="middle" font-size="14" font-weight="800" fill="#FF5050">6 인/월</text>
+          <!-- after bar -->
+          <rect x="216" y="100" width="64" height="70" rx="6" fill="#10B981" opacity="0.95"/>
+          <text x="248" y="195" text-anchor="middle" font-size="12" font-weight="700" fill="#191919">After</text>
+          <text x="248" y="90" text-anchor="middle" font-size="14" font-weight="800" fill="#10B981">3 인/월</text>
+          <!-- arrow -->
+          <path d="M 116 100 Q 160 70 196 100" stroke="#3182F6" stroke-width="2.5" fill="none" stroke-dasharray="5 4"/>
+          <polygon points="190,94 200,100 190,108" fill="#3182F6"/>
+          <text x="160" y="60" text-anchor="middle" font-size="13" font-weight="800" fill="#3182F6">−50%</text>
+        </svg>
+        <div class="sig-cap" data-edit="why.sig">SCM 풀빌드 대신 청구·지급만 자른 MVP. 0.5개월 압축 사이클로 운영 인력 절반 — 같은 사고를 P2P 대출(0.5개월)·A/B 테스트 프레임에서도 반복.</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ============ ABOUTFISHING ============ -->
 <section id="aboutfishing">
@@ -238,18 +308,19 @@ footer.foot{padding:24px;text-align:center;font-size:11px;color:var(--mute);back
     </div>
 
     <div class="company-summary" data-edit="companies.aboutfishing.summary">
-      국내 낚시 인구를 위한 커뮤니티 + 커머스 플랫폼. 예약 · 쇼핑 · 중고장터 · 커뮤니티 · 챔피언십 · 머니/포인트 등 슈퍼앱 전 도메인을 동시에 다룹니다. 디자인 시스템(컬러·타이포·컴포넌트 토큰)을 정의하고 도메인별 PM의 산출물 일관성을 직접 관리합니다. 창업도약패키지 제안서 작성 및 선정으로 사업 자금을 확보했고, TMAP과의 협업으로 위치 기반 낚시 데이터 연동을 진행하고 있습니다.
+      국내 낚시 인구를 위한 커뮤니티 × 커머스 슈퍼앱. <b>등기이사 · CPO</b>로서 홈·예약·쇼핑·커뮤니티·중고장터·머니·챔피언십·마이페이지·알림 등 풀 도메인을 직접 총괄합니다. <b>2025 연매출 14.26억(KPI 97.6%)</b>, <b>2026 4월 단월 매출 1.43억(1→4월 +10×)</b>, <b>얼라이언스 예약 4개월 누적 3.63억(월 판매 건 +86×)</b>, <b>MAU 3배 성장(29.6K→89.0K)</b>의 성과를 만들고 있습니다. 디자인 시스템 v3로 도메인 간 산출물 일관성을 관리하고, 창업도약패키지·TMAP 협업으로 자금·파트너십을 확보했으며, <b>사내 일정관리 대시보드를 직접 빌드(Claude × Code)</b>해 8명 멤버·11 배포·다수 프로젝트를 단일 화면에서 운영합니다.
     </div>
 
     <div class="company-tags">
       <span class="tag">슈퍼앱</span>
       <span class="tag">커뮤니티</span>
       <span class="tag">커머스</span>
-      <span class="tag">예약</span>
+      <span class="tag">예약 (얼라이언스)</span>
       <span class="tag">중고장터</span>
       <span class="tag">디자인 시스템</span>
       <span class="tag">창업도약패키지</span>
       <span class="tag">TMAP 협업</span>
+      <span class="tag">사내 도구 자체 빌드</span>
     </div>
 
     <div class="proj-grid" data-projects-of="aboutfishing">
@@ -257,7 +328,7 @@ footer.foot{padding:24px;text-align:center;font-size:11px;color:var(--mute);back
       <article class="proj" data-project-id="af_startup_package">
         <div class="proj-top">
           <div class="proj-emoji">🚀</div>
-          <span class="proj-tag collab">FUNDING</span>
+          <span class="proj-tag collab">GRANT</span>
         </div>
         <div class="proj-title">창업도약패키지 제안서 작성 &amp; 선정</div>
         <div class="proj-summary">중기부 창업도약패키지 사업 제안서를 직접 작성·발표하여 선정. 사업 자금과 시장 검증 트랙 동시 확보.</div>
@@ -316,11 +387,12 @@ footer.foot{padding:24px;text-align:center;font-size:11px;color:var(--mute);back
           <p>커뮤니티만으로는 수익화가 어려웠고, 낚시 용품 구매 동선이 외부 쇼핑몰로 흩어져 있었습니다. 쇼핑 → 결제 풀 퍼널을 앱 안에서 끝내도록 만들어 상품 매출 + 데이터 두 마리 토끼를 잡는 것이 목표였습니다.</p>
         </div>
         <div class="kpi-block">
-          <h4>달성 KPI</h4>
+          <h4>달성 KPI (실수치)</h4>
           <ul class="kpi-list">
-            <li>장바구니 → 결제 전환율 +18%</li>
-            <li>가격 인지 일관성 확보 (할인율 표기 정책 통일)</li>
-            <li>NPay · 카카오페이 통합으로 결제 실패율 ↓</li>
+            <li>2025 커머스 연매출 13.31억 (스마트스토어 10.4억 + 자사몰 2.9억)</li>
+            <li>2026 4월 단월 매출 1.43억 — 1월 대비 +10배 성장</li>
+            <li>2026 자사몰 ARPPU 91,001원 (2025 67,020원 대비 +36%)</li>
+            <li>2026 재방문율 88.1% → 97.5% (3개월간)</li>
           </ul>
         </div>
         <div class="proj-detail">
@@ -351,10 +423,12 @@ footer.foot{padding:24px;text-align:center;font-size:11px;color:var(--mute);back
           <p>선상 낚시는 사용자 결정 단계가 가장 깊은 도메인. ‘어떤 배에서, 어떤 어종을, 얼마에’ 가는지를 단일 화면에서 끝내야 하고, 조황 데이터가 결정 트리거이기 때문에 예약/선박/조황을 한 흐름으로 묶었습니다.</p>
         </div>
         <div class="kpi-block">
-          <h4>달성 KPI</h4>
+          <h4>달성 KPI (실수치 · 얼라이언스 대시보드)</h4>
           <ul class="kpi-list">
-            <li>선박 상세 → 예약 전환율 우상향 트렌드 확보</li>
-            <li>조황 구독 사용자수 증가 (커뮤니티 락인 효과)</li>
+            <li>2026 4개월 누적 예약 거래액 3.63억</li>
+            <li>월 판매 건 86× 성장 (2월 10건 → 3월 865건)</li>
+            <li>예약 ARPPU 22.7만원 (커머스 ARPPU의 2.5×)</li>
+            <li>4월 재구매율 19.5%</li>
           </ul>
         </div>
         <div class="proj-detail">
@@ -467,10 +541,108 @@ footer.foot{padding:24px;text-align:center;font-size:11px;color:var(--mute);back
         </div>
       </article>
 
+      <article class="proj" data-project-id="af_home">
+        <div class="proj-top"><div class="proj-emoji">🏠</div><span class="proj-tag new">NEW</span></div>
+        <div class="proj-title">홈 / 스플래시 / 검색 — 앱의 첫 30초</div>
+        <div class="proj-summary">스플래시 → 홈 진입 → 검색까지 첫 진입 동선 설계. 챔피언십 배너 / 카테고리 바로가기 / 인기 검색어 칩까지 한 화면에서 끝내도록 구성.</div>
+        <div class="why-block">
+          <h4>기획 의도 / 목적</h4>
+          <p>슈퍼앱은 "첫 30초 안에 무엇을 할 수 있는지" 보여주지 못하면 이탈합니다. 핵심 진입점(예약 / 쇼핑 / 커뮤니티 / 챔피언십)을 한 스크롤에 모두 노출하고, 인기 검색어 칩으로 사용자가 "내가 찾던 게 여기 있다"는 신호를 즉시 받게 했습니다.</p>
+        </div>
+        <div class="kpi-block">
+          <h4>달성 KPI</h4>
+          <ul class="kpi-list">
+            <li>스플래시 → 홈 진입 이탈률 1자릿수 유지</li>
+            <li>홈 카테고리 진입률 우상향 — 포인트맵·심해갑이·최신조황 순</li>
+            <li>인기 검색어 클릭률 두 자릿수 — 검색 전환 트리거로 정착</li>
+          </ul>
+        </div>
+        <div class="proj-meta"><span><b>도메인</b> Acquisition</span><span><b>역할</b> CPO · PO</span></div>
+      </article>
+
+      <article class="proj" data-project-id="af_market">
+        <div class="proj-top"><div class="proj-emoji">🏷️</div><span class="proj-tag new">NEW</span></div>
+        <div class="proj-title">중고장터 — C2C 거래 흐름</div>
+        <div class="proj-summary">낚시 용품 중고 거래에 특화된 C2C. 등록 → 채팅 → 거래완료까지 상태머신 + 신고/차단/거래후기 정책을 전부 정의.</div>
+        <div class="why-block">
+          <h4>기획 의도 / 목적</h4>
+          <p>낚시 장비는 고가에 회전이 빠른 카테고리라 C2C 수요가 큽니다. 단, 그래서 사기·분쟁이 잦은 영역이라 거래 단계마다의 상태와 책임 소재를 정확히 정의해 분쟁 비용을 최소화하는 게 목표였습니다.</p>
+        </div>
+        <div class="kpi-block">
+          <h4>달성 KPI</h4>
+          <ul class="kpi-list">
+            <li>거래 완료 단계까지 도달율 우상향</li>
+            <li>분쟁/신고 처리 평균 응답시간 단축</li>
+            <li>커뮤니티 ↔ 중고장터 교차 사용 사용자 비중 증가</li>
+          </ul>
+        </div>
+        <div class="proj-meta"><span><b>도메인</b> C2C / Marketplace</span><span><b>역할</b> CPO · PO</span></div>
+      </article>
+
+      <article class="proj" data-project-id="af_mypage">
+        <div class="proj-top"><div class="proj-emoji">👤</div><span class="proj-tag new">NEW</span></div>
+        <div class="proj-title">마이페이지 / 가입 · 온보딩</div>
+        <div class="proj-summary">가입 → 닉네임/지역/관심어종 입력 → 첫 액션 유도까지 풀 온보딩. 마이페이지에서는 출조 이력·구매·포인트·찜을 한곳에 통합.</div>
+        <div class="why-block">
+          <h4>기획 의도 / 목적</h4>
+          <p>슈퍼앱의 가입 단계가 길수록 이탈하지만, 너무 짧으면 개인화 데이터를 못 얻습니다. 핵심 3단(닉네임·관심어종·지역)으로 압축하고, 가입 직후 "맞춤 콘텐츠"가 보이게 해 첫 5분 안에 가치를 체감하도록 설계했습니다.</p>
+        </div>
+        <div class="kpi-block">
+          <h4>달성 KPI</h4>
+          <ul class="kpi-list">
+            <li>가입 완료율 개선 (다단계 → 3단계 압축)</li>
+            <li>가입 D+1 재방문율 우상향</li>
+            <li>마이페이지 → 결제·예약 전환 트래픽 증가</li>
+          </ul>
+        </div>
+        <div class="proj-meta"><span><b>도메인</b> Onboarding / Profile</span><span><b>역할</b> CPO · PO</span></div>
+      </article>
+
+      <article class="proj" data-project-id="af_alarm">
+        <div class="proj-top"><div class="proj-emoji">🔔</div><span class="proj-tag ops">SYSTEM</span></div>
+        <div class="proj-title">알림 시스템 + 채널톡 CS 연동</div>
+        <div class="proj-summary">앱 푸시 / 인앱 알림 / 채널톡 CS를 한 정책으로 통합. 가다 Noti 시스템에서 검증한 카테고리·태그 모델을 어바웃피싱 도메인에 맞춰 재설계.</div>
+        <div class="why-block">
+          <h4>기획 의도 / 목적</h4>
+          <p>"중요한 알림"과 "마케팅 알림"이 같은 통로로 가면 사용자는 알림 자체를 끕니다. 도메인별(예약 변경, 결제 완료, 커뮤니티 댓글, 마케팅) 카테고리/태그를 명확히 정의해 사용자가 종류별로 끄고 켤 수 있게 만들었습니다. CS는 채널톡으로 통합해 운영팀의 응답 시간을 단축.</p>
+        </div>
+        <div class="kpi-block">
+          <h4>달성 KPI</h4>
+          <ul class="kpi-list">
+            <li>푸시 옵트아웃율 감소 (분리 설정 도입 후)</li>
+            <li>운영팀 CS 평균 응답시간 단축 (채널톡 통합)</li>
+            <li>알림 → 결제·예약 전환 트래픽 측정 가능 데이터화</li>
+          </ul>
+        </div>
+        <div class="proj-meta"><span><b>도메인</b> Notification / CS</span><span><b>역할</b> CPO · PM</span></div>
+      </article>
+
+      <article class="proj" data-project-id="af_schedule">
+        <div class="proj-top"><div class="proj-emoji">📅</div><span class="proj-tag ops">INTERNAL</span></div>
+        <div class="proj-title">사내 일정관리 대시보드 (Claude × CPO 직접 빌드)</div>
+        <div class="proj-summary">v2026.05.06 운영중. <b>스케줄(Gantt)·프로젝트·이슈·배포·팀·개요·이력·릴리즈 7+개 탭</b>으로 8명 멤버·11 배포·다수 프로젝트를 단일 화면에서 관리. CPO가 직접 코드 작성한 사내 도구.</div>
+        <div class="why-block">
+          <h4>기획 의도 / 목적</h4>
+          <p>Notion·Asana·Monday로는 PM 4~5명 + 외부협업 + 정부과제까지 동시에 관리하기 핏이 안 맞았습니다. 어바웃피싱 워크플로(스프린트·배포·회고·외부협업)에 정확히 맞춘 도구를, CPO 본인이 외주 없이 빠르게 만들고, 동시에 "AI 시대의 CPO는 도구를 직접 만들 수 있어야 한다"는 시그널을 팀과 외부에 보내는 의미를 동시에 가집니다.</p>
+        </div>
+        <div class="kpi-block">
+          <h4>실제 운영 현황 (v2026.05.06)</h4>
+          <ul class="kpi-list">
+            <li>실시간 동기화 + 7개 탭(스케줄/프로젝트/이슈/배포/팀/이력/릴리즈) 운영중</li>
+            <li>프로젝트 우선순위 (CRITICAL / TIER1 / TIER2) + 기획·디자인·FE·BE·QA 5개 트랙별 일정</li>
+            <li>팀 8명(CPO·PM·CDO·FE·BE·QA·디자이너) 과부하 시각화 + 안건수 추적</li>
+            <li>이슈 카드/테이블/컴팩트 뷰 + Major/Minor 분류 + CSV 내보내기</li>
+            <li>배포 11건 (준비중·완료·기한초과 자동 분류)</li>
+            <li>변경/접속 이력 — 전체 활동 감사 가능</li>
+          </ul>
+        </div>
+        <div class="proj-meta"><span><b>도메인</b> Internal Tools (자체 빌드)</span><span><b>역할</b> CPO · 코드 직접 작성</span></div>
+      </article>
+
       <article class="proj" data-project-id="af_design_system">
         <div class="proj-top">
           <div class="proj-emoji">🎨</div>
-          <span class="proj-tag ops">SYSTEM</span>
+          <span class="proj-tag ops">DESIGN</span>
         </div>
         <div class="proj-title">디자인 시스템 v3</div>
         <div class="proj-summary">앱 캡처 100장+를 정밀 분석해 컬러 / 타이포 / 컴포넌트를 토큰화. 모든 신규 화면이 같은 언어로 만들어지게 표준화.</div>
@@ -807,7 +979,7 @@ footer.foot{padding:24px;text-align:center;font-size:11px;color:var(--mute);back
       </article>
 
       <article class="proj" data-project-id="wm_backlog">
-        <div class="proj-top"><div class="proj-emoji">📋</div><span class="proj-tag ops">OPS</span></div>
+        <div class="proj-top"><div class="proj-emoji">📋</div><span class="proj-tag ops">PROCESS</span></div>
         <div class="proj-title">백로그 운영 프로세스 개선</div>
         <div class="proj-summary">개선전: 슬랙접수 → 스프레드시트 적재. 개선후: 슬랙 워크플로 → 슬랙 적재 → PO 자동 알림.</div>
         <div class="why-block">
@@ -892,7 +1064,7 @@ footer.foot{padding:24px;text-align:center;font-size:11px;color:var(--mute);back
     <div class="approach-grid">
       <div class="approach-card"><div class="ic">①</div><h3 data-edit="approach.a1.h">가설은 작게, 검증은 빠르게</h3><p data-edit="approach.a1.p">큰 의사결정 전 A/B 또는 MVP로 가설을 잘라서 검증합니다. 청구·지급 ERP는 SCM 전 단계 MVP로 운영비를 먼저 절반으로 만들었고, P2P 대출도 0.5개월 압축 사이클로 가설을 검증했습니다.</p></div>
       <div class="approach-card"><div class="ic">②</div><h3 data-edit="approach.a2.h">VOC와 데이터를 같은 책상에서</h3><p data-edit="approach.a2.p">FGI / 채널톡 VOC와 GA / Redash / DB raw 데이터를 함께 봅니다. ‘이탈 후 재진입’ 같이 GA로는 잡히지 않는 행동을 DB로 보강해 정책에 반영합니다.</p></div>
-      <div class="approach-card"><div class="ic">③</div><h3 data-edit="approach.a3.h">“이래서 안됩니다 ❌” 대신 “이렇게 하면 됩니다 ⭕”</h3><p data-edit="approach.a3.p">제약은 항상 있지만, 그 안에서 갈 수 있는 길을 찾습니다. 일정은 협의해 정한 뒤 반드시 지키는 편입니다.</p></div>
+      <div class="approach-card"><div class="ic">③</div><h3 data-edit="approach.a3.h">제약 안에서 최적해를 설계합니다.</h3><p data-edit="approach.a3.p">리소스 / 일정 / 정책의 제약은 늘 있지만, 그 안에서 가장 임팩트 큰 길을 찾습니다. 일정은 협의해 정한 뒤 반드시 지킵니다.</p></div>
       <div class="approach-card"><div class="ic">④</div><h3 data-edit="approach.a4.h">친구 같은 PM이 좋은 PM</h3><p data-edit="approach.a4.p">PM이 거리가 멀면 팀원들이 의견을 내지 않습니다. Daily Scrum + 1:1 + 커피챗을 일의 일부로 두고, 의견이 모이는 자리를 매일 만듭니다.</p></div>
       <div class="approach-card"><div class="ic">⑤</div><h3 data-edit="approach.a5.h">회고는 3Ls로</h3><p data-edit="approach.a5.p">Liked · Learned · Lacked. 단순하지만 기획·개발·디자인 모두가 같이 쓰기 좋아 회고 정착에 가장 효과적이었습니다.</p></div>
       <div class="approach-card"><div class="ic">⑥</div><h3 data-edit="approach.a6.h">운영을 잘 알아야 제품이 산다</h3><p data-edit="approach.a6.p">운영팀이 하루를 어떻게 보내는지 모르면 백오피스도 BO도 만들 수 없습니다. 백로그·요청접수 프로세스부터 같이 다듬습니다.</p></div>
@@ -992,7 +1164,7 @@ footer.foot{padding:24px;text-align:center;font-size:11px;color:var(--mute);back
 <!-- ============ CONTACT ============ -->
 <section class="contact" id="contact">
   <h2 data-edit="contact.h">같이 만들고 싶은 게 있다면.</h2>
-  <p data-edit="contact.p">제품 · 사업기획 · 그로스 어떤 단계든, 부담 없이 연락 주세요.</p>
+  <p data-edit="contact.p">O2O · 슈퍼앱 · 마켓플레이스에서 제품을 함께 만들 기회를 찾고 있습니다.</p>
   <div class="contact-actions">
     <a class="btn primary" href="mailto:banns0104@gmail.com">📩 banns0104@gmail.com</a>
     <a class="btn ghost" href="tel:+821033333768">📱 +82 10-3333-3768</a>
@@ -1023,6 +1195,67 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
       if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); }
     }
   });
+});
+
+// 프로젝트별 이미지 갤러리 자동 삽입
+// 각 프로젝트의 이미지 폴더(images/<id>/)를 매핑해서 갤러리 렌더링
+const PROJECT_GALLERY = {
+  'af_startup_package': { count: 1, ext: 'svg', label: '사업 트랙 다이어그램' },
+  'af_tmap':            { count: 1, ext: 'svg', label: 'TMAP × 어바웃피싱 협업 구조' },
+  'af_home':            { count: 8, ext: 'jpg', label: '실제 화면 — 홈 / 스플래시 / 검색' },
+  'af_commerce':        { count: 8, ext: 'jpg', label: '실제 화면 — 쇼핑 / 상품 / 결제' },
+  'af_booking':         { count: 8, ext: 'jpg', label: '실제 화면 — 예약 / 선박 / 조황' },
+  'af_community':       { count: 8, ext: 'jpg', label: '실제 화면 — 커뮤니티 피드' },
+  'af_market':          { count: 8, ext: 'jpg', label: '실제 화면 — 중고장터' },
+  'af_money':           { count: 3, ext: 'jpg', label: '실제 화면 — 머니 / 포인트' },
+  'af_mypage':          { count: 8, ext: 'jpg', label: '실제 화면 — 마이페이지 / 가입' },
+  'af_alarm':           { count: 2, ext: 'jpg', label: '실제 화면 — 알림 / 채널톡 CS' },
+  'af_championship':    { count: 1, ext: 'svg', label: '챔피언십 시즌 다이어그램' },
+  'af_design_system':   { count: 1, ext: 'svg', label: '디자인 시스템 v3 토큰' },
+  'wm_worker_renewal':  { count: 6, ext: 'jpg', label: '근로자앱 화면 / 데이터' },
+  'wm_manager_renewal': { count: 6, ext: 'jpg', label: '관리자앱 리뉴얼 결과물' },
+  'wm_backoffice':      { count: 6, ext: 'jpg', label: '백오피스 (EOS) 결과물' },
+  'wm_erp':             { count: 6, ext: 'jpg', label: '청구·지급 ERP MVP 화면' },
+  'wm_noti':            { count: 6, ext: 'jpg', label: '알림 시스템 정책 / 화면' },
+  'wm_b2b':             { count: 1, ext: 'jpg', label: 'B2B 웹페이지' },
+  'wm_p2p':             { count: 3, ext: 'jpg', label: 'P2P 대출 협업 결과' },
+  'wm_kjc':             { count: 3, ext: 'jpg', label: '건설 근로자 공제회 협업' },
+  'wm_abtest':          { count: 3, ext: 'jpg', label: 'A/B 테스트 결과' },
+  'wm_persona':         { count: 6, ext: 'jpg', label: '페르소나 / 저니맵' },
+  'wm_uxwriting':       { count: 6, ext: 'jpg', label: 'UX writing 산출물' },
+  'wm_backlog':         { count: 6, ext: 'jpg', label: '백로그 운영 프로세스' },
+};
+function ensureGallery(card) {
+  const id = card.dataset.projectId;
+  if (!id || !PROJECT_GALLERY[id]) return;
+  if (card.querySelector('.images-block')) return; // 이미 있으면 스킵
+  const meta = PROJECT_GALLERY[id];
+  const gallery = document.createElement('div');
+  gallery.className = 'images-block';
+  let imgs = '';
+  for (let i = 1; i <= meta.count; i++) {
+    imgs += `<img src="images/${id}/${i}.${meta.ext}" loading="lazy" alt="${meta.label} ${i}">`;
+  }
+  gallery.innerHTML = `<h4>결과물 — ${meta.label}</h4><div class="gallery">${imgs}</div>`;
+  // proj-meta 직전에 삽입
+  const m = card.querySelector('.proj-meta');
+  if (m) card.insertBefore(gallery, m);
+  else card.appendChild(gallery);
+}
+document.querySelectorAll('.proj[data-project-id]').forEach(ensureGallery);
+
+// 라이트박스
+const lb = document.createElement('div');
+lb.id = 'imglb';
+lb.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;padding:24px;z-index:9000;cursor:zoom-out;';
+lb.innerHTML = '<img style="max-width:100%;max-height:100%;border-radius:8px;">';
+document.body.appendChild(lb);
+lb.addEventListener('click',()=>lb.style.display='none');
+document.addEventListener('click', e=>{
+  if (e.target.matches('.images-block .gallery img')) {
+    lb.querySelector('img').src = e.target.src;
+    lb.style.display = 'flex';
+  }
 });
 </script>
 
