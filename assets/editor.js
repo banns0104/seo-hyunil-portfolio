@@ -277,7 +277,7 @@
   //   (a) data-edit="path.to.key" 가 붙은 요소의 textContent 를 RTDB 값으로 덮어쓴다 (있으면)
   //   (b) data-projects-of="<companyKey>" 가 붙은 .proj-grid 안의 .proj 카드 목록을 RTDB로 동기화
 
-  const ROOT_KEY = (document.body.dataset.docKey || "portfolio"); // "portfolio" or "resume"
+  const ROOT_KEY = (document.body.dataset.docKey || "portfolio"); // "portfolio" | "resume" | "career"
 
   function dbRefPath(path) {
     return db.ref(ROOT_KEY + "/" + path);
