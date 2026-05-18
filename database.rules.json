@@ -11,6 +11,10 @@
       ".write": "auth != null && auth.token.email == 'banns0104@gmail.com' && auth.token.email_verified == true"
     },
 
+    "career": {
+      ".write": "auth != null && auth.token.email == 'banns0104@gmail.com' && auth.token.email_verified == true"
+    },
+
     "meta": {
       ".write": "auth != null && auth.token.email == 'banns0104@gmail.com' && auth.token.email_verified == true",
       "lastEditedAt": { ".validate": "newData.isNumber()" },
