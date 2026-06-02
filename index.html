@@ -3,2611 +3,1068 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>서현일 Hyunil Seo · Portfolio</title>
-<meta name="description" content="6년차 PM/PO/CPO 서현일의 포트폴리오 — 어바웃피싱, 가다(웍스메이트), 아키마켓 등 O2O 플랫폼 제품기획 사례" />
-<link rel="preconnect" href="https://cdn.jsdelivr.net" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<title>서현일 · Hyunil Seo — Portfolio 2026</title>
+<meta name="description" content="7년차 PM·PO·CPO 서현일 — 어바웃피싱 등기이사·CPO. 임팩트 순으로 정리한 7개 제품 결정." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Lora:ital,wght@1,500&family=Inter:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Noto+Serif+KR:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap">
+<link rel="stylesheet" href="assets/editorial.css" />
 <style>
-:root{
-  --ink:#1A1814;
-  --body:#36332E;
-  --sub:#85817A;
-  --mute:#C4BFB5;
-  --line:#EDEAE0;
-  --soft:#F8F6F0;       /* 섹션 배경 — 화이트 더 가깝게 */
-  --soft2:#FCFAF5;
-  --brand:#3182F6;
-  --accent:#7B61FF;
-  --accent-soft:#EEEBFF;
-  --bg:#FCFCFA;         /* 페이지 배경 — 거의 순백 */
-  --card:#FFFFFF;
-  --chip:#F4F1E9;
-  --chip-text:#5A554D;
-  --hot:#FF5050; --good:#10B981; --gold:#FFB800;
-  --signature:#8E3A23;
+/* ───────── COVER ───────── */
+.cover{padding:72px 0 0;}
+.cover-eyebrow{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:14px;border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:44px;}
+.cover-eyebrow .issue{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--muted);}
+.cover h1{font-size:clamp(38px,5.6vw,68px);line-height:1.05;letter-spacing:-0.024em;font-weight:560;max-width:18ch;}
+.cover-lede{margin-top:30px;max-width:660px;}
+.cover-meta{margin-top:42px;padding-top:24px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:40px;}
+.cover-meta .item{display:flex;flex-direction:column;gap:5px;}
+.cover-meta .l{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);}
+.cover-meta .v{font-family:var(--serif);font-size:17px;color:var(--ink);font-weight:500;}
+.cover-actions{margin-top:34px;display:flex;gap:8px;flex-wrap:wrap;}
 
-  /* 8pt grid spacing tokens */
-  --s-1:8px; --s-2:16px; --s-3:24px; --s-4:32px; --s-5:48px; --s-6:64px; --s-7:88px;
+/* ───────── LEDGER ───────── */
+.ledger{margin-top:60px;border-top:2px solid var(--ink);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);}
+.ledger .cell{padding:30px 28px;border-right:1px solid var(--line);}
+.ledger .cell:first-child{padding-left:0;}
+.ledger .cell:last-child{border-right:none;padding-right:0;}
+.ledger .cap{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;}
+.ledger .stat-num{margin-bottom:12px;}
+.ledger .lbl{font-family:var(--serif);font-size:16px;color:var(--ink);font-weight:500;line-height:1.4;margin-bottom:5px;}
+.ledger .sub{font-family:var(--sans);font-size:12.5px;color:var(--sub);line-height:1.5;}
 
-  /* Shadow depth tokens */
-  --shadow-xs:0 1px 2px rgba(26,24,20,0.04);
-  --shadow-sm:0 2px 8px rgba(26,24,20,0.05);
-  --shadow-md:0 6px 24px rgba(26,24,20,0.06);
-  --shadow-lg:0 12px 40px rgba(26,24,20,0.08);
-  --shadow-brand:0 8px 32px rgba(49,130,246,0.08);
+section.band{padding:92px 0;}
+.band.recess{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
 
-  /* Type scale tokens */
-  --t-xs:11.5px; --t-sm:13px; --t-md:14.5px; --t-base:16px;
-  --t-lg:18px; --t-xl:24px; --t-2xl:32px; --t-3xl:36px; --t-hero:60px;
-}
-*{box-sizing:border-box;margin:0;padding:0;}
-html,body{
-  font-family:'Pretendard',-apple-system,BlinkMacSystemFont,sans-serif;
-  font-size:16px;
-  letter-spacing:-0.015em;
-  line-height:1.75;
-  color:var(--body);
-  background:var(--bg);
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
-  font-feature-settings:"kern" 1, "liga" 1;
-}
-/* 잡지 느낌의 강조 단어용 (필요 곳에만 .serif 클래스로) */
-.serif-em{
-  font-family:'Caveat','Snell Roundhand', Georgia, serif;
-  font-style:italic;
-  font-weight:500;
-  letter-spacing:-0.02em;
-  color:var(--signature);
-  font-size:1.08em;
-}
-a{color:inherit;text-decoration:none;}
-img{max-width:100%;display:block;}
+/* Prologue */
+.prologue{display:grid;grid-template-columns:1.15fr 1fr;gap:64px;align-items:start;}
+.prologue .body p{font-family:var(--serif);font-size:18.5px;line-height:1.66;color:var(--body);margin-bottom:20px;font-weight:380;letter-spacing:-0.01em;}
+.prologue .body p b{color:var(--ink);font-weight:600;}
+.prologue .body p:first-child::first-letter{font-family:var(--serif);float:left;font-size:4.2em;line-height:0.82;font-weight:600;padding:8px 12px 0 0;color:var(--accent);}
+.case-card{background:var(--card);border:1px solid var(--line);padding:34px 32px;box-shadow:var(--sh-2);}
+.case-card .ct{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;}
+.case-card h3{font-family:var(--serif);font-size:23px;font-weight:580;color:var(--ink);margin-bottom:22px;letter-spacing:-0.014em;}
+.case-card .cap{font-family:var(--sans);font-size:13px;color:var(--sub);line-height:1.66;margin-top:22px;padding-top:20px;border-top:1px solid var(--line);}
 
-.nav{position:sticky;top:0;z-index:50;background:rgba(253,252,250,0.88);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line);}
-.nav-inner{max-width:1120px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
-.logo{font-weight:800;font-size:16px;color:var(--ink);letter-spacing:-0.03em;}
-.logo .dot{color:var(--brand);}
-.nav-links{display:flex;gap:18px;font-size:13.5px;font-weight:600;color:var(--body);}
-.nav-links a:hover{color:var(--brand);}
-.nav-cta{display:flex;gap:8px;}
-.btn{border:none;border-radius:10px;padding:9px 14px;font-weight:700;font-family:inherit;font-size:13px;cursor:pointer;letter-spacing:-0.02em;transition:transform .05s ease, opacity .15s ease;text-align:center;}
-.btn:active{transform:translateY(1px);}
-.btn.primary{background:var(--ink);color:#fff;}
-.btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line);}
-.btn.brand{background:var(--brand);color:#fff;}
+/* ───────── TABLE OF CONTENTS ───────── */
+.toc{border-top:2px solid var(--ink);}
+.toc a{display:grid;grid-template-columns:58px 1fr auto;align-items:baseline;gap:22px;padding:22px 4px;border-bottom:1px solid var(--line);transition:background .15s;}
+.toc a:hover{background:var(--card);}
+.toc .tn{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--accent);}
+.toc .tt{font-family:var(--serif);font-size:23px;font-weight:560;color:var(--ink);letter-spacing:-0.014em;}
+.toc a:hover .tt{color:var(--accent);}
+.toc .tk{font-family:var(--sans);font-size:13px;color:var(--sub);font-weight:600;white-space:nowrap;}
+.toc .tk b{font-family:var(--serif);color:var(--ink);font-weight:600;font-size:16px;}
 
-.hero{max-width:1120px;margin:0 auto;padding:96px 24px 64px;}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--signature);padding:0;border-radius:0;font-size:12px;font-weight:700;margin-bottom:24px;letter-spacing:0.06em;text-transform:uppercase;border-top:1px solid var(--signature);padding-top:14px;}
-.hero-eyebrow .dot{display:none;}
-.hero h1{font-family:'Pretendard','Inter',sans-serif;font-size:68px;font-weight:900;color:var(--ink);letter-spacing:-0.03em;line-height:1.08;margin-bottom:28px;font-feature-settings:"ss01" 1;}
-.hero h1 .grad{background:linear-gradient(135deg,#3182F6 0%,#7B61FF 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
-.hero h1 em.script{
-  font-family:'Caveat','Snell Roundhand', Georgia, cursive;
-  font-style:normal;font-weight:500;
-  color:var(--signature);
-  font-size:0.92em;
-  letter-spacing:-0.02em;
-  padding:0 0.05em;
-}
-.hero p.lead{font-size:18px;color:var(--body);max-width:680px;line-height:1.78;letter-spacing:-0.012em;}
-.hero-meta{margin-top:26px;display:flex;flex-wrap:wrap;gap:20px;font-size:13px;color:var(--sub);}
-.hero-meta b{color:var(--ink);font-weight:700;}
-.hero-actions{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap;}
-.hero-actions .btn{padding:13px 20px;font-size:14px;}
+/* ───────── CASES ───────── */
+.cases .case{padding:80px 0;border-top:1px solid var(--line);}
+.cases .case:first-child{border-top:none;padding-top:8px;}
+.case-eyebrow{display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;}
+.case-eyebrow .co{color:var(--ink);}
+.case-eyebrow .role,.case-eyebrow .yr{color:var(--muted);}
+.case-eyebrow .num-badge{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--quiet);text-transform:none;letter-spacing:0;margin-right:4px;}
+.case-title{font-family:var(--serif);font-size:clamp(28px,3.4vw,42px);font-weight:560;color:var(--ink);letter-spacing:-0.02em;line-height:1.14;margin-bottom:16px;max-width:20ch;}
+.case-title em{font-style:italic;color:var(--accent);font-weight:500;}
+.case-headline{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--sub);line-height:1.5;font-weight:380;max-width:60ch;}
 
-.stats{max-width:1120px;margin:0 auto;padding:0 24px 80px;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
-.stat{border:1px solid var(--line);border-radius:16px;padding:24px;background:var(--card);}
-.stat .num{font-family:'Inter','Pretendard',sans-serif;font-size:36px;font-weight:900;color:var(--ink);letter-spacing:-0.04em;font-feature-settings:"tnum";line-height:1;}
-.stat .num .unit{font-size:16px;color:var(--brand);margin-left:4px;}
-.stat .label{font-size:12.5px;color:var(--ink);margin-top:6px;font-weight:700;}
-.stat .sub{font-size:11px;color:var(--sub);margin-top:2px;line-height:1.45;}
-.stat.featured{background:linear-gradient(135deg,rgba(49,130,246,0.06),rgba(123,97,255,0.04));border-color:rgba(49,130,246,0.25);}
-.stat.featured .num{color:var(--brand);}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;}
+.chip{display:inline-flex;align-items:baseline;gap:7px;border:1px solid var(--line);background:var(--card);padding:8px 13px;font-family:var(--sans);font-size:12.5px;font-weight:600;color:var(--body);letter-spacing:-0.005em;}
+.chip b{font-family:var(--serif);font-size:16px;font-weight:600;color:var(--accent);letter-spacing:-0.01em;}
 
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;}
-.why-text .section-title{font-size:30px;line-height:1.25;}
-.why-body{font-size:14.5px;color:var(--body);line-height:1.7;margin-top:14px;}
-.why-body b{color:var(--ink);font-weight:700;}
-.sig-card{border:1px solid var(--line);border-radius:18px;padding:26px;background:#fff;box-shadow:0 4px 24px rgba(49,130,246,0.06);}
-.sig-label{font-size:11px;font-weight:800;color:var(--brand);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;}
-.sig-title{font-size:18px;font-weight:800;color:var(--ink);letter-spacing:-0.02em;margin-bottom:12px;}
-.sig-chart{width:100%;max-width:320px;display:block;margin:0 auto;}
-.sig-cap{font-size:12px;color:var(--sub);margin-top:10px;line-height:1.6;}
-@media (max-width:760px){
-  .why-grid{grid-template-columns:1fr;gap:24px;}
-  .why-text .section-title{font-size:24px;}
-}
+.case-shots{margin-top:34px;}
 
-section{max-width:1120px;margin:0 auto;padding:88px 24px;}
-.section-head{margin-bottom:48px;}
-.section-eyebrow{
-  display:inline-block;font-size:11px;font-weight:700;color:var(--sub);
-  letter-spacing:0.14em;text-transform:uppercase;margin-bottom:14px;
-  border-top:2px solid var(--signature);padding-top:14px;
-}
-.section-title{font-family:'Pretendard','Inter',sans-serif;font-size:42px;font-weight:900;color:var(--ink);letter-spacing:-0.025em;line-height:1.18;}
-.section-title .quiet{color:var(--mute);font-weight:700;}
-.section-desc{margin-top:14px;font-size:15px;color:var(--sub);max-width:680px;line-height:1.75;}
+/* Movements */
+.movements{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line);}
+.move{padding:32px 40px;border-right:1px solid var(--line);}
+.move:first-child{padding-left:0;}
+.move:last-child{border-right:none;padding-right:0;}
+.move .beat{margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--line-2);}
+.move .beat:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
+.move .beat .bl{display:block;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:7px;}
+/* Result band — full width KPI */
+.result{margin-top:0;padding:30px 0 0;}
+.result .move-label{margin-bottom:18px;}
+.result .kpi-ledger{grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink);}
+.result .kpi-ledger .k{border-right:1px solid var(--line);border-bottom:none;padding:20px 18px 0;}
+.result .kpi-ledger .k:first-child{padding-left:0;}
+.result .kpi-ledger .k:last-child{border-right:none;padding-right:0;}
+.result .kpi-ledger .kn{font-size:32px;}
+.move-label{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;display:flex;align-items:baseline;gap:10px;}
+.move-label .rn{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--quiet);text-transform:none;letter-spacing:0;}
+.move p{font-family:var(--serif);font-size:16px;line-height:1.62;color:var(--body);font-weight:380;letter-spacing:-0.006em;margin-bottom:14px;}
+.move p:last-child{margin-bottom:0;}
+.move p b{color:var(--ink);font-weight:600;}
+.move p em{font-style:italic;color:var(--accent);font-weight:500;}
 
-.company-block{border:1px solid var(--line);border-radius:20px;padding:44px 40px;background:var(--card);margin-bottom:28px;overflow:hidden;position:relative;}
-.company-block.featured{background:linear-gradient(180deg,var(--soft2) 0%, var(--card) 60%);border-color:rgba(49,130,246,0.18);}
-.company-head{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:24px;}
-.company-id{display:flex;align-items:center;gap:14px;}
-.company-logo{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,#3182F6,#7B61FF);color:#fff;font-weight:800;font-size:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.company-logo.gada{background:linear-gradient(135deg,#FFB800,#FF5050);}
-.company-logo.archi{background:linear-gradient(135deg,#10B981,#3182F6);}
-.company-name{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-0.03em;}
-.company-role{font-size:13px;color:var(--sub);margin-top:2px;}
-.company-period{text-align:right;font-size:12.5px;color:var(--sub);font-weight:600;}
-.company-period .badge{display:inline-block;background:var(--ink);color:#fff;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:700;margin-bottom:4px;}
-.company-summary{font-size:15.5px;color:var(--body);line-height:1.8;margin-bottom:22px;}
-.company-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:28px;}
+/* KPI ledger inside result movement */
+.kpi-ledger{margin-top:6px;display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line-2);}
+.kpi-ledger .k{padding:16px 14px 16px 0;border-right:1px solid var(--line-2);border-bottom:1px solid var(--line-2);}
+.kpi-ledger .k:nth-child(2n){border-right:none;}
+.kpi-ledger .kn{font-family:var(--serif);font-size:27px;font-weight:560;color:var(--ink);letter-spacing:-0.02em;line-height:1;}
+.kpi-ledger .kn .u{font-size:0.5em;color:var(--accent);}
+.kpi-ledger .kt{font-family:var(--sans);font-size:11px;color:var(--sub);font-weight:600;margin-top:8px;line-height:1.4;}
 
-/* === 서비스 설명 / 페르소나 / 차트 (어바웃피싱 회사 블록 내부) === */
-.service-section{
-  background:linear-gradient(135deg, var(--soft2) 0%, var(--card) 60%);
-  border:1px solid var(--line);border-radius:16px;
-  padding:32px;margin-bottom:24px;
-}
-.service-section h3.section-h{
-  font-size:11px;font-weight:700;color:var(--signature);
-  letter-spacing:0.16em;text-transform:uppercase;margin-bottom:14px;
-  border-top:2px solid var(--signature);padding-top:12px;display:inline-block;
-}
-.service-grid-mini{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;}
-.service-grid-mini h4{font-size:14px;font-weight:800;color:var(--ink);margin-bottom:8px;letter-spacing:-0.01em;}
-.service-grid-mini p{font-size:14px;color:var(--body);line-height:1.78;}
-.service-grid-mini ul{list-style:none;padding:0;}
-.service-grid-mini li{position:relative;padding-left:14px;font-size:13.5px;color:var(--body);line-height:1.75;margin-bottom:6px;}
-.service-grid-mini li::before{content:"—";position:absolute;left:0;color:var(--mute);}
-.service-meta-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px;}
-.service-meta-mini .item{padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--card);text-align:center;}
-.service-meta-mini .item .num{font-family:'Inter',sans-serif;font-size:20px;font-weight:900;color:var(--ink);letter-spacing:-0.025em;line-height:1;}
-.service-meta-mini .item .label{font-size:11px;color:var(--sub);font-weight:600;margin-top:6px;}
+.case-meta{margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:36px;padding-top:24px;border-top:1px solid var(--line);}
+.case-meta .ml{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
+.case-meta p{font-family:var(--sans);font-size:13px;color:var(--body);line-height:1.62;}
+.case-meta p b{color:var(--ink);font-weight:700;}
 
-/* Personas mini */
-.personas-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px;}
-.persona-mini{
-  background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 20px;
-  position:relative;overflow:hidden;
-}
-.persona-mini::before{
-  content:"";position:absolute;top:0;left:0;right:0;height:3px;
-  background:linear-gradient(90deg, var(--signature), var(--brand));
-}
-.persona-mini .avatar{
-  width:44px;height:44px;border-radius:50%;
-  background:linear-gradient(135deg, #F4F1E9, #E8E3D8);
-  display:flex;align-items:center;justify-content:center;
-  font-family:Lora, Georgia, serif;font-style:italic;font-size:16px;
-  color:var(--signature);font-weight:500;margin-bottom:14px;
-}
-.persona-mini h4{font-size:15px;font-weight:800;color:var(--ink);letter-spacing:-0.015em;margin-bottom:3px;}
-.persona-mini .meta{font-size:11px;color:var(--sub);font-weight:600;margin-bottom:12px;}
-.persona-mini .quote{
-  font-family:Lora, Georgia, serif;font-style:italic;
-  font-size:12.5px;color:var(--body);line-height:1.6;
-  padding:10px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-  margin-bottom:10px;
-}
-.persona-mini .entry{font-size:11px;color:var(--sub);line-height:1.5;}
-.persona-mini .entry b{color:var(--signature);font-weight:700;}
+.pullquote{margin:0;padding:56px 0;text-align:center;}
+.pullquote .q{font-family:var(--serif);font-style:italic;font-size:clamp(24px,2.8vw,32px);line-height:1.36;color:var(--ink);letter-spacing:-0.014em;max-width:26ch;margin:0 auto;font-weight:420;}
+.pullquote .q b{color:var(--accent);font-weight:560;font-style:normal;}
 
-/* Charts grid */
-.charts-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px;}
-.chart-mini{
-  background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;
-}
-.chart-mini h4{font-size:11px;font-weight:700;color:var(--signature);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:4px;}
-.chart-mini .chart-t{font-size:14px;font-weight:800;color:var(--ink);letter-spacing:-0.015em;margin-bottom:14px;}
-.chart-mini svg{width:100%;height:auto;display:block;}
-.chart-mini .chart-summary{font-size:11.5px;color:var(--sub);margin-top:10px;line-height:1.55;}
-.chart-mini .chart-summary b{color:var(--ink);}
+/* ───────── PROPOSALS ───────── */
+.proposals{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:2px solid var(--ink);border-bottom:1px solid var(--line);}
+.prop{padding:30px 26px;border-right:1px solid var(--line);}
+.prop:first-child{padding-left:0;}
+.prop:last-child{border-right:none;padding-right:0;}
+.prop .py{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
+.prop h4{font-family:var(--serif);font-size:23px;font-weight:580;color:var(--ink);line-height:1.12;margin-bottom:12px;letter-spacing:-0.014em;}
+.prop p{font-family:var(--sans);font-size:12.5px;color:var(--sub);line-height:1.55;}
+.prop p b{color:var(--accent);font-weight:700;}
 
-@media (max-width:760px){
-  .service-grid-mini{grid-template-columns:1fr;gap:18px;}
-  .service-meta-mini{grid-template-columns:1fr;}
-  .personas-mini{grid-template-columns:1fr;}
-  .charts-grid{grid-template-columns:1fr;}
+/* ───────── ARCHIVE ───────── */
+.arch-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--ink);padding-bottom:14px;margin:54px 0 28px;}
+.arch-head .ah{font-family:var(--serif);font-size:26px;font-weight:560;color:var(--ink);letter-spacing:-0.016em;}
+.arch-head .ah .en{font-style:italic;color:var(--muted);font-weight:420;font-size:0.62em;margin-left:8px;}
+.arch-head .am{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);}
+.arch-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.arch{border:1px solid var(--line);background:var(--card);padding:26px 26px 0;display:flex;flex-direction:column;}
+.arch .at{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
+.arch h4{font-family:var(--serif);font-size:21px;font-weight:580;color:var(--ink);letter-spacing:-0.014em;line-height:1.2;margin-bottom:10px;}
+.arch .as{font-family:var(--serif);font-size:15.5px;color:var(--body);line-height:1.55;font-weight:380;margin-bottom:14px;}
+.arch .ak{list-style:none;margin-bottom:18px;}
+.arch .ak li{position:relative;padding-left:16px;font-family:var(--sans);font-size:13px;color:var(--ink);line-height:1.55;margin-bottom:6px;font-weight:500;}
+.arch .ak li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:1px;background:var(--accent);}
+.arch .plate{margin:auto -26px 0;border-top:1px solid var(--line);background:var(--paper);padding:18px 26px;}
+.arch.solo{grid-column:1 / -1;}
+
+/* ───────── APPROACH ───────── */
+.approach{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);}
+.app-card{padding:34px 34px;border-right:1px solid var(--line);}
+.app-card:first-child{padding-left:0;}
+.app-card:last-child{border-right:none;padding-right:0;}
+.app-card .rn{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--accent);margin-bottom:16px;}
+.app-card h3{font-family:var(--serif);font-size:20px;font-weight:580;color:var(--ink);margin-bottom:12px;letter-spacing:-0.014em;line-height:1.22;}
+.app-card p{font-family:var(--sans);font-size:13.5px;line-height:1.68;color:var(--body);}
+.app-card p b{color:var(--ink);font-weight:700;}
+
+/* ───────── CONTACT ───────── */
+.contact{padding:120px 0 90px;text-align:center;background:var(--paper-2);border-top:2px solid var(--ink);}
+.contact .eyebrow{justify-content:center;margin-bottom:26px;}
+.contact h2{font-family:var(--serif);font-size:clamp(36px,5vw,64px);line-height:1.14;letter-spacing:-0.022em;font-weight:560;color:var(--ink);margin-bottom:24px;padding-bottom:0.06em;}
+.contact h2 em{font-style:italic;color:var(--accent);}
+.contact p{font-family:var(--serif);font-size:20px;color:var(--sub);max-width:600px;margin:0 auto 40px;line-height:1.55;font-weight:380;}
+.contact-actions{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;}
+.contact-ledger{max-width:760px;margin:60px auto 0;padding-top:30px;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
+.contact-ledger .item{padding:0 18px;border-right:1px solid var(--line);}
+.contact-ledger .item:last-child{border-right:none;}
+.contact-ledger .l{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+.contact-ledger .v{font-family:var(--serif);font-size:14px;color:var(--ink);font-weight:500;white-space:nowrap;}
+.foot{padding:30px 0;}
+
+/* ───────── RESPONSIVE ───────── */
+@media (max-width:920px){
+  .wrap{padding:0 22px;}
+  .ledger{grid-template-columns:1fr 1fr;}
+  .ledger .cell{padding:24px 20px 24px 0;}
+  .ledger .cell:nth-child(2){border-right:none;padding-right:0;}
+  .prologue{grid-template-columns:1fr;gap:40px;}
+  .movements{grid-template-columns:1fr;}
+  .move{border-right:none;border-bottom:1px solid var(--line);padding:26px 0;}
+  .move:last-child{border-bottom:none;}
+  .case-meta{grid-template-columns:1fr;gap:20px;}
+  .proposals{grid-template-columns:1fr 1fr;}
+  .prop{border-bottom:1px solid var(--line);padding:24px 20px 24px 0;}
+  .prop:nth-child(2n){border-right:none;}
+  .arch-grid{grid-template-columns:1fr;}
+  .approach{grid-template-columns:1fr;}
+  .app-card{border-right:none;border-bottom:1px solid var(--line);padding:26px 0;}
+  .app-card:last-child{border-bottom:none;}
+  .contact-ledger{grid-template-columns:1fr 1fr;gap:22px 0;}
+  .contact-ledger .item:nth-child(2){border-right:none;}
+  .mh-links{display:none;}
+  .toc a{grid-template-columns:40px 1fr;gap:14px;}
+  .toc .tk{grid-column:2;}
 }
-.company-tags .tag{
-  background:transparent;color:var(--sub);
-  padding:5px 12px;border-radius:6px;
-  font-size:11.5px;font-weight:600;letter-spacing:-0.01em;
-  border:1px solid rgba(122,118,111,0.18);
+@media (max-width:560px){
+  .cover h1{font-size:33px;}
+  .ledger{grid-template-columns:1fr;}
+  .ledger .cell{border-right:none;padding:20px 0;border-bottom:1px solid var(--line);}
+  .kpi-ledger{grid-template-columns:1fr;}
+  .kpi-ledger .k{border-right:none;}
+  .contact-ledger{grid-template-columns:1fr;}
+  .contact-ledger .item{border-right:none;padding:14px 0;border-bottom:1px solid var(--line);}
 }
 
-.proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
-.proj,.company-block,.skill-card,.stat,.approach-card{
-  transition:border-color .22s ease, box-shadow .22s ease, transform .22s ease;
-}
-.proj{border:1px solid var(--line);border-radius:18px;padding:32px;background:var(--card);display:flex;flex-direction:column;gap:16px;}
-.proj:hover{border-color:rgba(49,130,246,0.35);box-shadow:0 10px 36px rgba(26,24,20,0.06);}
-.company-block:hover{border-color:rgba(49,130,246,0.18);box-shadow:0 6px 28px rgba(49,130,246,0.05);}
-.skill-card:hover{border-color:var(--mute);box-shadow:0 4px 16px rgba(26,24,20,0.04);}
-.stat:hover{border-color:var(--mute);box-shadow:0 4px 16px rgba(26,24,20,0.05);transform:translateY(-2px);}
-.approach-card:hover{border-color:var(--mute);transform:translateY(-2px);}
-.proj-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;}
-.proj-emoji{
-  width:36px;height:36px;border-radius:10px;
-  background:transparent;
-  display:flex;align-items:center;justify-content:center;
-  font-size:16px;flex-shrink:0;
-  opacity:0.5;
-  filter:saturate(0.7);
-  border:1px solid var(--line);
-}
-.proj:hover .proj-emoji{opacity:0.85;}
-.proj-tag{font-size:11px;font-weight:700;padding:3px 8px;border-radius:5px;}
-.proj-tag.new{background:var(--brand);color:#fff;}
-.proj-tag.renewal{background:var(--accent);color:#fff;}
-.proj-tag.collab{background:var(--good);color:#fff;}
-.proj-tag.ops{background:var(--ink);color:#fff;}
-.proj-title{font-size:17px;font-weight:800;color:var(--ink);letter-spacing:-0.02em;line-height:1.4;}
-.proj-summary{font-size:14px;color:var(--body);line-height:1.7;}
-.proj-detail{margin-top:14px;padding-top:14px;border-top:1px dashed rgba(232,227,216,0.55);}
-.proj-detail h4{font-size:12.5px;font-weight:800;color:var(--ink);margin-bottom:8px;letter-spacing:-0.02em;}
-.proj-detail ul{list-style:none;padding:0;margin-bottom:12px;}
-.proj-detail li{position:relative;padding-left:14px;font-size:13px;color:var(--body);line-height:1.65;margin-bottom:5px;}
-.proj-detail li::before{content:"";position:absolute;left:0;top:8px;width:4px;height:4px;background:var(--brand);border-radius:50%;}
-.why-block, .kpi-block, .images-block{margin-top:14px;padding-top:14px;border-top:1px dashed rgba(232,227,216,0.55);}
-.why-block h4, .kpi-block h4, .images-block h4{font-size:12.5px;font-weight:800;color:var(--ink);margin-bottom:8px;letter-spacing:-0.02em;}
-.why-block p{font-size:13.5px;color:var(--body);line-height:1.75;}
-.kpi-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;}
-.kpi-list li{font-size:13px;color:var(--good);font-weight:700;padding-left:18px;position:relative;line-height:1.55;}
-.kpi-list li::before{content:"▲";position:absolute;left:0;font-size:10px;top:3px;}
+/* plates sizing tuned for cases (reuse editorial .plates) */
+.plates.q4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:560px){.plates,.plates.q4{grid-template-columns:repeat(3,1fr);}}
 
-/* === 갤러리 v3 — 매거진 톤 (큰 hero + 캡션 + 썸네일 strip) === */
-.images-block{
-  margin:var(--s-3) calc(var(--s-4) * -1) calc(var(--s-4) * -1);
-  padding:var(--s-4);
-  background:#FBFAF6;
-  border-radius:0 0 18px 18px;
-  border-top:1px solid var(--line);
+/* ───────── MOTION ───────── */
+@media (prefers-reduced-motion:no-preference){
+  html.anim .cover-eyebrow,html.anim .cover-lede,html.anim .cover-meta,html.anim .cover-actions,html.anim .cover .ledger{opacity:0;transform:translateY(26px);animation:heroRise 1s cubic-bezier(.19,1,.22,1) forwards;}
+  html.anim .cover-lede{animation-delay:.22s;}
+  html.anim .cover-meta{animation-delay:.34s;}
+  html.anim .cover-actions{animation-delay:.44s;}
+  html.anim .cover .ledger{animation-delay:.54s;}
+  @keyframes heroRise{to{opacity:1;transform:none;}}
+  html.anim .case .beat{opacity:0;transform:translateY(12px);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1);}
+  html.anim .case.in .beat{opacity:1;transform:none;}
+  html.anim .case.in .move .beat:nth-child(2){transition-delay:.06s;}
+  html.anim .case.in .move .beat:nth-child(3){transition-delay:.14s;}
+  html.anim .case.in .move .beat:nth-child(4){transition-delay:.22s;}
+  html.anim .case .result{opacity:0;transform:translateY(12px);transition:opacity .7s cubic-bezier(.2,.7,.2,1) .26s,transform .7s cubic-bezier(.2,.7,.2,1) .26s;}
+  html.anim .case.in .result{opacity:1;transform:none;}
+  html.anim .chips .chip{opacity:0;transform:translateY(8px);transition:opacity .5s cubic-bezier(.2,.7,.2,1),transform .5s cubic-bezier(.2,.7,.2,1);}
+  html.anim .case.in .chips .chip{opacity:1;transform:none;}
+  html.anim .case.in .chips .chip:nth-child(2){transition-delay:.05s;}
+  html.anim .case.in .chips .chip:nth-child(3){transition-delay:.10s;}
+  html.anim .case.in .chips .chip:nth-child(4){transition-delay:.15s;}
+  html.anim .plates .pframe{opacity:0;}
+  @keyframes plateIn{from{opacity:0;transform:translateY(14px) scale(.985);}to{opacity:1;transform:none;}}
+  html.anim .plates.shown .pframe{animation:plateIn .6s cubic-bezier(.2,.7,.2,1) both;}
 }
-.images-block h4{
-  font-size:11px;font-weight:700;color:var(--sub);
-  letter-spacing:0.14em;text-transform:uppercase;
-  margin-bottom:var(--s-3);
-  display:flex;align-items:baseline;justify-content:space-between;gap:var(--s-2);
-}
-.images-block h4 .gallery-count{
-  font-size:10.5px;font-weight:600;color:var(--mute);
-  letter-spacing:0.04em;text-transform:none;
-}
-
-/* iPhone 세로 캡쳐 — 폰 프레임 hero + 썸네일 row */
-.images-block.is-vertical .gallery-mag{
-  display:flex;gap:14px;align-items:stretch;
-}
-.images-block.is-vertical .gallery-hero{
-  position:relative;
-  flex:0 0 130px;
-  width:130px;height:264px;        /* 폰 형태 9:18.3 */
-  background:#0A0A0A;
-  border-radius:24px;
-  padding:5px;
-  box-shadow:
-    0 0 0 3px #1d1d1d,
-    0 12px 32px rgba(0,0,0,0.18),
-    0 4px 10px rgba(0,0,0,0.10);
-  cursor:zoom-in;
-  transition:transform .3s ease, box-shadow .3s ease;
-  align-self:flex-start;
-  overflow:visible;
-}
-.images-block.is-vertical .gallery-hero::before{
-  content:"";position:absolute;top:9px;left:50%;transform:translateX(-50%);
-  width:48px;height:13px;background:#000;border-radius:30px;z-index:10;
-}
-.images-block.is-vertical .gallery-hero::after{
-  content:"01";
-  position:absolute;top:6px;right:-22px;
-  font-family:Lora, Georgia, serif;font-style:italic;
-  font-size:12px;color:var(--mute);
-  letter-spacing:-0.02em;font-weight:500;
-}
-.images-block.is-vertical .gallery-hero img{
-  width:100%;height:100%;object-fit:cover;object-position:top center;
-  display:block;border-radius:18px;
-  transition:transform .5s ease;
-}
-.images-block.is-vertical .gallery-hero:hover{
-  transform:translateY(-3px);
-  box-shadow:0 0 0 3px #1d1d1d, 0 18px 44px rgba(0,0,0,0.22);
-}
-.images-block.is-vertical .gallery-hero:hover img{transform:scale(1.03);}
-
-.images-block.is-vertical .gallery-thumbs{
-  flex:1;
-  display:grid;
-  grid-template-columns:repeat(7, 1fr);   /* 7개 썸네일 가로로 */
-  gap:6px;
-  align-content:stretch;
-}
-.images-block.is-vertical .gallery-thumbs .cell{
-  position:relative;aspect-ratio:9/16;     /* hero와 같은 비율 */
-  max-height:240px;                          /* hero와 같은 높이 cap */
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:8px;overflow:hidden;
-  cursor:zoom-in;
-  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-}
-.images-block.is-vertical .gallery-thumbs .cell img{
-  width:100%;height:100%;object-fit:cover;object-position:top center;
-  display:block;transition:transform .35s ease;
-}
-.images-block.is-vertical .gallery-thumbs .cell:hover{
-  transform:translateY(-2px);
-  border-color:rgba(49,130,246,0.4);
-  box-shadow:var(--shadow-sm);
-}
-.images-block.is-vertical .gallery-thumbs .cell:hover img{transform:scale(1.05);}
-.images-block.is-vertical .gallery-thumbs .cell.more{
-  display:flex;align-items:center;justify-content:center;
-  border-style:dashed;background:transparent;
-}
-.images-block.is-vertical .gallery-thumbs .cell.more::after{
-  content:"+" attr(data-more);
-  font-family:Lora, Georgia, serif;font-style:italic;font-weight:500;
-  font-size:16px;color:var(--signature);letter-spacing:-0.02em;
-}
-
-/* SVG / 가로형 — 풀폭 hero (16:9) + 작은 strip */
-.images-block.is-wide .gallery-hero{
-  width:100%;aspect-ratio:16/9;
-  border-radius:12px;overflow:hidden;
-  background:#fff;border:1px solid var(--line);
-  cursor:zoom-in;transition:transform .25s ease, box-shadow .25s ease;
-  box-shadow:var(--shadow-sm);
-}
-.images-block.is-wide .gallery-hero img,
-.images-block.is-wide .gallery-hero svg{
-  width:100%;height:100%;object-fit:contain;display:block;
-}
-.images-block.is-wide .gallery-hero:hover{
-  transform:translateY(-2px);box-shadow:var(--shadow-md);
-}
-.images-block.is-wide .gallery-strip{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-  gap:6px;margin-top:8px;
-}
-.images-block.is-wide .gallery-strip img{
-  width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top center;
-  border-radius:6px;background:#fff;
-  border:1px solid var(--line);
-  cursor:zoom-in;transition:transform .15s ease;
-}
-.images-block.is-wide .gallery-strip img:hover{transform:translateY(-2px);}
-
-@media (max-width:760px){
-  .images-block{margin:var(--s-3) calc(var(--s-3) * -1) calc(var(--s-3) * -1);padding:var(--s-3);}
-  .images-block.is-vertical .gallery-mag{flex-direction:column;}
-  .images-block.is-vertical .gallery-hero{flex:0 0 auto;width:100%;max-height:300px;aspect-ratio:9/12;}
-  .images-block.is-vertical .gallery-thumbs{grid-template-columns:repeat(4,1fr);}
-}
-.proj-meta{display:flex;justify-content:space-between;font-size:11.5px;color:var(--sub);padding-top:14px;border-top:1px solid rgba(232,227,216,0.55);font-weight:600;line-height:1.5;}
-.proj-meta b{color:var(--ink);font-weight:700;}
-
-/* ============ FEATURED CASES (Top 6 long-form) ============ */
-.featured-cases{
-  background:linear-gradient(180deg, #FCFAF5 0%, var(--bg) 100%);
-  padding:96px 24px 112px;
-  max-width:none;margin:0;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-}
-.featured-cases-inner{max-width:1120px;margin:0 auto;}
-.featured-cases .section-title em{
-  font-family:'Caveat','Snell Roundhand',Georgia,cursive;
-  font-style:italic;font-weight:500;color:var(--signature);
-  font-size:1.05em;letter-spacing:-0.02em;padding:0 0.04em;
-}
-.cases-list{display:flex;flex-direction:column;gap:128px;margin-top:72px;}
-.case{position:relative;}
-.case-num{
-  position:absolute;top:-44px;left:-8px;
-  font-family:'Lora',Georgia,serif;font-style:italic;font-weight:500;
-  font-size:140px;color:rgba(142,58,35,0.10);
-  letter-spacing:-0.05em;line-height:1;
-  pointer-events:none;user-select:none;z-index:0;
-}
-.case-head{position:relative;z-index:1;padding-left:96px;margin-bottom:36px;}
-.case-eyebrow{
-  font-size:11px;font-weight:700;color:var(--signature);
-  letter-spacing:0.16em;text-transform:uppercase;margin-bottom:18px;
-  display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;
-}
-.case-eyebrow .role{color:var(--sub);font-weight:600;letter-spacing:0.08em;}
-.case-eyebrow .year{color:var(--mute);font-family:'Inter';font-weight:700;}
-.case-title{
-  font-family:'Pretendard','Inter',sans-serif;
-  font-size:40px;font-weight:900;color:var(--ink);
-  letter-spacing:-0.028em;line-height:1.15;margin-bottom:16px;
-}
-.case-title em{
-  font-family:'Caveat',Georgia,cursive;font-style:italic;font-weight:500;
-  color:var(--signature);font-size:1.08em;padding:0 0.05em;letter-spacing:-0.02em;
-}
-.case-headline{
-  font-family:'Lora',Georgia,serif;font-style:italic;
-  font-size:19px;color:var(--sub);line-height:1.65;
-  max-width:680px;
-}
-.case-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px;}
-.case-chips .chip{
-  background:var(--card);border:1px solid var(--line);
-  padding:7px 13px;border-radius:7px;
-  font-size:12.5px;font-weight:600;color:var(--body);
-  letter-spacing:-0.01em;
-}
-.case-chips .chip b{color:var(--brand);font-family:'Inter',sans-serif;font-weight:800;letter-spacing:-0.02em;margin-right:2px;}
-.case-chips .chip.terra b{color:var(--signature);}
-
-.case-shots{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
-  margin-bottom:48px;padding:0 8px;
-}
-.case-shot{
-  aspect-ratio:9/19.5;background:#0A0A0A;border-radius:24px;padding:5px;
-  box-shadow:0 0 0 3px #1d1d1d, 0 14px 36px rgba(0,0,0,0.16), 0 4px 10px rgba(0,0,0,0.10);
-  position:relative;overflow:visible;
-  transition:transform .3s ease, box-shadow .3s ease;
-}
-.case-shot::before{
-  content:"";position:absolute;top:8px;left:50%;transform:translateX(-50%);
-  width:44px;height:11px;background:#000;border-radius:30px;z-index:10;
-}
-.case-shot img{
-  width:100%;height:100%;object-fit:cover;object-position:top center;
-  border-radius:19px;display:block;
-}
-.case-shot:hover{transform:translateY(-4px);}
-
-/* === 노트북/데스크탑 프레임 — 폰과 같은 가족 === */
-.case-shot.is-wide{
-  aspect-ratio:16/10;
-  border-radius:12px;
-  padding:8px;
-}
-.case-shot.is-wide::before{display:none;} /* 노치 제거 */
-.case-shot.is-wide::after{
-  content:"";position:absolute;
-  left:50%;bottom:-10px;transform:translateX(-50%);
-  width:60px;height:4px;
-  background:#1d1d1d;border-radius:0 0 6px 6px;
-}
-.case-shot.is-wide img{
-  border-radius:6px;
-  object-fit:cover;
-}
-.case-shot.is-wide.is-square img{
-  object-fit:contain;
-  background:#0A0A0A;
-}
-/* 와이드 그리드는 2×2 + 호흡 넓게 */
-.case-shots.is-desktop{
-  grid-template-columns:repeat(2,1fr);
-  gap:24px;
-  padding:0;
-}
-@media(max-width:880px){
-  .case-shots.is-desktop{grid-template-columns:repeat(2,1fr);gap:14px;}
-}
-
-.case-body{
-  display:grid;grid-template-columns:repeat(2,1fr);
-  gap:8px 36px;margin-top:64px;
-}
-.case-axis{padding:28px 0;border-top:1px solid var(--line);}
-.case-axis.terra{border-top:2px solid var(--signature);}
-.case-axis h4{
-  font-size:11px;font-weight:700;color:var(--signature);
-  letter-spacing:0.18em;text-transform:uppercase;margin-bottom:14px;
-  display:flex;align-items:baseline;gap:10px;
-}
-.case-axis h4 .num{
-  font-family:'Lora',Georgia,serif;font-style:italic;
-  font-size:14px;font-weight:500;letter-spacing:-0.01em;
-  color:var(--mute);text-transform:none;
-}
-.case-axis p{
-  font-size:15.5px;color:var(--body);line-height:1.85;
-  letter-spacing:-0.012em;
-}
-.case-axis p em{
-  font-family:'Caveat',Georgia,cursive;font-style:italic;font-weight:500;
-  color:var(--signature);font-size:1.18em;letter-spacing:-0.02em;
-  padding:0 0.04em;
-}
-.case-axis p b{color:var(--ink);font-weight:700;}
-.case-axis.span-2{grid-column:1 / -1;}
-
-.case-meta{
-  margin-top:40px;padding:28px 32px;
-  background:var(--card);border:1px solid var(--line);border-radius:14px;
-  display:grid;grid-template-columns:1fr 1fr;gap:32px;
-}
-.case-meta-block{font-size:13.5px;color:var(--body);line-height:1.75;}
-.case-meta-block .meta-label{
-  display:block;font-size:10.5px;font-weight:700;
-  color:var(--signature);letter-spacing:0.16em;
-  text-transform:uppercase;margin-bottom:8px;
-}
-.case-meta-block b{color:var(--ink);font-weight:700;}
-
-.cases-divider{
-  margin:24px 0;padding:48px 60px;
-  background:linear-gradient(135deg, #FFF5F1 0%, var(--card) 100%);
-  border-left:3px solid var(--signature);
-  border-radius:14px;position:relative;
-}
-.cases-divider .label{
-  font-size:11px;font-weight:700;color:var(--signature);
-  letter-spacing:0.18em;text-transform:uppercase;margin-bottom:18px;
-}
-.cases-divider .quote{
-  font-size:20px;color:var(--ink);font-weight:600;line-height:1.65;
-  letter-spacing:-0.018em;max-width:760px;
-}
-.cases-divider .quote em{
-  font-family:'Caveat',Georgia,cursive;font-style:italic;font-weight:500;
-  color:var(--signature);font-size:1.14em;letter-spacing:-0.02em;padding:0 0.04em;
-}
-.cases-divider .quote b{color:var(--ink);font-weight:800;}
-
-.archive-eyebrow{
-  font-size:11px;font-weight:700;color:var(--sub);
-  letter-spacing:0.18em;text-transform:uppercase;
-  border-top:1px solid var(--line);padding-top:18px;
-  margin:48px 0 18px;display:block;
-}
-
-@media(max-width:880px){
-  .featured-cases{padding:64px 22px 80px;}
-  .cases-list{gap:88px;margin-top:48px;}
-  .case-num{font-size:84px;top:-22px;left:0;}
-  .case-head{padding-left:56px;}
-  .case-title{font-size:28px;}
-  .case-headline{font-size:16px;}
-  .case-shots{grid-template-columns:repeat(2,1fr);gap:12px;padding:0;}
-  .case-body{grid-template-columns:1fr;gap:0;margin-top:44px;}
-  .case-meta{grid-template-columns:1fr;padding:22px 24px;gap:22px;}
-  .cases-divider{padding:32px 28px;}
-  .cases-divider .quote{font-size:17px;}
-}
-
-
-
-/* === Editorial Index (책 목차 스타일) === */
-.toc-section{
-  background:#FDFCFA;
-  padding:88px 24px 96px;
-  border-bottom:1px solid var(--line);
-  border-top:1px solid var(--ink);
-}
-.toc-inner{max-width:920px;margin:0 auto;}
-.toc-head{
-  display:flex;justify-content:space-between;align-items:baseline;
-  border-bottom:1px solid var(--ink);
-  padding-bottom:14px;margin-bottom:36px;
-}
-.toc-head .toc-eye{
-  font-family:'Inter',sans-serif;font-size:12px;font-weight:700;
-  letter-spacing:0.28em;text-transform:uppercase;color:var(--ink);
-}
-.toc-head .toc-meta{
-  font-size:11.5px;color:var(--mute);letter-spacing:0.08em;font-weight:600;
-}
-.toc-list{list-style:none;padding:0;margin:0;}
-.toc-list li{border-top:1px solid var(--line);}
-.toc-list li:first-child{border-top:none;}
-.toc-list a{
-  display:grid;
-  grid-template-columns:56px 1fr auto auto;
-  align-items:baseline;gap:18px;
-  padding:22px 4px;
-  text-decoration:none;color:var(--ink);
-  transition:color .2s ease;
-}
-.toc-list .toc-n{
-  font-family:'Inter',sans-serif;font-size:13px;font-weight:700;
-  color:var(--signature);letter-spacing:0.04em;
-}
-.toc-list .toc-t{
-  font-size:22px;font-weight:800;letter-spacing:-0.022em;
-  color:var(--ink);
-}
-.toc-list .toc-leader{
-  border-bottom:1px dotted var(--mute);
-  align-self:end;transform:translateY(-6px);
-  min-width:40px;
-  transition:border-color .2s ease;
-}
-.toc-list .toc-k{
-  font-size:13px;color:var(--sub);
-  font-variant-numeric:tabular-nums;font-weight:600;
-  white-space:nowrap;
-}
-.toc-list .toc-k b{color:var(--ink);font-weight:700;}
-.toc-list a:hover .toc-t{color:var(--signature);}
-.toc-list a:hover .toc-leader{border-bottom-color:var(--signature);}
-@media(max-width:880px){
-  .toc-section{padding:56px 22px 64px;}
-  .toc-list a{grid-template-columns:40px 1fr;gap:12px;padding:18px 2px;}
-  .toc-list .toc-t{font-size:17px;}
-  .toc-list .toc-leader,.toc-list .toc-k{grid-column:2;display:block;}
-  .toc-list .toc-leader{display:none;}
-  .toc-list .toc-k{margin-top:4px;}
-}
-
-/* === Archive 가로 스크롤 + 카드 높이 통일 === */
-.proj-grid{
-  display:flex !important;
-  gap:14px;
-  overflow-x:auto;
-  scroll-snap-type:x mandatory;
-  padding-bottom:14px;
-  scrollbar-width:thin;
-  scrollbar-color:var(--mute) transparent;
-}
-.proj-grid::-webkit-scrollbar{height:8px;}
-.proj-grid::-webkit-scrollbar-thumb{
-  background:var(--mute);border-radius:4px;
-}
-.proj-grid::-webkit-scrollbar-track{background:transparent;}
-.proj{
-  flex:0 0 360px !important;
-  scroll-snap-align:start;
-  min-height:380px;
-  display:flex !important;
-  flex-direction:column;
-}
-.proj .proj-meta{margin-top:auto;}
-
-@media(max-width:880px){
-  .proj{flex:0 0 280px !important;min-height:320px;}
-}
-
-/* === 제안서 PPT 프레임 (정부지원 사업기획 섹션) === */
-.proposals-section{
-  max-width:1120px;margin:0 auto;
-  padding:64px 24px;
-}
-.proposals-scroll{
-  display:flex;
-  gap:18px;
-  overflow-x:auto;
-  scroll-snap-type:x mandatory;
-  padding:24px 0 24px;
-  margin:0 -24px;padding-left:24px;padding-right:24px;
-  scrollbar-width:thin;
-}
-.proposals-scroll::-webkit-scrollbar{height:8px;}
-.proposals-scroll::-webkit-scrollbar-thumb{background:var(--mute);border-radius:4px;}
-.ppt-card{
-  flex:0 0 460px;
-  scroll-snap-align:start;
-  display:flex;flex-direction:column;
-}
-.ppt-frame{
-  aspect-ratio:16/9;
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:10px;
-  box-shadow:0 10px 32px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.04);
-  position:relative;
-  overflow:hidden;
-  display:flex;align-items:center;justify-content:center;
-  padding:28px 36px;
-  text-align:center;
-}
-.ppt-frame::before{
-  content:"";
-  position:absolute;top:0;left:0;right:0;
-  height:24px;
-  background:#f8f6f0;
-  border-bottom:1px solid var(--line);
-  z-index:1;
-}
-.ppt-frame::after{
-  content:"";
-  position:absolute;top:8px;left:14px;
-  width:9px;height:9px;
-  border-radius:50%;
-  background:#ff5050;
-  box-shadow:14px 0 0 #ffb800, 28px 0 0 #10b981;
-  z-index:2;
-}
-.ppt-frame .ppt-body{
-  margin-top:16px;width:100%;
-  display:flex;flex-direction:column;gap:8px;
-}
-.ppt-frame .ppt-label{
-  font-size:11px;font-weight:700;
-  color:var(--signature);letter-spacing:0.16em;
-  text-transform:uppercase;
-}
-.ppt-frame .ppt-title{
-  font-size:24px;font-weight:900;
-  color:var(--ink);letter-spacing:-0.025em;
-  line-height:1.25;
-}
-.ppt-frame .ppt-sub{
-  font-size:12.5px;color:var(--sub);font-weight:600;
-  line-height:1.5;
-}
-.ppt-card .ppt-meta{
-  margin-top:14px;padding:0 4px;
-}
-.ppt-card .ppt-meta .ppt-meta-title{
-  font-size:14px;font-weight:800;color:var(--ink);
-  letter-spacing:-0.015em;margin-bottom:4px;
-}
-.ppt-card .ppt-meta .ppt-meta-sub{
-  font-size:12px;color:var(--sub);line-height:1.55;
-}
-.ppt-card .ppt-meta .ppt-meta-sub b{color:var(--brand);font-weight:700;}
-
-
-/* === Case 07 illustration 슬라이드 (밝은 종이 카드) === */
-.case-shot.is-illust{
-  aspect-ratio:16/10;
-  background:#fff !important;
-  border:1px solid var(--line) !important;
-  border-radius:14px !important;
-  padding:38px 24px 22px !important;
-  box-shadow:0 8px 28px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04) !important;
-  position:relative;
-  display:flex;flex-direction:column;justify-content:flex-end;gap:6px;
-  overflow:hidden;
-}
-.case-shot.is-illust::before{
-  content:""; display:block !important;
-  position:absolute; top:0; left:0; right:0;
-  height:26px !important; width:auto !important;
-  background:#FAF8F3;
-  border-bottom:1px solid var(--line);
-  border-radius:14px 14px 0 0;
-  transform:none !important;
-}
-.case-shot.is-illust::after{
-  content:"";
-  position:absolute; top:9px; left:14px;
-  width:8px; height:8px; border-radius:50%;
-  background:#ff5050;
-  box-shadow:13px 0 0 #ffb800, 26px 0 0 #10b981;
-  z-index:2; bottom:auto !important; transform:none !important;
-}
-.case-shot.is-illust .ill-chat{
-  margin-top:8px;margin-bottom:8px;
-  display:flex;flex-direction:column;gap:5px;
-  flex:1;justify-content:center;
-}
-.case-shot.is-illust .chat-row{
-  font-size:11px;line-height:1.5;
-  padding:6px 10px;border-radius:8px;
-  background:#F8F6F0;color:var(--body);
-  border:1px solid var(--line);
-}
-.case-shot.is-illust .chat-row.user{
-  background:#FFF5F1;border-color:rgba(142,58,35,0.2);
-}
-.case-shot.is-illust .chat-row.ai{
-  background:#F0F7FF;border-color:rgba(49,130,246,0.2);
-}
-.case-shot.is-illust .chat-row.file{
-  background:#fff;font-family:'Inter',monospace;
-}
-.case-shot.is-illust .chat-row.metric{
-  background:#fff;font-size:11.5px;
-}
-.case-shot.is-illust .chat-row.metric.brand{
-  background:linear-gradient(90deg,rgba(49,130,246,0.08),rgba(123,97,255,0.04));
-  border-color:rgba(49,130,246,0.3);
-}
-.case-shot.is-illust .chat-row .who{
-  font-weight:800;color:var(--signature);margin-right:5px;
-}
-
-.case-shot.is-illust .ill-label{
-  font-size:10.5px;font-weight:700;
-  color:var(--signature);letter-spacing:0.18em;
-  text-transform:uppercase;margin-bottom:6px;
-}
-.case-shot.is-illust .ill-title{
-  font-size:20px;font-weight:900;color:var(--ink);
-  letter-spacing:-0.025em;line-height:1.2;
-}
-.case-shot.is-illust .ill-num{
-  font-family:'Inter',sans-serif;
-  font-size:28px;font-weight:900;
-  color:var(--brand);letter-spacing:-0.03em;line-height:1;
-  margin-top:8px;
-}
-.case-shot.is-illust .ill-sub{
-  font-size:12px;color:var(--sub);font-weight:600;
-  margin-top:2px;line-height:1.4;
-}
-
-/* === Nav 목차화 (UX 디자이너 권장) === */
-.nav{position:sticky;top:0;z-index:50;background:rgba(253,252,250,0.92);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line);}
-.nav-progress{position:absolute;top:0;left:0;right:0;height:2px;background:transparent;z-index:51;}
-.nav-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--signature),var(--brand));transition:width .1s ease;}
-.nav-links a{position:relative;display:inline-flex;align-items:baseline;gap:5px;padding:4px 2px;color:var(--sub);font-weight:600;}
-.nav-links a .num{
-  font-family:'Inter',sans-serif;font-size:10px;font-weight:700;
-  color:var(--mute);letter-spacing:0.04em;
-  font-variant-numeric:tabular-nums;
-}
-.nav-links a:hover{color:var(--ink);}
-.nav-links a:hover .num{color:var(--signature);}
-.nav-links a.active{color:var(--ink);font-weight:800;}
-.nav-links a.active::before{
-  content:"";position:absolute;left:-9px;top:50%;
-  width:3px;height:14px;background:var(--signature);
-  transform:translateY(-50%);border-radius:2px;
-}
-.nav-links a.active .num{color:var(--signature);}
-
-.approach{background:var(--soft);padding:88px 24px;}
-.approach-inner{max-width:1120px;margin:0 auto;}
-.approach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;}
-.approach-card{background:var(--card);border-radius:16px;padding:32px;border:1px solid var(--line);}
-.approach-card .ic{width:36px;height:36px;border-radius:50%;background:transparent;color:var(--signature);border:1.5px solid var(--signature);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:15px;margin-bottom:18px;font-family:Georgia, serif;}
-.approach-card h3{font-size:18px;font-weight:800;color:var(--ink);margin-bottom:10px;letter-spacing:-0.02em;line-height:1.4;}
-.approach-card p{font-size:14.5px;color:var(--body);line-height:1.78;}
-
-.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:24px;}
-.skill-card{border:1px solid var(--line);border-radius:14px;padding:22px;background:#fff;}
-.skill-card h3{font-size:14px;font-weight:800;color:var(--ink);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
-.skill-card .ic{width:24px;height:24px;border-radius:6px;background:var(--brand);color:#fff;font-size:12px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;}
-.pill-list{display:flex;flex-wrap:wrap;gap:5px;}
-.pill-list .pill{background:transparent;color:var(--sub);font-size:11.5px;padding:4px 10px;border-radius:5px;font-weight:600;border:1px solid rgba(122,118,111,0.16);letter-spacing:-0.01em;}
-
-.timeline{border-left:2px solid var(--line);padding-left:24px;margin-top:24px;}
-.timeline-item{position:relative;padding-bottom:28px;}
-.timeline-item::before{content:"";position:absolute;left:-31px;top:6px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid var(--brand);}
-.timeline-item .when{font-size:12px;color:var(--sub);font-weight:700;margin-bottom:4px;}
-.timeline-item .what{font-size:14px;color:var(--ink);font-weight:700;}
-.timeline-item .what a{color:var(--brand);}
-.timeline-item p{font-size:13px;color:var(--body);margin-top:4px;}
-
-.contact{background:var(--ink);color:#fff;padding:80px 24px;text-align:center;}
-.contact h2{font-size:38px;font-weight:800;letter-spacing:-0.03em;margin-bottom:12px;}
-.contact p{font-size:15px;color:#BCBCBC;margin-bottom:28px;}
-.contact-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;}
-.contact-actions .btn{padding:14px 22px;font-size:14px;}
-.contact-actions .btn.primary{background:#fff;color:var(--ink);}
-.contact-actions .btn.ghost{background:transparent;color:#fff;border-color:#444;}
-.contact-info{margin-top:28px;font-size:13px;color:#888;display:flex;justify-content:center;gap:18px;flex-wrap:wrap;}
-
-footer.foot{padding:24px;text-align:center;font-size:11px;color:var(--mute);background:#191919;}
-
 @media print{
-  .nav,.hero-actions,.contact-actions,.contact{display:none!important;}
-  body{background:#fff;}
-  section,.hero,.approach,.contact{padding:18px 16px;break-inside:avoid;}
-  .proj{break-inside:avoid;page-break-inside:avoid;}
-  .company-block{break-inside:avoid;page-break-inside:avoid;}
-  .hero h1{font-size:32px;}
-  .stats{grid-template-columns:repeat(4,1fr);}
+  html.anim .reveal,html.anim .case .beat,html.anim .case .result,html.anim .chips .chip,html.anim .plates .pframe,html.anim .plates img,
+  html.anim .cover-eyebrow,html.anim .cover h1,html.anim .cover-lede,html.anim .cover-meta,html.anim .cover-actions,html.anim .cover .ledger{opacity:1!important;transform:none!important;animation:none!important;}
 }
-@media (max-width:760px){
-  .hero{padding:48px 22px 32px;}
-  .hero h1{font-size:36px;}
-  .stats{grid-template-columns:repeat(2,1fr);padding:0 22px 40px;}
-  section{padding:48px 22px;}
-  .section-title{font-size:24px;}
-  .proj-grid,.approach-grid,.skills{grid-template-columns:1fr;}
-  .company-block{padding:24px 22px;}
-  .company-head{flex-direction:column;}
-  .company-period{text-align:left;}
-  .nav-links{display:none;}
-  .contact{padding:56px 22px;}
-  .contact h2{font-size:28px;}
+#progress{position:fixed;top:0;left:0;right:0;height:2px;background:transparent;z-index:60;pointer-events:none;}
+#progress span{display:block;height:100%;width:0;background:var(--accent);box-shadow:0 0 8px rgba(30,90,64,0.4);transition:width .12s linear;}
+@media (prefers-reduced-motion:reduce){#progress span{transition:none;}}
+/* ───────── PREMIUM MOTION ───────── */
+@media (prefers-reduced-motion:no-preference){
+  html.anim .cover h1 .wr{display:inline-block;overflow:hidden;vertical-align:top;line-height:1.06;padding:0.18em 0.06em 0.16em;margin:-0.18em -0.06em -0.16em;}
+  html.anim .cover h1.reveal-done .wr{overflow:visible;}
+  html.anim .cover h1 .wr>span{display:inline-block;transform:translateY(116%);transition:transform 1s cubic-bezier(.16,1,.3,1);}
+  html.anim .cover h1.words-in .wr>span{transform:none;}
+  html.anim .contact h2{opacity:0;clip-path:inset(0 0 110% 0);}
+  html.anim .contact.in h2{opacity:1;clip-path:inset(0 0 -18% 0);transition:opacity .2s linear,clip-path 1.1s cubic-bezier(.16,1,.3,1);}
+  html.anim .sec-head .eyebrow,html.anim .sec-head .title,html.anim .sec-head .desc{opacity:0;transform:translateY(22px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1);}
+  html.anim .sec-head.in .eyebrow{opacity:1;transform:none;}
+  html.anim .sec-head.in .title{opacity:1;transform:none;transition-delay:.08s;}
+  html.anim .sec-head.in .desc{opacity:1;transform:none;transition-delay:.16s;}
+  html.anim .result .kpi-ledger .k{opacity:0;transform:translateY(14px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1);}
+  html.anim .case.in .result .kpi-ledger .k{opacity:1;transform:none;}
+  html.anim .case.in .result .kpi-ledger .k:nth-child(2){transition-delay:.07s;}
+  html.anim .case.in .result .kpi-ledger .k:nth-child(3){transition-delay:.14s;}
+  html.anim .case.in .result .kpi-ledger .k:nth-child(4){transition-delay:.21s;}
 }
+.mh-links a{position:relative;}
+.mh-links a::after{content:"";position:absolute;left:0;right:100%;bottom:-3px;height:1px;background:var(--accent);transition:right .35s cubic-bezier(.16,1,.3,1);}
+.mh-links a:hover::after{right:0;}
+.mh-links a:hover{color:var(--accent);}
+.plates.dash{grid-template-columns:repeat(2,1fr);gap:12px;}
+.plates.dash .pframe{aspect-ratio:16/9;}
+/* Archive: lead plate only, rest live in the lightbox */
+.arch .plates{grid-template-columns:1fr!important;gap:0;}
+.arch .plates .pframe{aspect-ratio:16/10;}
+.arch .plates .pframe:nth-child(n+2){display:none;}
+.mh-cta{display:flex;gap:7px;flex-wrap:wrap;align-items:center;}
+.mh-dl{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);display:inline-flex;align-items:center;gap:3px;margin-right:4px;padding-right:8px;border-right:1px solid var(--line);}
+.mh-dl .ar{font-size:12px;color:var(--accent);}
 </style>
 </head>
-<body data-doc-key="portfolio">
+<body>
 
-<nav class="nav">
-  <div class="nav-progress"><span id="nav-progress-bar"></span></div>
-  <div class="nav-inner">
-    <a href="#top" class="logo">서현일<span class="dot">.</span></a>
-    <div class="nav-links">
-      <a href="#toc"><span class="num">00</span>목차</a>
-      <a href="#cases"><span class="num">01</span>Cases</a>
-      <a href="#proposals"><span class="num">02</span>제안서</a>
-      <a href="#aboutfishing"><span class="num">03</span>어바웃피싱</a>
-      <a href="#workmate"><span class="num">04</span>웍스메이트</a>
-      <a href="#approach"><span class="num">05</span>Approach</a>
-      <a href="#career"><span class="num">06</span>경력</a>
-      <a href="#contact"><span class="num">07</span>Contact</a>
+<div id="progress" class="no-print"><span id="progress-bar"></span></div>
+
+<!-- ───────── MASTHEAD ───────── -->
+<nav class="masthead no-print">
+  <div class="masthead-inner">
+    <a href="#top" class="mh-brand">서현일<span class="en">Hyunil Seo</span></a>
+    <div class="mh-links">
+      <a href="#cases">케이스</a>
+      <a href="#proposals">정부지원</a>
+      <a href="#archive">아카이브</a>
+      <a href="#approach">일하는 방식</a>
+      <a href="#contact">연락</a>
     </div>
-    <div class="nav-cta">
-      <a href="portfolio-deck.html" class="btn ghost">📊 PPT 덱</a>
-      <a href="resume.html" class="btn ghost">이력서</a>
-      <a href="#contact" class="btn primary">연락하기</a>
+    <div class="mh-cta">
+      <span class="mh-dl">PDF<span class="ar">↓</span></span>
+      <a href="resume.pdf" target="_blank" rel="noopener" title="이력서 PDF 다운로드" class="btn ghost">이력서</a>
+      <a href="career-statement.pdf" target="_blank" rel="noopener" title="경력기술서 PDF 다운로드" class="btn ghost">경력기술서</a>
+      <a href="portfolio-deck.pdf" target="_blank" rel="noopener" title="포트폴리오 덱 PDF 다운로드" class="btn ghost">덱</a>
+      <a href="portfolio.pdf" target="_blank" rel="noopener" title="포트폴리오 PDF 다운로드" class="btn primary">포트폴리오</a>
     </div>
   </div>
 </nav>
 
-<!-- ============ HERO ============ -->
-<section class="hero" id="top">
-  <div class="hero-eyebrow"><span class="dot"></span><span data-edit="hero.eyebrow">AI-Native CPO — Claude로 직접 빌드하는 프로덕트 리더 · Open to opportunities 2026</span></div>
-  <h1>
-    <span data-edit="hero.title1">선상 낚시 <em class="script">4조 시장</em>을</span><br/>
-    <span data-edit="hero.title2" style="color:var(--ink);font-weight:900;">86배로 흔든 슈퍼앱 CPO.</span>
-  </h1>
-  <p class="lead" data-edit="hero.lead">아키마켓 기획자에서 시작해 웍스메이트(가다) PM·PO를 거쳐, 지금은 어바웃피싱에서 9개 도메인 P&amp;L을 총괄하고 있습니다. 어바웃피싱 1년 9개월에 <b>연매출 14.26억</b>(KPI 97.6%), 얼라이언스 예약 4개월 <b>3.63억</b>(월 10→865건, 86배), 자사몰 ARPPU 67K→89.9K(<b>+34%</b>) — 본인이 PRD를 직접 쓴 핵심 3 도메인(예약·쇼핑·홈)의 합산 결과입니다. 웍스메이트에서는 일평균 1,000명 매칭 × 10만원 × 10% 수수료로 <b>월 매출 3억(연 36억)</b> 규모를 운영했고, 청구·지급 ERP MVP로 잔여 3인을 영업·신규 트랙으로 재배치했습니다. 정부지원 4건 100% 선정으로 비희석 자금을 확보했고, SKT TMAP 본계약을 직접 협상했습니다. Claude로 첫 버전을 직접 빌드하고 팀이 정식 빌드를 가져가는 워크플로우로 의사결정 사이클을 <b>3~5배 단축</b>했습니다.</p>
-
-  <div class="hero-meta">
-    <span><b>경력</b> <span data-edit="hero.meta1">6년</span></span>
-    <span><b>현재</b> <span data-edit="hero.meta2">어바웃피싱 등기이사 · CPO</span></span>
-    <span><b>전문</b> <span data-edit="hero.meta3">O2O · 슈퍼앱 · 마켓플레이스</span></span>
+<!-- ───────── COVER ───────── -->
+<header class="cover wrap" id="top">
+  <div class="cover-eyebrow">
+    <span class="eyebrow"><span class="tick"></span>Portfolio — Product Leadership</span>
+    <span class="issue">No. 2026 · Open to opportunities</span>
   </div>
 
-  <div class="hero-actions">
-    <a href="#aboutfishing" class="btn primary">프로젝트 보기</a>
-    <a href="resume.html" class="btn ghost">이력서 (HTML)</a>
-    <a href="resume.pdf" class="btn ghost" download>이력서 PDF ↓</a>
-    <a href="portfolio.pdf" class="btn ghost" download>포트폴리오 PDF ↓</a>
-  </div>
-</section>
+  <h1>제약이 클수록,<br/><em>더 크게</em> 만듭니다.</h1>
 
-<!-- ============ STATS ============ -->
-<div class="stats">
-  <div class="stat">
-    <div class="num"><span data-edit="stats.s1.num">14.26</span><span class="unit" data-edit="stats.s1.unit">억</span></div>
-    <div class="label" data-edit="stats.s1.label">2025 연매출 · 매출 KPI 97.6%</div>
-    <div class="sub" data-edit="stats.s1.sub">2026 4월 단월 1.43억 · 1→4월 +10× · 자사몰 ARPPU 67K→89.9K</div>
-  </div>
-  <div class="stat featured">
-    <div class="num"><span data-edit="stats.s2.num">0.8</span><span class="unit" data-edit="stats.s2.unit">%</span></div>
-    <div class="label" data-edit="stats.s2.label">앱 배포 롤백 1 / 122</div>
-    <div class="sub" data-edit="stats.s2.sub">1년 9개월 운영 · QA 검증율 94% · 이슈 930건 처리</div>
-  </div>
-  <div class="stat">
-    <div class="num"><span data-edit="stats.s3.num">3.63</span><span class="unit" data-edit="stats.s3.unit">억</span></div>
-    <div class="label" data-edit="stats.s3.label">얼라이언스 예약 4개월 누적</div>
-    <div class="sub" data-edit="stats.s3.sub">판매 건 86× · ARPPU 24.87만원 · 연 KPI 28.6억 + 광고 5.4억 별도</div>
-  </div>
-  <div class="stat">
-    <div class="num"><span data-edit="stats.s4.num">6→3</span><span class="unit" data-edit="stats.s4.unit">인/월</span></div>
-    <div class="label" data-edit="stats.s4.label">청구·지급 운영 인력 (웍스메이트 ERP)</div>
-    <div class="sub" data-edit="stats.s4.sub">웍스메이트 월 매출 3억 운영 중 ERP MVP로 인력 절감</div>
-  </div>
-  <div class="stat featured">
-    <div class="num"><span data-edit="stats.s5.num">3~5</span><span class="unit" data-edit="stats.s5.unit">×</span></div>
-    <div class="label" data-edit="stats.s5.label">AI × Claude로 빌드 사이클 단축</div>
-    <div class="sub" data-edit="stats.s5.sub">포트폴리오 · 운영 대시보드 · 사업계획서 4건 직접 빌드</div>
-  </div>
-</div>
+  <p class="lede cover-lede">
+    건설에서 낚시까지, <b>오프라인 산업을 앱으로 옮겨 온 7년차 PM·PO·CPO</b>입니다. 시장이 달라도 방식은 같습니다 — 전부 만들지 않고, <b>가장 비싼 문제부터 작게 검증</b>합니다. 제품에 더해 운영·자금·파트너십까지 확보해, 결국 매출로 증명해 왔습니다.
+  </p>
 
-<!-- ============ TOC (Editorial Index) ============ -->
-<section class="toc-section" id="toc">
-  <div class="toc-inner">
-    <div class="toc-head">
-      <span class="toc-eye">Contents</span>
-      <span class="toc-meta">7 Cases · 2019—2025</span>
+  <div class="cover-meta">
+    <div class="item"><span class="l">경력</span><span class="v">7년차</span></div>
+    <div class="item"><span class="l">현재</span><span class="v">어바웃피싱 · 등기이사 · CPO</span></div>
+    <div class="item"><span class="l">전문</span><span class="v">O2O · 슈퍼앱 · 마켓플레이스</span></div>
+    <div class="item"><span class="l">상태</span><span class="v it">Open to opportunities</span></div>
+  </div>
+
+  <div class="cover-actions">
+    <a href="#cases" class="btn primary">케이스 읽기</a>
+    <a href="resume.html" class="btn">이력서</a>
+    <a href="career-statement.html" class="btn">경력기술서</a>
+    <a href="portfolio-deck.html" class="btn">포트폴리오 덱</a>
+  </div>
+
+  <div class="ledger">
+    <div class="cell">
+      <div class="cap">2025 연매출</div>
+      <div class="stat-num">14.26<span class="u">억</span></div>
+      <div class="lbl">어바웃피싱 매출</div>
+      <div class="sub">사업 KPI 대비 97.6% 달성</div>
     </div>
-    <ol class="toc-list">
-      <li><a href="#case-1">
-        <span class="toc-n">01</span>
-        <span class="toc-t">예약 / 얼라이언스</span>
-        <span class="toc-leader"></span>
-        <span class="toc-k"><b>3.63억</b> · 86배</span>
-      </a></li>
-      <li><a href="#case-2">
-        <span class="toc-n">02</span>
-        <span class="toc-t">쇼핑 / 자사몰</span>
-        <span class="toc-leader"></span>
-        <span class="toc-k"><b>14.26억</b> · ARPPU +34%</span>
-      </a></li>
-      <li><a href="#case-3">
-        <span class="toc-n">03</span>
-        <span class="toc-t">홈 / 가입</span>
-        <span class="toc-leader"></span>
-        <span class="toc-k">회원 전환율 <b>65%</b></span>
-      </a></li>
-      <li><a href="#case-4">
-        <span class="toc-n">04</span>
-        <span class="toc-t">커뮤니티 / 중고장터</span>
-        <span class="toc-leader"></span>
-        <span class="toc-k">더치트 검증 · 상세 정보</span>
-      </a></li>
-      <li><a href="#case-5">
-        <span class="toc-n">05</span>
-        <span class="toc-t">청구·지급 ERP MVP</span>
-        <span class="toc-leader"></span>
-        <span class="toc-k"><b>−50%</b> 운영 인력</span>
-      </a></li>
-      <li><a href="#case-6">
-        <span class="toc-n">06</span>
-        <span class="toc-t">v2→v4 3축 풀리뉴얼</span>
-        <span class="toc-leader"></span>
-        <span class="toc-k">PM→PO 승격</span>
-      </a></li>
-      <li><a href="#case-7">
-        <span class="toc-n">07</span>
-        <span class="toc-t">AI × CPO 프로세스</span>
-        <span class="toc-leader"></span>
-        <span class="toc-k">1주→1일 · <b>3~5×</b></span>
-      </a></li>
-    </ol>
-  </div>
-</section>
-
-<!-- ============ WHY THIS WORK / SIGNATURE ============ -->
-<section id="why" style="padding-top:24px;padding-bottom:48px;">
-  <div class="why-grid">
-    <div class="why-text">
-      <div class="section-eyebrow" data-edit="why.eyebrow">Why this work</div>
-      <h2 class="section-title" data-edit="why.title">건설에서 낚시로,<br/>같은 결, 다른 판.</h2>
-      <p class="why-body" data-edit="why.body">
-        아키마켓·가다에서 다룬 건설 일용직 사용자의 핵심 과제는 "일감과 인력의 매칭", 어바웃피싱 낚시 사용자의 핵심 과제는 "경험(예약·조황·커뮤니티)과 거래의 통합"입니다. 도메인은 다르지만 둘 다 <b>물리적 제약을 소프트웨어로 녹이는 O2O</b>이고, 가다에서 얻은 <b>‘구인구직 플랫폼의 신뢰 설계’ 경험을 예약·결제·커뮤니티 보상</b>으로 그대로 옮겼습니다.
-      </p>
-      <p class="why-body" data-edit="why.body2">
-        낚시 시장은 시즌성·대회 문화·고관여 장비·세대별 락인이 모두 작용하는 독특한 도메인이라, 단순 커머스 플랫폼이나 단순 커뮤니티가 아닌 <b>슈퍼앱</b>으로 묶을 때만 임팩트가 납니다. 그래서 등기이사·CPO로서 9개 도메인을 동시에 총괄합니다.
-      </p>
+    <div class="cell">
+      <div class="cap">예약 단월 건수</div>
+      <div class="stat-num">865<span class="u">건</span></div>
+      <div class="lbl">2026년 3월 예약 판매</div>
+      <div class="sub">2월 10건에서 한 달 만에 86배</div>
     </div>
-    <div class="why-chart">
-      <div class="sig-card">
-        <div class="sig-label">Same Thinking · Two Outcomes</div>
-        <div class="sig-title">같은 사고, 두 도메인.</div>
-        <svg viewBox="0 0 340 220" xmlns="http://www.w3.org/2000/svg" class="sig-chart">
-          <!-- 좌: 가다 ERP -->
-          <text x="55" y="22" text-anchor="middle" font-size="10" font-weight="700" fill="#85817A" letter-spacing="0.5">웍스메이트 · ERP</text>
-          <rect x="30" y="40" width="20" height="120" rx="3" fill="#FF5050" opacity="0.85"/>
-          <text x="40" y="36" text-anchor="middle" font-size="11" font-weight="800" fill="#FF5050" font-family="Inter">6명</text>
-          <rect x="60" y="100" width="20" height="60" rx="3" fill="#10B981" opacity="0.95"/>
-          <text x="70" y="96" text-anchor="middle" font-size="11" font-weight="800" fill="#10B981" font-family="Inter">3명</text>
-          <text x="40" y="178" text-anchor="middle" font-size="9" fill="#85817A">Before</text>
-          <text x="70" y="178" text-anchor="middle" font-size="9" fill="#85817A">After</text>
-          <text x="55" y="198" text-anchor="middle" font-size="13" font-weight="900" fill="#1A1814" font-family="Inter">−50%</text>
-          <text x="55" y="212" text-anchor="middle" font-size="9" fill="#85817A">청구·지급 운영 인력</text>
-          <!-- 가운데 divider -->
-          <line x1="170" y1="40" x2="170" y2="180" stroke="#EDEAE0" stroke-width="1" stroke-dasharray="3 3"/>
-          <text x="170" y="32" text-anchor="middle" font-size="10" font-weight="700" fill="#8E3A23">같은 사고</text>
-          <text x="170" y="105" text-anchor="middle" font-size="10" font-style="italic" fill="#8E3A23">가장 비싼</text>
-          <text x="170" y="118" text-anchor="middle" font-size="10" font-style="italic" fill="#8E3A23">한 단계만</text>
-          <text x="170" y="131" text-anchor="middle" font-size="10" font-style="italic" fill="#8E3A23">자른다</text>
-          <!-- 우: AF 얼라이언스 -->
-          <text x="270" y="22" text-anchor="middle" font-size="10" font-weight="700" fill="#85817A" letter-spacing="0.5">어바웃피싱 · 얼라이언스</text>
-          <rect x="240" y="155" width="20" height="5" rx="2" fill="#85817A" opacity="0.6"/>
-          <text x="250" y="151" text-anchor="middle" font-size="11" font-weight="800" fill="#85817A" font-family="Inter">10건</text>
-          <rect x="280" y="55" width="20" height="105" rx="3" fill="#3182F6" opacity="0.95"/>
-          <text x="290" y="51" text-anchor="middle" font-size="11" font-weight="800" fill="#3182F6" font-family="Inter">865건</text>
-          <text x="250" y="178" text-anchor="middle" font-size="9" fill="#85817A">2월</text>
-          <text x="290" y="178" text-anchor="middle" font-size="9" fill="#85817A">4월</text>
-          <text x="270" y="198" text-anchor="middle" font-size="13" font-weight="900" fill="#1A1814" font-family="Inter">86배</text>
-          <text x="270" y="212" text-anchor="middle" font-size="9" fill="#85817A">월 예약 거래 건수</text>
+    <div class="cell">
+      <div class="cap">자사몰 ARPPU</div>
+      <div class="stat-num">89,925<span class="u">원</span></div>
+      <div class="lbl">결제 1인 평균 매출</div>
+      <div class="sub">전년 67,000원 대비 34% 상승</div>
+    </div>
+    <div class="cell">
+      <div class="cap">릴리즈 신뢰성</div>
+      <div class="stat-num">122<span class="pre"> / </span>1</div>
+      <div class="lbl">배포 / 롤백</div>
+      <div class="sub">롤백률 0.8% · QA 검증율 94%</div>
+    </div>
+  </div>
+</header>
+
+<!-- ───────── PROLOGUE ───────── -->
+<section class="band recess" id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow"><span class="tick"></span>Prologue</div>
+      <h2 class="title">건설에서 낚시로,<br/><em>같은 사고</em>의 다른 시장.</h2>
+      <p class="desc">시장은 다르지만, 문제를 푸는 방식은 하나입니다 — 가장 비싼 한 단계부터 자릅니다.</p>
+    </div>
+
+    <div class="prologue">
+      <div class="body reveal">
+        <p>지난 7년간 제가 다룬 일은 하나로 모입니다 — <b>오프라인의 거래를 앱 안으로 옮기는 일</b>입니다. 아키마켓과 가다에서는 건설 현장의 일감과 사람을 이었고, 지금 어바웃피싱에서는 낚시의 경험과 거래를 잇습니다. 시장은 건설에서 낚시로 바뀌었지만, 풀어야 할 문제의 구조는 같았습니다.</p>
+        <p>방식도 늘 같았습니다. <b>전부 만들지 않고, 가장 비싼 문제부터 풉니다.</b> 가다에서는 시스템 전체 대신 청구·지급만 떼어내 운영 인력을 절반으로 줄였고, 어바웃피싱에서는 자사 직판 대신 외부 사업자 입점만 먼저 열어 월 거래를 86배로 키웠습니다. 손대는 순서가 결과를 갈랐습니다.</p>
+        <p>낚시 시장은 그 한 수가 특히 중요한 곳입니다. 시즌과 대회 문화, 고관여 장비, 세대별 습관이 한꺼번에 맞물려, 단순 커머스나 커뮤니티 하나로는 시장을 잡지 못합니다. <b>아홉 개 도메인을 하나의 슈퍼앱으로 묶을 때 비로소 선점이 가능</b>합니다. 그래서 등기이사·CPO로서 그 아홉 개를 동시에 총괄하고 있습니다.</p>
+      </div>
+
+      <aside class="case-card reveal">
+        <div class="ct">Same Thinking · Two Outcomes</div>
+        <h3>가장 비싼 곳부터.</h3>
+        <svg viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+          <text x="62" y="20" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="10" font-weight="700" fill="#938C7B">가다 · ERP</text>
+          <rect x="42" y="44" width="22" height="116" fill="#1B1A16"/>
+          <text x="53" y="38" text-anchor="middle" font-family="Newsreader,serif" font-size="13" font-weight="600" fill="#1B1A16">6명</text>
+          <rect x="74" y="102" width="22" height="58" fill="#1E5A40"/>
+          <text x="85" y="96" text-anchor="middle" font-family="Newsreader,serif" font-size="13" font-weight="600" fill="#1E5A40">3명</text>
+          <text x="68" y="184" text-anchor="middle" font-family="Newsreader,serif" font-style="italic" font-size="20" font-weight="600" fill="#1B1A16">−50%</text>
+          <line x1="160" y1="44" x2="160" y2="172" stroke="#D8D1BF" stroke-width="1" stroke-dasharray="3 3"/>
+          <text x="258" y="20" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="10" font-weight="700" fill="#938C7B">어바웃피싱 · 예약</text>
+          <rect x="226" y="155" width="22" height="5" fill="#938C7B"/>
+          <text x="237" y="149" text-anchor="middle" font-family="Newsreader,serif" font-size="13" font-weight="600" fill="#938C7B">10건</text>
+          <rect x="268" y="58" width="22" height="102" fill="#1E5A40"/>
+          <text x="279" y="52" text-anchor="middle" font-family="Newsreader,serif" font-size="13" font-weight="600" fill="#1E5A40">865건</text>
+          <text x="258" y="184" text-anchor="middle" font-family="Newsreader,serif" font-style="italic" font-size="20" font-weight="600" fill="#1B1A16">86×</text>
         </svg>
-        <div class="sig-cap" data-edit="why.sig">가다 ERP는 SCM 전체가 아닌 청구·지급만 잘라 운영 인력 절반. 어바웃피싱 얼라이언스는 자사 직판이 아닌 외부 사업자 입점만 잘라 월 거래 86배. 도메인은 달라도 같은 사고입니다.</div>
-      </div>
+        <div class="cap">가다 ERP는 시스템 전체가 아닌 청구·지급만, 예약은 자사 직판이 아닌 외부 입점만 풀었습니다. 가장 비싼 문제부터 푸는 같은 방식입니다.</div>
+      </aside>
     </div>
   </div>
 </section>
 
-<!-- ============ FEATURED CASES (Top 6) ============ -->
-<section class="featured-cases" id="cases">
-  <div class="featured-cases-inner">
-    <div class="section-head">
-      <div class="section-eyebrow">Featured Cases · 임팩트 순</div>
-      <h2 class="section-title">일곱 개의 <em>결정</em>.</h2>
-      <p class="section-desc">매출, 운영비, 사용자 — 세 종류의 임팩트. 각 카드에 무엇을 풀려 했고, 왜 이쪽을 택했으며, 어떤 결정을 했고, 무엇이 남았는지를 펴 놓았습니다.</p>
+<!-- ───────── TABLE OF CONTENTS ───────── -->
+<section class="band" id="contents" style="padding-top:72px;padding-bottom:0;">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:32px;">
+      <div class="eyebrow"><span class="tick"></span>Featured Cases · 임팩트 순</div>
+      <h2 class="title">일곱 개의 <em>결정</em>.</h2>
+      <p class="desc">각 케이스를 <b>왜 했나 · 어떻게 했나 · 무엇이 남았나</b> 세 마디로 폈습니다. 매출·운영비·사용자, 세 종류의 임팩트 순서입니다.</p>
     </div>
-
-    <div class="cases-list">
-
-      <!-- ===== CASE 01 — AF 예약/얼라이언스 ===== -->
-      <article class="case" id="case-1">
-        <div class="case-num">01</div>
-        <div class="case-head">
-          <div class="case-eyebrow"><span>AboutFishing</span><span class="role">CPO · PO</span><span class="year">2026 · Q1</span></div>
-          <h3 class="case-title">예약 / 얼라이언스 — 한 달 10건이 <em>865건</em>이 되기까지.</h3>
-          <p class="case-headline">월 예약 10건을 865건으로, 네 달 만에 86배 키웠습니다.</p>
-          <div class="case-chips">
-            <span class="chip terra"><b>3.63억</b> 4개월 누적 (연 KPI 28.6억)</span>
-            <span class="chip"><b>86×</b> 월 판매 건</span>
-            <span class="chip"><b>24.87만</b> 예약 ARPPU</span>
-            <span class="chip"><b>19.5%</b> 4월 재구매</span>
-          </div>
-        </div>
-
-        <div class="case-shots">
-          <div class="case-shot"><img src="images/af_booking/new_1.jpg" alt="예약 홈 — 선박 예약 검색" loading="lazy"></div>
-          <div class="case-shot"><img src="images/af_booking/new_2.jpg" alt="선박 상세 — 만선호" loading="lazy"></div>
-          <div class="case-shot"><img src="images/af_booking/new_3.jpg" alt="예약 결제 — 광어/우럭" loading="lazy"></div>
-          <div class="case-shot"><img src="images/af_booking/new_4.jpg" alt="예약 신청 완료" loading="lazy"></div>
-        </div>
-
-        <div class="case-body">
-          <div class="case-axis terra">
-            <h4><span class="num">i.</span> 무엇을 풀려 했나</h4>
-            <p>선상 낚시는 사용자가 결제까지 거치는 의사결정 단계가 가장 많은 도메인입니다. <b>어떤 배에서, 어떤 어종을, 얼마에</b> 가는지를 한 화면에서 끝내야 하고, 조황 데이터가 구매 전환의 핵심 트리거였습니다. 자사 선박 직판이 아닌 외부 사업자 입점 — <em>얼라이언스</em> 구조를 택한 이유는, 4조 시장의 본질이 공급의 분산이기 때문입니다. 직판이었다면 마진은 컸겠지만 86배는 만들지 못했을 것입니다.</p>
-          </div>
-          <div class="case-axis terra">
-            <h4><span class="num">ii.</span> 왜 이쪽이었나</h4>
-            <p>직판으로 10건을 늘리려면 선박 영업 인력을 더 뽑아야 했는데, 시리즈A 규모에서 그 ROI가 안 나왔습니다. 그래서 영업 조직 R&R로 두고, 제품팀은 입점 선장에게 <b>예약 알림·정산 자동화·조황 연계</b> 세 가지를 제공해, 직접 모객하는 것보다 우리 앱에 올리는 게 이득이 되도록 설계했습니다. 수요(사용자 예약)와 공급(선장 일정)을 같은 예약 화면에 묶었고, <em>4개월 만에 월 거래 10건에서 865건</em>으로 늘었습니다.</p>
-          </div>
-          <div class="case-axis">
-            <h4><span class="num">iii.</span> 사용자의 동선</h4>
-            <p>검색 → 선박 상세 → 가격·옵션·날짜 → 결제 → 알림 → 정산. 6단계 중 이탈이 가장 많은 지점은 <b>옵션 분기</b>였습니다. 어종·인원·승선일이 가격에 미치는 영향을 한 화면에서 보여주지 않으면 다음 단계로 가지 않습니다. 옵션 가시화가 <em>전환율 개선</em>의 핵심 레버였습니다.</p>
-          </div>
-          <div class="case-axis">
-            <h4><span class="num">iv.</span> 결정의 한 점</h4>
-            <p>예약 전환의 가장 큰 결정 요인은 조황 데이터였습니다. 사용자가 사진을 믿어야 결제까지 가는데, 그러려면 원본 사진과 어종 태그가 같은 카드 안에 있어야 했습니다. 조황 카드를 <b>사진 우선 · 어종 태그 · 선박 링크</b> 세 축으로 재설계했습니다. 조황 카드 재설계 하나로 예약 전환의 <em>신뢰 지표</em>가 개선됐습니다.</p>
-          </div>
-          <div class="case-axis span-2">
-            <h4><span class="num">v.</span> 숫자로 남은 것</h4>
-            <p><b>회원 전환율 65%</b>(가입 시도→완료 기준) 달성. 신규 회원 가입 4개월 누적 <b>10,329명</b> · 4월 AOS 가입률 51% · 가입 직후 D+1 재방문 우상향. 가입 → 개인화 홈 → 예약·쇼핑 첫 진입까지 한 사이클이 짧아진 결과입니다.<b>3.63억</b>(연 KPI 28.6억 대비 12.7% 진행) · 월 판매 10건(베이스) → 865건 (<b>86×</b>) · 거래액 기준 2월 192만 → 4월 1.99억 · 예약 ARPPU <b>24.87만원</b>(누적, 4월 단월 최대 29.1만원) · 4월 재구매율 <b>19.5%</b>.</p>
-          </div>
-        </div>
-
-        <div class="case-meta">
-          <div class="case-meta-block">
-            <span class="meta-label">함께 만든 사람</span>
-            PM 1, BE 2, FE 2, Designer 1, QA 1, 얼라이언스 운영팀 2. 본인 역할 — 사업 모델·예약 IA·결제·정산 정책 정의, KPI 트래킹 구조, 운영 핸드오프.
-          </div>
-          <div class="case-meta-block">
-            <span class="meta-label">이번에 안 한 결정</span>
-            자사 선박 직판 인벤토리. 마진은 더 컸지만 시장의 분산 구조와 맞지 않아 의도적으로 일정 단계 회전 이후로 미뤘습니다.
-          </div>
-        </div>
-      </article>
-
-      <!-- ===== CASE 02 — AF 쇼핑/자사몰 ===== -->
-      <article class="case" id="case-2">
-        <div class="case-num">02</div>
-        <div class="case-head">
-          <div class="case-eyebrow"><span>AboutFishing</span><span class="role">CPO · PM</span><span class="year">2025 — 2026</span></div>
-          <h3 class="case-title">쇼핑 / 자사몰 — <em>외부 쇼핑몰</em>이 닫혔습니다.</h3>
-          <p class="case-headline">외부 쇼핑몰로 새던 재구매 트래픽을 자사몰로 회수했습니다.</p>
-          <div class="case-chips">
-            <span class="chip terra"><b>14.26억</b> 2025 연 매출</span>
-            <span class="chip"><b>+34%</b> 자사몰 ARPPU</span>
-            <span class="chip"><b>597건</b> 자사몰 주문 (4개월)</span>
-            <span class="chip"><b>+10×</b> 1→4월 단월 (143M)</span>
-          </div>
-        </div>
-
-        <div class="case-shots">
-          <div class="case-shot"><img src="images/af_commerce/new_1.jpg" alt="쇼핑 홈 — 어종 카테고리" loading="lazy"></div>
-          <div class="case-shot"><img src="images/af_commerce/new_2.jpg" alt="상품 상세 — 시마노 켈커타" loading="lazy"></div>
-          <div class="case-shot"><img src="images/af_commerce/new_3.jpg" alt="장바구니" loading="lazy"></div>
-          <div class="case-shot"><img src="images/af_commerce/new_4.jpg" alt="결제 — 주문하기" loading="lazy"></div>
-        </div>
-
-        <div class="case-body">
-          <div class="case-axis terra">
-            <h4><span class="num">i.</span> 무엇을 풀려 했나</h4>
-            <p>커뮤니티만으로는 매출이 안 났고, 사용자의 구매 동선은 외부 쇼핑몰로 새고 있었습니다. <b>쇼핑→결제 풀퍼널</b>을 앱 안에서 끝내, 매출과 행동 데이터를 동시에 <em>우리 몰</em>로 가져오는 게 목표였습니다.</p>
-          </div>
-          <div class="case-axis terra">
-            <h4><span class="num">ii.</span> 왜 이쪽이었나</h4>
-            <p>매출 채널은 스마트스토어 73% · 자사몰 20% · 기타 7%. 외부 의존이 큰 구조였습니다. 스마트스토어 73%를 당장 끊지 않았습니다. 외부 채널 매출은 그대로 받으면서, 자사몰 ARPPU만 <em>별도 KPI</em>로 분리해 운영했습니다. 외부 채널 매출에 묻혀 자사몰 개선이 보이지 않던 게 문제였는데, KPI를 분리하니 4개월간 67K → 89.9K(+34%)까지 끌어올렸습니다.</p>
-          </div>
-          <div class="case-axis">
-            <h4><span class="num">iii.</span> 사용자의 동선</h4>
-            <p>홈 → 카테고리 → 상세 → 장바구니 → 주문 → 결제. 가장 비싼 이탈점은 <b>가격 인지</b>였습니다. 쿠폰·할인율 표기를 <em>두 색 규칙</em>으로 정리했습니다 — 일반 할인은 초록, 프로모션은 빨강. 결제수단(카드 / NPay / 카카오) 분기와 실패 시나리오를 한 화면 안에 통합했습니다.</p>
-          </div>
-          <div class="case-axis">
-            <h4><span class="num">iv.</span> 결정의 한 점</h4>
-            <p>머니 사용률 28% 정착의 결정 트리거는 <em>큐레이션</em>이었습니다. 카테고리 트리를 <b>어종 / 장비</b> 두 축으로 재구성하고, 사용자별 관심어종 데이터를 홈으로 끌어왔습니다. 카테고리 IA를 바꾼 한 결정이 리텐션 곡선을 들어 올렸습니다.</p>
-          </div>
-          <div class="case-axis span-2">
-            <h4><span class="num">v.</span> 숫자로 남은 것</h4>
-            <p>2025 커머스 연매출 <b>13.31억</b> (스마트스토어 10.4 + 자사몰 2.9) · 2026 4월 단월 <b>1.43억</b> · 1→4월 <b>+10×</b> · 자사몰 4개월 누적 <b>597건</b> 주문 · 자사몰 ARPPU <b>67K → 89.9K(+34%)</b> · 머니 사용률 <b>28%</b> 정착(매출 대비). 외부 채널 매출을 지키면서 자사몰을 키운 게 이 케이스의 핵심입니다.</p>
-          </div>
-        </div>
-
-        <div class="case-meta">
-          <div class="case-meta-block">
-            <span class="meta-label">함께 만든 사람</span>
-            PM 1, BE 2, FE 2, QA 1, Designer 1. 본인 역할 — 풀퍼널 IA, 쿠폰·결제 정책, 카테고리 큐레이션 의사결정, ARPPU·재방문 KPI 운영.
-          </div>
-          <div class="case-meta-block">
-            <span class="meta-label">이번에 안 한 결정</span>
-            스마트스토어 의존 축소. 채널을 합산해 보면 안 보이던 학습이, <b>분리 KPI</b>로 떼서 보니 빠르게 나왔습니다. 외부 트래픽을 그대로 둔 채 자사몰만 키웁니다.
-          </div>
-        </div>
-      </article>
-
-      <!-- ===== CASE 03 — AF 홈/가입 ===== -->
-      <article class="case" id="case-3">
-        <div class="case-num">03</div>
-        <div class="case-head">
-          <div class="case-eyebrow"><span>AboutFishing</span><span class="role">CPO · PO</span><span class="year">2025 — 2026</span></div>
-          <h3 class="case-title">홈 / 가입 — 회원 전환율 <em>65%</em></h3>
-          <p class="case-headline">카카오 로그인 + 휴대폰 점유인증으로 가입 마찰을 줄이고, 가입 직후 취향정보를 수집해 개인화 홈을 구현했습니다.</p>
-          <div class="case-chips">
-            <span class="chip terra"><b>65%</b> 회원 전환율</span>
-            <span class="chip"><b>카카오</b> 소셜 로그인</span>
-            <span class="chip"><b>점유인증</b> 휴대폰 본인확인</span>
-            <span class="chip"><b>관심어종</b> 개인화 홈 키</span>
-          </div>
-        </div>
-
-        <div class="case-shots">
-          <div class="case-shot"><img src="images/af_home/new_1.jpg" alt="스플래시 — 카카오·Apple 로그인" loading="lazy"></div>
-          <div class="case-shot"><img src="images/af_home/new_2.jpg" alt="휴대폰 점유인증" loading="lazy"></div>
-          <div class="case-shot"><img src="images/af_home/new_3.jpg" alt="주 낚시 장소 선택" loading="lazy"></div>
-          <div class="case-shot"><img src="images/af_home/new_4.jpg" alt="관심 어종 선택" loading="lazy"></div>
-        </div>
-
-        <div class="case-body">
-          <div class="case-axis terra">
-            <h4><span class="num">i.</span> 무엇을 풀려 했나</h4>
-            <p>신규 사용자가 *가입 단계에서 가장 많이 이탈*하던 게 문제였습니다. 이메일·비밀번호·약관·인증·프로필을 거치는 다단 가입을 단순화하면서, *개인화 추천을 위한 최소 정보*는 가입 시점에 함께 수집해 두는 게 목표였습니다.</p>
-          </div>
-          <div class="case-axis terra">
-            <h4><span class="num">ii.</span> 왜 이쪽이었나</h4>
-            <p><b>카카오 소셜 로그인</b>으로 이메일·비밀번호 입력을 없애고, <b>휴대폰 점유인증</b>으로 본인확인 단계를 한 번에 끝냈습니다. 가입 마찰이 가장 큰 두 단계를 동시에 해결한 게 회원 전환율 <em>65%</em>의 핵심이었습니다.</p>
-          </div>
-          <div class="case-axis">
-            <h4><span class="num">iii.</span> 사용자의 동선</h4>
-            <p>이메일·비번·약관·프로필·관심사·지역으로 늘어지던 다단 가입을 <b>3단(닉네임 · 관심어종 · 지역)</b>으로 압축했습니다. 가입 직후 <em>맞춤 콘텐츠</em>가 보이도록 — 첫 5분 안에 가치를 체감하게 합니다.</p>
-          </div>
-          <div class="case-axis">
-            <h4><span class="num">iv.</span> 결정의 한 점</h4>
-            <p><em>관심 어종</em>이 홈·예약·쇼핑·커뮤니티 4개 도메인의 추천 로직 공통 키였습니다. 가입 단계에서 받은 이 한 입력값으로 첫 진입 홈의 콘텐츠가 사용자마다 다르게 구성되도록 설계했습니다. <b>가입의 마지막 단계가 곧 개인화의 첫 단계</b>가 되도록 만든 것이 핵심이었습니다.</p>
-          </div>
-          <div class="case-axis span-2">
-            <h4><span class="num">v.</span> 숫자로 남은 것</h4>
-            <p>신규 회원 가입 4개월 누적 <b>10,329명</b> · 4월 AOS 가입률 51%. 스플래시 → 홈 이탈률 1자릿수 유지 · 홈 카테고리 진입률 우상향 (포인트맵·심해갑이·최신조황 순) · 인기 검색어 클릭률 두 자릿수 · 가입 완료율 개선 · D+1 재방문 우상향. 9도메인 슈퍼앱이 첫 30초 안에 "이게 내 앱이다"라는 인식을 만들었습니다.</p>
-          </div>
-        </div>
-
-        <div class="case-meta">
-          <div class="case-meta-block">
-            <span class="meta-label">함께 만든 사람</span>
-            CPO·PO(본인), Designer 1, FE 1, BE 1. 본인 역할 — 가입 플로우 재설계, 카카오·휴대폰 인증 도입 결정, 취향 데이터 모델 설계, 개인화 홈 추천 키 정의.
-          </div>
-          <div class="case-meta-block">
-            <span class="meta-label">이번에 안 한 결정</span>
-            1뎁스에 9도메인 전부 노출. <b>점진 노출</b>이 더 강했습니다. 머니·중고·알람은 사용자가 필요로 할 때 나타나도록 미뤘습니다.
-          </div>
-        </div>
-      </article>
-
-      <!-- ===== CASE 04 — AF 커뮤니티/중고 ===== -->
-      <article class="case" id="case-4">
-        <div class="case-num">04</div>
-        <div class="case-head">
-          <div class="case-eyebrow"><span>AboutFishing</span><span class="role">CPO · PO</span><span class="year">2025</span></div>
-          <h3 class="case-title">커뮤니티 / 중고장터 — 사기 리스크를 <em>먼저 잘라낸</em> C2C.</h3>
-          <p class="case-headline">더치트 검사·상세 정보 필수 입력으로 중고 거래 사기 리스크를 먼저 차단했습니다.</p>
-          <div class="case-chips">
-            <span class="chip terra"><b>더치트</b> 사기 이력 검증</span>
-            <span class="chip"><b>상세 정보</b> 필수 입력 유도</span>
-            <span class="chip"><b>5축</b> 신고 카테고리</span>
-            <span class="chip"><b>DAU</b> 우상향</span>
-          </div>
-        </div>
-
-        <div class="case-shots">
-          <div class="case-shot"><img src="images/af_community/1.jpg" alt="커뮤니티 피드 홈" loading="lazy"></div>
-          <div class="case-shot"><img src="images/af_market/new_1.jpg" alt="중고장터 홈 — 매물 목록" loading="lazy"></div>
-          <div class="case-shot"><img src="images/af_market/new_2.jpg" alt="거래 채팅" loading="lazy"></div>
-          <div class="case-shot"><img src="images/af_market/new_3.jpg" alt="매물 상세 — 더치트 검증" loading="lazy"></div>
-        </div>
-
-        <div class="case-body">
-          <div class="case-axis terra">
-            <h4><span class="num">i.</span> 무엇을 풀려 했나</h4>
-            <p>낚시 장비는 고가에 회전이 빠른 카테고리라 C2C 수요가 크지만, *사기·분쟁 리스크*도 그만큼 큰 도메인입니다. 1) 거래 시작 전 <b>더치트 API</b>로 판매자 사기 이력을 검증하고, 2) 버티컬 플랫폼이라는 강점을 살려 <b>장비명·연식·상태·실착용 사진</b> 등 상세 정보를 등록 시점에 필수로 받게 설계했습니다. 동시에 커뮤니티 피드와 중고장터를 같은 카드 컴포넌트·UX writing으로 묶어, 사용자가 두 도메인 사이를 자연스럽게 오가도록 했습니다.</p>
-          </div>
-          <div class="case-axis terra">
-            <h4><span class="num">ii.</span> 왜 이쪽이었나</h4>
-            <p>중고는 사기·분쟁이 잦습니다. 거래 단계마다 상태와 책임 소재를 분리했다 — <b>등록 / 대화 / 거래완료 / 분쟁 / 신고</b>. 어디부터 사용자 책임이고 어디까지 운영 개입인지를, 거래 흐름의 <em>단계마다</em> 끊어 정의했습니다. C2C는 분쟁·CS 비용이 빠르게 누적되는 구조여서, 기능보다 운영 정책을 먼저 설계했습니다.</p>
-          </div>
-          <div class="case-axis">
-            <h4><span class="num">iii.</span> 사용자의 동선</h4>
-            <p>매물 등록 폼을 <b>장비 카테고리(릴·로드·소품·기타) → 모델명 → 연식 → 상태 등급 → 사진 4장</b>으로 단계화해, 사용자가 한 화면씩 채우게 했습니다. 일반 중고 플랫폼이 자유 텍스트 한 칸에 모든 정보를 받는 것과 달리, 버티컬 플랫폼이라 *낚시 장비에 특화된 정보 구조*를 강제할 수 있었습니다. 동시에 커뮤니티 피드와 중고장터의 UX writing(호칭·동사)을 통일해 도메인 간 호흡을 맞췄습니다.</p>
-          </div>
-          <div class="case-axis">
-            <h4><span class="num">iv.</span> 결정의 한 점</h4>
-            <p>신고·분쟁 <em>응답 속도</em>가 곧 재방문 지표로 이어졌습니다. 신고 카테고리를 5축으로 좁히고, 운영팀 응답 SLA를 명시. 신고·분쟁 응답이 빠른 카테고리일수록 재거래율이 따라 올라온다는 걸 데이터로 확인했고, 이 결과를 근거로 CS 응답 SLA를 카테고리별로 차등 운영했습니다.</p>
-          </div>
-          <div class="case-axis span-2">
-            <h4><span class="num">v.</span> 숫자로 남은 것</h4>
-            <p>DAU 우상향 · 커뮤니티 평균 체류시간 증가 · 중고 거래완료 도달율 우상향 · 분쟁/신고 평균 응답시간 단축 · 커뮤니티 ↔ 중고장터 <b>교차 사용 사용자</b> 비중 증가. 두 도메인이 따로 쓰이지 않고 함께 쓰이기 시작한 게 의미였습니다.</p>
-          </div>
-        </div>
-
-        <div class="case-meta">
-          <div class="case-meta-block">
-            <span class="meta-label">함께 만든 사람</span>
-            PO(본인), Designer 1, FE 1, BE 1, CS 운영 1. 본인 역할 — 더치트 API 연동 의사결정, 매물 등록 폼 정보 구조 설계, 분쟁·신고 5축 정책 정의, UX writing 가이드, 운영 SLA 합의.
-          </div>
-          <div class="case-meta-block">
-            <span class="meta-label">이번에 안 한 결정</span>
-            중고 에스크로(직접 결제). 운영 비용과 사용자 신뢰 사이에서 <b>한 발 미뤘다</b>. 일정 단계 회전까지는 <em>분쟁 SLA 단축</em>이 더 빠른 ROI였습니다.
-          </div>
-        </div>
-      </article>
-      <p class="quote">"먼저 <em>잘라낼 것</em>을 정합니다." — 가다 ERP는 SCM 전체가 아닌 청구·지급만, AF 예약은 자사 직판이 아닌 얼라이언스만. 풀스코프보다 <b>지금 안 할 것의 목록</b>을 먼저 합의하는 것이, 운영 가능한 로드맵의 출발점이라고 봅니다.</p>
-      </div>
-
-      <!-- ===== CASE 05 — 가다 ERP MVP ===== -->
-      <article class="case" id="case-5">
-        <div class="case-num">05</div>
-        <div class="case-head">
-          <div class="case-eyebrow"><span>Workmate · GADA</span><span class="role">PO · PM</span><span class="year">2022 — 2023</span></div>
-          <h3 class="case-title">청구·지급 ERP MVP — 엑셀 6명이 <em>3명</em>이 된 달</h3>
-          <p class="case-headline">청구·지급 ERP MVP로 운영 인력을 6명에서 3명으로 50% 감축했습니다.</p>
-          <div class="case-chips">
-            <span class="chip terra"><b>−50%</b> 운영 인력</span>
-            <span class="chip"><b>6→3</b> 인/월</span>
-            <span class="chip"><b>100%</b> 데이터화</span>
-            <span class="chip"><b>SCM</b> 로드맵 정렬</span>
-          </div>
-        </div>
-
-        <div class="case-shots is-desktop">
-          <div class="case-shot is-wide"><img src="images/wm_erp/1.jpg" alt="ERP 메인" loading="lazy"></div>
-          <div class="case-shot is-wide"><img src="images/wm_erp/2.jpg" alt="청구 화면" loading="lazy"></div>
-          <div class="case-shot is-wide is-square"><img src="images/wm_erp/3.jpg" alt="지급 결재" loading="lazy"></div>
-          <div class="case-shot is-wide"><img src="images/wm_erp/4.jpg" alt="정산 데이터" loading="lazy"></div>
-        </div>
-
-        <div class="case-body">
-          <div class="case-axis terra">
-            <h4><span class="num">i.</span> 무엇을 풀려 했나</h4>
-            <p>청구·지급 프로세스가 전부 오프라인이라 직원 6명이 매달 매달려 있었습니다. 종이와 엑셀로 흐르는 돈은 <b>데이터로 남지 않았습니다</b>. SCM 전체를 짓기 전에, 가장 비용이 큰 청구·지급만 잘라 MVP로 가는 게 목표였습니다.</p>
-          </div>
-          <div class="case-axis terra">
-            <h4><span class="num">ii.</span> 왜 이쪽이었나</h4>
-            <p>SCM 전체가 아닌 청구·지급만 먼저 잘라낸 이유는 현금흐름이 가장 큰 통증이었기 때문입니다. 영업·고객관리·재고는 통증이 작거나 외부 시스템으로 일시 대체할 수 있었습니다. 풀스코프 SCM을 한 번에 짰다면 1년이 걸렸을 텐데, <em>청구·지급</em>만 떼서 0.5개월 압축 사이클로 인력 6→3명으로 줄였습니다.</p>
-          </div>
-          <div class="case-axis">
-            <h4><span class="num">iii.</span> 사용자의 동선</h4>
-            <p>실수령 데이터 → 청구 데이터 자동 생성 → 지급 결재 → 정산 데이터. 4단의 정합을 한 화면에서 시각화. 운영팀이 한 줄에서 <b>조회 · 수정 · 결재</b>를 끝내도록 — 부서 간 핸드오프를 줄이는 일이 곧 인력 절감이었습니다.</p>
-          </div>
-          <div class="case-axis">
-            <h4><span class="num">iv.</span> 결정의 한 점</h4>
-            <p>공통 입력 포맷을 부서 간에 <em>합의</em>한 것 — ERP가 정착하는 핵심 조건이었습니다. 영업·CS·매니저가 보는 청구서를 같은 그리드로 묶고, 부서 고유 컬럼은 <b>접기</b>로 둠. 한 번 익히면 다른 부서도 쓸 수 있도록.</p>
-          </div>
-          <div class="case-axis span-2">
-            <h4><span class="num">v.</span> 숫자로 남은 것</h4>
-            <p>운영 인력 <b>6 → 3 (−50%)</b> · 청구·지급 데이터 <b>100% 디지털화</b> · 잔여 3인은 영업·신규 채널 트랙으로 재배치(2023 Q2). 단순 인력 절감이 아닌, <em>고부가가치 업무로 인력 이동</em>이 핵심이었습니다.</p>
-          </div>
-        </div>
-
-        <div class="case-meta">
-          <div class="case-meta-block">
-            <span class="meta-label">함께 만든 사람</span>
-            PM(본인), BE 2, FE 1, Designer 1 / 운영 부서 3축(영업·재무·매칭) 인터뷰·합의. 청구·지급 전담 6명 중 3명은 MVP 후 영업·재고 트랙으로 재배치(2023 Q2)했습니다. 본인 역할 — 운영 인터뷰, 스코프 정의, 부서 간 포맷 합의, MVP→SCM 로드맵.
-          </div>
-          <div class="case-meta-block">
-            <span class="meta-label">이번에 안 한 결정</span>
-            SCM 풀 스코프. 운영 통증 1순위만 자르고, 영업·재고·고객관리는 <b>다음 분기로 미뤘다</b>. 한 단계씩 자르는 게 더 빨랐습니다.
-          </div>
-        </div>
-      </article>
-
-      <!-- ===== CASE 06 — 가다 v2→v4 풀리뉴얼 ===== -->
-      <article class="case" id="case-6">
-        <div class="case-num">06</div>
-        <div class="case-head">
-          <div class="case-eyebrow"><span>Workmate · GADA</span><span class="role">PM → PO</span><span class="year">2021 — 2024</span></div>
-          <h3 class="case-title">v2 → v4 3축 풀리뉴얼 — <em>50대 근로자</em>가 멈추지 않은 화면.</h3>
-          <p class="case-headline">40-50대 일용직 근로자의 가입 이탈을 해소한 첫 버전, v4를 출시했습니다.</p>
-          <div class="case-chips">
-            <span class="chip terra"><b>3축</b> 동시 리뉴얼</span>
-            <span class="chip"><b>40.6%</b> 가입 매우쉬움</span>
-            <span class="chip"><b>43.6%</b> 이수증 매우쉬움</span>
-            <span class="chip"><b>PM→PO</b> 트랙 전환</span>
-          </div>
-        </div>
-
-        <div class="case-shots is-desktop">
-          <div class="case-shot is-wide is-square"><img src="images/wm_worker_renewal/4.jpg" alt="근로자앱 — 회원가입" loading="lazy"></div>
-          <div class="case-shot is-wide is-square"><img src="images/wm_worker_renewal/5.jpg" alt="근로자앱 — 일자리 매칭" loading="lazy"></div>
-          <div class="case-shot is-wide is-square"><img src="images/wm_worker_renewal/6.jpg" alt="근로자앱 — 임금/공수" loading="lazy"></div>
-          <div class="case-shot is-wide"><img src="images/wm_manager_renewal/3.jpg" alt="관리자앱 — 일관리" loading="lazy"></div>
-          <div class="case-shot is-wide"><img src="images/wm_backoffice/2.jpg" alt="백오피스" loading="lazy"></div>
-          <div class="case-shot is-wide"><img src="images/wm_worker_renewal/1.jpg" alt="근로자앱 가입 플로우" loading="lazy"></div>
-        </div>
-
-        <div class="case-body">
-          <div class="case-axis terra">
-            <h4><span class="num">i.</span> 무엇을 풀려 했나</h4>
-            <p>주 사용자가 <b>40-50대 건설 근로자</b>였습니다. 큰 글자, 단순한 흐름, 흙이 묻은 손으로도 누를 수 있는 큰 버튼이 필요했습니다. 동시에 현장 관리자(앉을 시간이 없음)와 백오피스(부서 간 학습 비용)의 요구가 <em>서로 충돌</em>했습니다.</p>
-          </div>
-          <div class="case-axis terra">
-            <h4><span class="num">ii.</span> 왜 이쪽이었나</h4>
-            <p>근로자 · 관리자 · 백오피스 세 사용자를 우선순위 1·2·3으로 줄 세웠습니다. 요구가 충돌하면 그 화면 앞에 가장 오래 앉아 있는 사람의 의견을 따랐습니다 — 백오피스는 운영팀, 관리자앱은 현장 소장 기준이었습니다. 점진적 개선이 아닌 풀리뉴얼을 택한 이유는, 각 앱의 IA가 v2에서 이미 깨져 있어서였습니다. 처음 6개월은 부분 패치로 버텼는데, IA가 깨진 상태에서 패치할수록 사이드이펙트가 늘었습니다. 그래서 풀리뉴얼로 전환했습니다.</p>
-          </div>
-          <div class="case-axis">
-            <h4><span class="num">iii.</span> 사용자의 동선</h4>
-            <p>근로자앱: 회원가입(매우쉬움 <b>40.6%</b>) · 이수증(<b>43.6%</b>) · 일자리·임금. 관리자앱: 일자리 등록 자동값 → 출퇴근 → 공수 → 지급의 <em>한 화면 일관리</em>. 백오피스: 공통 포맷 / 블라인드 / 1 화면 의사결정. 세 트랙이 같은 디자인 토큰을 공유했습니다.</p>
-          </div>
-          <div class="case-axis">
-            <h4><span class="num">iv.</span> 결정의 한 점</h4>
-            <p>백오피스 리뉴얼의 핵심은, <em>어떤 데이터를 노출하지 않을지</em> 결정하는 일이었습니다. 화면을 새로 짜는 것보다 <b>안 보이는 것을 정하는 일</b>이 더 어렵습니다. 부서별 의견이 충돌하면 "이 화면을 가장 오래 보는 사람"의 의견을 우선했습니다.</p>
-          </div>
-          <div class="case-axis span-2">
-            <h4><span class="num">v.</span> 숫자로 남은 것</h4>
-            <p>근로자앱 회원가입·이수증 "매우 쉬움" <b>40%대</b> 응답 · VOC 채널톡 1순위 응답시간 단축 · 관리자앱 등록 터치 수 감소·DAU 증가 · 백오피스 부서 간 학습 시간 절감. 무엇보다 — PM에서 PO로 승격하며 스코프가 <em>한 앱</em>에서 <b>PD·QA 그룹 운영</b>으로 넓어진 시기였습니다.</p>
-          </div>
-        </div>
-
-        <div class="case-meta">
-          <div class="case-meta-block">
-            <span class="meta-label">함께 만든 사람 · 인계</span>
-            PM(본인) → 후반 PO 승격. FE 1, BE 1, QA 1, Designer 1 × 3 트랙 / 7개월. PO 승격 직후 후임 PM 2명에게 <b>근로자앱·관리자앱 트랙을 위임</b>하고, 본인은 백오피스·우선순위 의사결정으로 옮겼습니다. 인계가 늦었으면 3축이 다시 깨졌습니다.
-          </div>
-          <div class="case-meta-block">
-            <span class="meta-label">이번에 안 한 결정</span>
-            한 앱씩 순차 리뉴얼. 동시 3축 리뉴얼은 위험한 카드였지만, IA가 셋 다 깨진 상태에서 순차로 가면 첫 앱이 끝날 때 마지막 앱은 이미 더 깨졌을 것입니다. 충돌은 <em>우선순위 룰</em>로 해소했습니다.
-          </div>
-        </div>
-      </article>
-
-      <!-- ===== CASE 07 — AI × CPO 프로세스 효율화 ===== -->
-      <article class="case" id="case-7">
-        <div class="case-num">07</div>
-        <div class="case-head">
-          <div class="case-eyebrow"><span>Process · 2025—Present</span><span class="role">CPO · Builder</span><span class="year">AI × Cowork</span></div>
-          <h3 class="case-title">AI × CPO — <em>외주 없이</em> 본인이 직접 짓는 PM 워크플로우.</h3>
-          <p class="case-headline">기획자가 직접 빌드합니다. Claude를 팀원으로 — 1주가 1일이 되는 워크플로우.</p>
-          <div class="case-chips">
-            <span class="chip terra"><b>1주 → 1일</b> 포트폴리오 사이트 빌드</span>
-            <span class="chip"><b>8명 · 122배포 · 9도메인</b> 단일 화면 운영</span>
-            <span class="chip"><b>4건 100%</b> 정부지원 사업계획서</span>
-            <span class="chip"><b>외주 없이</b> CPO 직접 빌드</span>
-          </div>
-        </div>
-
-        <div class="case-shots is-desktop">
-          <div class="case-shot is-illust">
-            <div class="ill-label">Step 1 · 의도 입력</div>
-            <div class="ill-chat">
-              <div class="chat-row user"><span class="who">CPO</span> "포트폴리오에 Top 6 long-form 케이스 섹션 만들어줘. 5축(의도/판단/플로우/결정/결과)으로."</div>
-              <div class="chat-row ai"><span class="who">Claude</span> "어떤 케이스 6개로 가시나요? 각 케이스 이미지·KPI도 같이 주시면..."</div>
-            </div>
-            <div class="ill-num">⏱ 5분</div>
-            <div class="ill-sub">기획서 없이 의도만 자연어로 입력. Claude가 빠진 정보를 역질문.</div>
-          </div>
-          <div class="case-shot is-illust">
-            <div class="ill-label">Step 2 · 에이전트 협업</div>
-            <div class="ill-chat">
-              <div class="chat-row">UX writer · 카피 마스터 · CPO 동료</div>
-              <div class="chat-row">CHRO · CEO · 럭셔리 카피 디렉터</div>
-              <div class="chat-row">PR 디렉터 · UI 디자이너 · 시니어 PM</div>
-            </div>
-            <div class="ill-num">9 에이전트</div>
-            <div class="ill-sub">한 작업에 시각이 다른 9명을 병렬 호출. 의견 통합 후 일괄 적용.</div>
-          </div>
-          <div class="case-shot is-illust">
-            <div class="ill-label">Step 3 · 결과물 시각화</div>
-            <div class="ill-chat">
-              <div class="chat-row file">📄 index.html (122KB)</div>
-              <div class="chat-row file">📄 portfolio-deck.html (57KB)</div>
-              <div class="chat-row file">📄 resume.html · career-statement.html</div>
-              <div class="chat-row file">📦 PDF 4종 자동 생성</div>
-            </div>
-            <div class="ill-num">4 산출물</div>
-            <div class="ill-sub">HTML + PDF + 시각 자산까지 한 사이클에서 완성.</div>
-          </div>
-          <div class="case-shot is-illust">
-            <div class="ill-label">Step 4 · 사이클 단축</div>
-            <div class="ill-chat">
-              <div class="chat-row metric"><b>외주 1주</b> · 디자이너 핸드오프 · 개발자 빌드</div>
-              <div class="chat-row metric brand"><b>Claude 1일</b> · CPO 직접 의도→결과물</div>
-            </div>
-            <div class="ill-num">7× 단축</div>
-            <div class="ill-sub">같은 결과물을 4~8주 외주 vs CPO 1일에 빌드.</div>
-          </div>
-        </div>
-
-        <div class="case-body">
-          <div class="case-axis terra">
-            <h4><span class="num">i.</span> 무엇을 풀려 했나</h4>
-            <p>CPO 역할의 핵심은 의사결정과 실행 사이의 리드타임을 줄이는 일이라고 봅니다. 기획서·프로토타입·운영 도구를 외주나 디자이너·개발자에 위임할수록 피드백 사이클이 길어집니다. 그래서 첫 버전은 CPO가 직접 만들고, 검증된 다음 팀이 정식 빌드를 가져가는 워크플로우로 운영하고 있습니다.</p>
-          </div>
-          <div class="case-axis terra">
-            <h4><span class="num">ii.</span> 왜 이쪽이었나</h4>
-            <p>Notion·Asana·Monday로는 어바웃피싱 워크플로우(스프린트·배포·회고·외부 협업·정부과제)에 핏이 안 맞았고, 외주 빌드는 4~8주가 걸렸습니다. 반면 <b>Claude × Cowork</b>로 첫 버전을 직접 만들면 같은 결과물을 1주 안에 만들 수 있었습니다. 4~8주 외주 vs 1주 본인 빌드 — 결과물의 정확도까지 더 높았습니다.</p>
-          </div>
-          <div class="case-axis">
-            <h4><span class="num">iii.</span> 사용자의 동선</h4>
-            <p>기획 → 디자인 → 개발 → 운영의 4단 워크플로우에 <b>Claude artifact</b>를 끼워 넣어 한 사람이 4단을 다 칩니다. ① 어바웃피싱 사내 운영 대시보드(Claude × CPO 직접 빌드), ② 본 포트폴리오 사이트(Cowork로 빌드·배포), ③ 정부지원 4건 사업계획서(Claude 활용 단독 작성), ④ 프로토타입(Claude artifact 즉시 시각화) — 모두 CPO 본인이 1차 버전을 만들고, 그 다음 팀이 정식 빌드를 가져갑니다.</p>
-          </div>
-          <div class="case-axis">
-            <h4><span class="num">iv.</span> 결정의 한 점</h4>
-            <p>핵심은 "외주를 줄이는 것"이 아니라 "CPO가 첫 버전을 만들고 검증한 다음 팀에 위임하는 것"입니다. Claude는 CPO 한 명에게 디자이너·개발자·기획자 1인분씩을 더해주는 도구라고 봅니다. <em>본 포트폴리오 사이트</em>와 어바웃피싱 사내 운영 대시보드 v2026.05.06이 그 워크플로우로 직접 만든 결과물입니다.</p>
-          </div>
-          <div class="case-axis span-2">
-            <h4><span class="num">v.</span> 숫자로 남은 것</h4>
-            <p>본 포트폴리오 사이트 — 기획·디자인·빌드·배포를 외주 추산 1주에서 <b>1일</b>로 단축. 사내 운영 대시보드 v2026.05.06 — <b>8명 멤버·122 배포·9개 도메인</b>을 단일 화면에서 운영하고 있습니다. 정부지원 4건 사업계획서 — 외주 평균 2개월 → 본인 직접 평균 <b>3주</b>로 작성해 TIPS·창업도약·NH 디지털챌린지플러스·NIPA AI 바우처 4건 모두 선정됐습니다. 프로토타입 — 디자이너 핸드오프 1주 → Claude Artifact <b>1일</b>. 단축된 시간은 사용자 인터뷰와 의사결정에 다시 투입했고, 팀 8명 중 디자이너·PM에게 같은 워크플로우(Claude × 1차 빌드 → 팀 위임)를 가이드라인으로 전파하고 있습니다.</p>
-          </div>
-        </div>
-
-        <div class="case-meta">
-          <div class="case-meta-block">
-            <span class="meta-label">함께 만든 도구</span>
-            CPO(본인) + Claude(Cowork·Artifact). 디자이너·개발자에게는 검증된 첫 버전을 핸드오프하고, 정식 빌드는 팀에 위임. AI를 사람 대체가 아닌 <b>본인의 가속기</b>로 활용.
-          </div>
-          <div class="case-meta-block">
-            <span class="meta-label">이번에 안 한 결정</span>
-            풀스코프 외주. Claude를 단순 Q&amp;A 도구로만 쓰는 것. 본인이 빠른 1차 버전을 만들고 — 디자인·개발·운영의 정식 사이클은 팀이 가져갑니다.
-          </div>
-        </div>
-      </article>
-
-
-    </div>
-
-<!-- ============ PROPOSALS (정부지원 사업기획서) ============ -->
-<section class="proposals-section" id="proposals">
-  <div class="section-head">
-    <div class="section-eyebrow">Proposals · 정부지원 100% 선정</div>
-    <h2 class="section-title">정부지원 4건, 본인이 단독 작성.</h2>
-    <p class="section-desc">중소벤처기업부 TIPS · 창업도약패키지 · NH 디지털챌린지플러스 · NIPA AI 바우처 — 외주 컨설팅 없이 사업계획서·재무·R&amp;D 트랙을 직접 집필하고 발표·선정까지 완수했습니다.</p>
+    <nav class="toc">
+      <a href="#case-1"><span class="tn">01</span><span class="tt">예약 · 얼라이언스</span><span class="tk">월 <b>865건</b> · 4개월 <b>3.63억</b></span></a>
+      <a href="#case-2"><span class="tn">02</span><span class="tt">쇼핑 · 자사몰</span><span class="tk">연 <b>14.26억</b> · ARPPU <b>+34%</b></span></a>
+      <a href="#case-3"><span class="tn">03</span><span class="tt">홈 · 가입</span><span class="tk">회원 전환율 <b>65%</b></span></a>
+      <a href="#case-4"><span class="tn">04</span><span class="tt">커뮤니티 · 중고장터</span><span class="tk">사기 리스크 먼저 차단</span></a>
+      <a href="#case-5"><span class="tn">05</span><span class="tt">청구·지급 ERP MVP</span><span class="tk">운영 인력 <b>−50%</b></span></a>
+      <a href="#case-6"><span class="tn">06</span><span class="tt">v2→v4 3축 풀리뉴얼</span><span class="tk">PM → PO 승격</span></a>
+      <a href="#case-7"><span class="tn">07</span><span class="tt">AI × CPO 워크플로</span><span class="tk">1주 → <b>1일</b></span></a>
+    </nav>
   </div>
-  <div class="proposals-scroll">
-    <article class="ppt-card">
-      <div class="ppt-frame">
-        <div class="ppt-body">
-          <div class="ppt-label">2025 · 어바웃피싱</div>
-          <div class="ppt-title">창업도약<br/>패키지</div>
-          <div class="ppt-sub">중소벤처기업부 · 주도 작성 · 선정</div>
+</section>
+
+<!-- ───────── CASES ───────── -->
+<section class="band cases" id="cases" style="padding-top:40px;">
+  <div class="wrap">
+
+    <!-- CASE 01 -->
+    <article class="case reveal" id="case-1">
+      <div class="case-eyebrow"><span class="num-badge">01</span><span class="co">AboutFishing</span><span class="role">CPO · PO</span><span class="yr">2026 · Q1</span></div>
+      <h2 class="case-title">예약 / 얼라이언스 — 한 달 10건이 <em>865건</em>이 되기까지.</h2>
+      <p class="case-headline">자사 직판이 아닌 외부 사업자 입점만 잘라, 월 예약을 넉 달 만에 86배로 키웠습니다.</p>
+      <div class="chips">
+        <span class="chip"><b>3.63억</b> 4개월 누적</span>
+        <span class="chip"><b>86×</b> 월 판매 건</span>
+        <span class="chip"><b>24.87만</b> 예약 ARPPU</span>
+        <span class="chip"><b>19.5%</b> 4월 재구매</span>
+      </div>
+      <div class="case-shots"><div class="plate-cap">Plates — 예약 / 선박 / 조황</div><div class="plates q4"><img src="images/af_booking/1.jpg" loading="lazy" alt="예약 검색"><img src="images/af_booking/2.jpg" loading="lazy" alt="선박 상세"><img src="images/af_booking/3.jpg" loading="lazy" alt="예약 결제"><img src="images/af_booking/4.jpg" loading="lazy" alt="예약 완료"><img src="images/af_booking/5.jpg" loading="lazy" alt=""><img src="images/af_booking/6.jpg" loading="lazy" alt=""><img src="images/af_booking/7.jpg" loading="lazy" alt=""><img src="images/af_booking/8.jpg" loading="lazy" alt=""></div></div>
+      <div class="movements">
+        <div class="move">
+          <div class="move-label"><span class="rn">i.</span>왜 했나</div>
+          <div class="beat"><span class="bl">현상</span><p>선상 낚시는 결제까지 거치는 의사결정 단계가 가장 많은 도메인입니다. 어떤 배에서, 어떤 어종을, 얼마에 가는지가 한 화면에서 정리되지 않으면 사용자는 단톡방과 전화 예약으로 되돌아갔습니다.</p></div>
+          <div class="beat"><span class="bl">진짜 병목</span><p>시장을 키우는 병목은 수요가 아니라 <b>공급의 분산</b>이었습니다. 4조 규모의 선박과 선장이 흩어져 있고, 예약과 조황 정보가 카카오톡에 묶여 있었습니다.</p></div>
+          <div class="beat"><span class="bl">그래서 이 방향</span><p>자사 직판 대신 <em>외부 사업자 입점</em>을 택했습니다. 직판은 마진이 컸지만 공급을 우리가 다 떠안아야 해, 시리즈A 규모에서 86배 성장은 불가능했습니다.</p></div>
+        </div>
+        <div class="move">
+          <div class="move-label"><span class="rn">ii.</span>어떻게 했나</div>
+          <div class="beat"><span class="bl">공급 유인 설계</span><p>선장이 직접 모객하는 것보다 우리 앱에 올리는 게 이득이 되도록, 입점 선장에게 <b>예약 알림·정산 자동화·조황 연계</b>를 묶어 제공했습니다.</p></div>
+          <div class="beat"><span class="bl">전환 레버</span><p>동선(검색→상세→옵션→결제) 중 이탈이 가장 큰 <b>옵션 분기</b>를 먼저 손봤습니다. 어종·인원·승선일이 가격에 미치는 영향을 한 화면에 보여주자 다음 단계로 넘어갔습니다.</p></div>
+          <div class="beat"><span class="bl">결정의 한 점</span><p>마지막 관문은 신뢰였습니다. 사용자가 사진을 믿어야 결제까지 갑니다. 조황 카드를 <em>사진 우선·어종 태그·선박 링크</em> 세 축으로 재설계해 신뢰 지표를 끌어올렸습니다.</p></div>
         </div>
       </div>
-      <div class="ppt-meta">
-        <div class="ppt-meta-title">시장·솔루션·BM·재무·R&amp;D 전 챕터 직접 집필</div>
-        <div class="ppt-meta-sub"><b>운영자금 + R&amp;D 자금 확보</b> · SKT TMAP 등 외부 파트너십 협상 기반</div>
+      <div class="result">
+          <div class="move-label"><span class="rn">iii.</span>무엇이 남았나</div>
+          <div class="kpi-ledger">
+            <div class="k"><div class="kn">3.63<span class="u">억</span></div><div class="kt">4개월 누적 거래액</div></div>
+            <div class="k"><div class="kn">865<span class="u">건</span></div><div class="kt">3월 예약 (86×)</div></div>
+            <div class="k"><div class="kn">24.87<span class="u">만</span></div><div class="kt">예약 ARPPU</div></div>
+            <div class="k"><div class="kn">19.5<span class="u">%</span></div><div class="kt">4월 재구매율</div></div>
+          </div>
+        </div>
+      <div class="case-meta">
+        <div><div class="ml">함께 만든 사람</div><p>PM 1 · BE 2 · FE 2 · Designer 1 · QA 1 · 얼라이언스 운영 2. <b>본인 역할</b> — 사업 모델, 예약 IA, 결제·정산 정책, KPI 트래킹, 운영 핸드오프.</p></div>
+        <div><div class="ml">이번에 안 한 결정</div><p>자사 선박 직판 인벤토리. 마진은 컸지만 시장의 분산 구조와 맞지 않아 <b>일정 단계 회전 이후로 미뤘습니다.</b></p></div>
       </div>
     </article>
-    <article class="ppt-card">
-      <div class="ppt-frame">
-        <div class="ppt-body">
-          <div class="ppt-label">2021 · 웍스메이트</div>
-          <div class="ppt-title">TIPS<br/>프로그램</div>
-          <div class="ppt-sub">중소벤처기업부 · 주도 작성 · 선정</div>
+
+    <!-- CASE 02 -->
+    <article class="case reveal" id="case-2">
+      <div class="case-eyebrow"><span class="num-badge">02</span><span class="co">AboutFishing</span><span class="role">CPO · PM</span><span class="yr">2025 — 2026</span></div>
+      <h2 class="case-title">쇼핑 / 자사몰 — <em>외부 쇼핑몰</em>로 새던 매출을 회수.</h2>
+      <p class="case-headline">외부 채널 매출은 그대로 둔 채, 자사몰 ARPPU만 따로 떼어 넉 달 만에 34% 올렸습니다.</p>
+      <div class="chips">
+        <span class="chip"><b>14.26억</b> 2025 연매출</span>
+        <span class="chip"><b>+34%</b> 자사몰 ARPPU</span>
+        <span class="chip"><b>597건</b> 자사몰 주문</span>
+        <span class="chip"><b>+10×</b> 1→4월 단월</span>
+      </div>
+      <div class="case-shots"><div class="plate-cap">Plates — 쇼핑 / 상품 / 결제</div><div class="plates q4"><img src="images/af_commerce/1.jpg" loading="lazy" alt="쇼핑 홈"><img src="images/af_commerce/2.jpg" loading="lazy" alt="상품 상세"><img src="images/af_commerce/3.jpg" loading="lazy" alt="장바구니"><img src="images/af_commerce/4.jpg" loading="lazy" alt="결제"><img src="images/af_commerce/5.jpg" loading="lazy" alt=""><img src="images/af_commerce/6.jpg" loading="lazy" alt=""><img src="images/af_commerce/7.jpg" loading="lazy" alt=""><img src="images/af_commerce/8.jpg" loading="lazy" alt=""></div></div>
+      <div class="movements">
+        <div class="move">
+          <div class="move-label"><span class="rn">i.</span>왜 했나</div>
+          <div class="beat"><span class="bl">현상</span><p>커뮤니티만으로는 매출이 나지 않았고, 사용자의 구매 동선은 외부 쇼핑몰로 새고 있었습니다.</p></div>
+          <div class="beat"><span class="bl">진짜 병목</span><p>매출은 스마트스토어에 73% 쏠려 있었습니다. 외부 채널 매출에 묻혀 <b>자사몰 개선이 보이지도 않는</b> 게 더 큰 문제였습니다.</p></div>
+          <div class="beat"><span class="bl">그래서 이 방향</span><p>외부 채널을 끊는 대신, 쇼핑부터 결제까지를 앱 안에서 끝내 <em>매출과 행동 데이터를 함께</em> 우리 몰로 가져오기로 했습니다.</p></div>
+        </div>
+        <div class="move">
+          <div class="move-label"><span class="rn">ii.</span>어떻게 했나</div>
+          <div class="beat"><span class="bl">계측 설계</span><p>스마트스토어 매출은 그대로 받으면서, <b>자사몰 ARPPU만 별도 KPI로 분리</b>했습니다. 합산하면 안 보이던 학습이 떼니 바로 나왔습니다.</p></div>
+          <div class="beat"><span class="bl">전환 레버</span><p>가장 비싼 이탈점은 가격 인지였습니다. 쿠폰·할인 표기를 두 색 규칙으로 정리하고, 결제수단 분기와 실패 처리를 한 화면에 통합했습니다.</p></div>
+          <div class="beat"><span class="bl">결정의 한 점</span><p>카테고리를 <em>어종·장비</em> 두 축으로 다시 짜고 관심어종 데이터를 홈으로 끌어왔습니다. 이 IA 변경 하나가 재방문 곡선을 들어 올렸습니다.</p></div>
         </div>
       </div>
-      <div class="ppt-meta">
-        <div class="ppt-meta-title">건설 일용직 매칭 R&amp;D 트랙 + 3개년 추정 매출</div>
-        <div class="ppt-meta-sub">약 <b>100p</b> · VC 후속 투자 라운드 신뢰도 강화</div>
+      <div class="result">
+          <div class="move-label"><span class="rn">iii.</span>무엇이 남았나</div>
+          <div class="kpi-ledger">
+            <div class="k"><div class="kn">14.26<span class="u">억</span></div><div class="kt">2025 연매출</div></div>
+            <div class="k"><div class="kn">+34<span class="u">%</span></div><div class="kt">자사몰 ARPPU</div></div>
+            <div class="k"><div class="kn">+10<span class="u">×</span></div><div class="kt">1→4월 단월</div></div>
+            <div class="k"><div class="kn">28<span class="u">%</span></div><div class="kt">머니 사용률 정착</div></div>
+          </div>
+        </div>
+      <div class="case-meta">
+        <div><div class="ml">함께 만든 사람</div><p>PM 1 · BE 2 · FE 2 · QA 1 · Designer 1. <b>본인 역할</b> — 풀퍼널 IA, 쿠폰·결제 정책, 카테고리 큐레이션, ARPPU·재방문 KPI 운영.</p></div>
+        <div><div class="ml">이번에 안 한 결정</div><p>스마트스토어 의존 축소. 채널을 합산하면 안 보이던 학습이 <b>분리 KPI</b>로 떼니 빠르게 나왔습니다.</p></div>
       </div>
     </article>
-    <article class="ppt-card">
-      <div class="ppt-frame">
-        <div class="ppt-body">
-          <div class="ppt-label">2022 · 웍스메이트</div>
-          <div class="ppt-title">NH 디지털<br/>챌린지플러스</div>
-          <div class="ppt-sub">NH농협 · 주도 작성 · 선정</div>
+
+    <!-- CASE 03 -->
+    <article class="case reveal" id="case-3">
+      <div class="case-eyebrow"><span class="num-badge">03</span><span class="co">AboutFishing</span><span class="role">CPO · PO</span><span class="yr">2025 — 2026</span></div>
+      <h2 class="case-title">홈 / 가입 — 회원 전환율 <em>65%</em>.</h2>
+      <p class="case-headline">가입 마찰이 큰 두 단계를 동시에 없애고, 가입의 마지막 입력이 개인화의 첫 단계가 되게 했습니다.</p>
+      <div class="chips">
+        <span class="chip"><b>65%</b> 회원 전환율</span>
+        <span class="chip"><b>10,329명</b> 4개월 가입</span>
+        <span class="chip"><b>3단</b> 가입 압축</span>
+        <span class="chip"><b>관심어종</b> 개인화 키</span>
+      </div>
+      <div class="case-shots"><div class="plate-cap">Plates — 스플래시 / 인증 / 온보딩</div><div class="plates q4"><img src="images/af_home/1.jpg" loading="lazy" alt="스플래시"><img src="images/af_home/2.jpg" loading="lazy" alt="인증"><img src="images/af_home/3.jpg" loading="lazy" alt="장소 선택"><img src="images/af_home/4.jpg" loading="lazy" alt="관심 어종"><img src="images/af_home/5.jpg" loading="lazy" alt=""><img src="images/af_home/6.jpg" loading="lazy" alt=""><img src="images/af_home/7.jpg" loading="lazy" alt=""><img src="images/af_home/8.jpg" loading="lazy" alt=""></div></div>
+      <div class="movements">
+        <div class="move">
+          <div class="move-label"><span class="rn">i.</span>왜 했나</div>
+          <div class="beat"><span class="bl">현상</span><p>신규 사용자가 가장 많이 이탈하는 곳이 가입 단계였습니다. 이메일·비밀번호·약관·인증·프로필로 이어지는 다단 가입이 문제였습니다.</p></div>
+          <div class="beat"><span class="bl">딜레마</span><p>단순화만 하면 개인화에 쓸 정보가 사라집니다. <b>마찰은 줄이되 최소 취향 정보는 남겨야</b> 했습니다.</p></div>
+          <div class="beat"><span class="bl">그래서 이 방향</span><p>가입의 마지막 입력을 <em>개인화의 첫 입력</em>으로 쓰기로 방향을 잡았습니다.</p></div>
+        </div>
+        <div class="move">
+          <div class="move-label"><span class="rn">ii.</span>어떻게 했나</div>
+          <div class="beat"><span class="bl">마찰 제거</span><p><b>카카오 로그인</b>으로 이메일·비밀번호를, <b>휴대폰 점유인증</b>으로 본인확인을 한 번에 끝냈습니다. 마찰이 큰 두 단계를 동시에 없앴습니다.</p></div>
+          <div class="beat"><span class="bl">압축</span><p>늘어지던 가입을 <em>닉네임·관심어종·지역</em> 3단으로 줄였습니다.</p></div>
+          <div class="beat"><span class="bl">결정의 한 점</span><p>관심어종 한 입력값을 홈·예약·쇼핑·커뮤니티 <b>네 도메인의 추천 공통 키</b>로 묶었습니다. 가입 직후 첫 홈이 사용자마다 다르게 구성됩니다.</p></div>
         </div>
       </div>
-      <div class="ppt-meta">
-        <div class="ppt-meta-title">건설 근로자 금융 데이터 활용 트랙</div>
-        <div class="ppt-meta-sub">한화 EBC · 피플펀드 <b>P2P 대출</b>로 연결</div>
+      <div class="result">
+          <div class="move-label"><span class="rn">iii.</span>무엇이 남았나</div>
+          <div class="kpi-ledger">
+            <div class="k"><div class="kn">65<span class="u">%</span></div><div class="kt">회원 전환율</div></div>
+            <div class="k"><div class="kn">10,329<span class="u">명</span></div><div class="kt">4개월 누적 가입</div></div>
+            <div class="k"><div class="kn">51<span class="u">%</span></div><div class="kt">4월 AOS 가입률</div></div>
+            <div class="k"><div class="kn">D+1</div><div class="kt">재방문 우상향</div></div>
+          </div>
+        </div>
+      <div class="case-meta">
+        <div><div class="ml">함께 만든 사람</div><p>CPO·PO(본인) · Designer 1 · FE 1 · BE 1. <b>본인 역할</b> — 가입 플로우 재설계, 인증 도입 결정, 취향 데이터 모델, 개인화 홈 키 정의.</p></div>
+        <div><div class="ml">이번에 안 한 결정</div><p>첫 화면에 9개 도메인 전부 노출. <b>점진 노출</b>이 더 강했습니다. 머니·중고·알림은 필요할 때 나타나게 미뤘습니다.</p></div>
       </div>
     </article>
-    <article class="ppt-card">
-      <div class="ppt-frame">
-        <div class="ppt-body">
-          <div class="ppt-label">2023 · 웍스메이트</div>
-          <div class="ppt-title">NIPA<br/>AI 바우처</div>
-          <div class="ppt-sub">정보통신산업진흥원 · 주도 작성 · 선정</div>
+
+    <!-- CASE 04 -->
+    <article class="case reveal" id="case-4">
+      <div class="case-eyebrow"><span class="num-badge">04</span><span class="co">AboutFishing</span><span class="role">CPO · PO</span><span class="yr">2025</span></div>
+      <h2 class="case-title">커뮤니티 / 중고장터 — 사기 리스크를 <em>먼저 잘라낸</em> C2C.</h2>
+      <p class="case-headline">기능보다 운영 정책을 먼저 설계해, 고가 장비 거래의 사기·분쟁을 앞단에서 차단했습니다.</p>
+      <div class="chips">
+        <span class="chip"><b>더치트</b> 사기 이력 검증</span>
+        <span class="chip"><b>필수</b> 상세 정보 입력</span>
+        <span class="chip"><b>5축</b> 신고 카테고리</span>
+        <span class="chip"><b>교차사용</b> 비중 증가</span>
+      </div>
+      <div class="case-shots"><div class="plate-cap">Plates — 커뮤니티 / 중고장터</div><div class="plates q4"><img src="images/af_community/1.jpg" loading="lazy" alt="커뮤니티 피드"><img src="images/af_market/1.jpg" loading="lazy" alt="중고 목록"><img src="images/af_market/2.jpg" loading="lazy" alt="거래 채팅"><img src="images/af_market/3.jpg" loading="lazy" alt="매물 상세"><img src="images/af_community/2.jpg" loading="lazy" alt=""><img src="images/af_community/3.jpg" loading="lazy" alt=""><img src="images/af_market/4.jpg" loading="lazy" alt=""><img src="images/af_market/5.jpg" loading="lazy" alt=""></div></div>
+      <div class="movements">
+        <div class="move">
+          <div class="move-label"><span class="rn">i.</span>왜 했나</div>
+          <div class="beat"><span class="bl">현상</span><p>낚시 장비는 값이 나가고 회전이 빨라 C2C 수요가 크지만, 사기·분쟁 리스크도 그만큼 큰 도메인입니다.</p></div>
+          <div class="beat"><span class="bl">진짜 병목</span><p>C2C는 분쟁·CS 비용이 빠르게 쌓입니다. <b>기능을 먼저 늘리면 운영이 감당하지 못합니다.</b></p></div>
+          <div class="beat"><span class="bl">그래서 이 방향</span><p>기능보다 <em>운영 정책을 먼저</em> 설계해, 리스크를 거래 시작 전에 잘라내기로 했습니다.</p></div>
+        </div>
+        <div class="move">
+          <div class="move-label"><span class="rn">ii.</span>어떻게 했나</div>
+          <div class="beat"><span class="bl">앞단 차단</span><p>거래 시작 전 <b>더치트</b>로 판매자 이력을 검증하고, 버티컬의 강점을 살려 장비명·연식·상태·사진을 등록 시점에 필수로 받았습니다.</p></div>
+          <div class="beat"><span class="bl">책임 분리</span><p>거래 단계마다 책임 소재를 끊어 정의했습니다 — <em>등록·대화·거래완료·분쟁·신고</em>. 어디까지가 사용자 책임이고 어디부터 운영 개입인지 명확히 했습니다.</p></div>
+          <div class="beat"><span class="bl">결정의 한 점</span><p>신고 카테고리를 5축으로 좁히고, 응답이 빠른 카테고리일수록 재거래율이 오른다는 걸 데이터로 확인해 <b>CS 응답 SLA를 차등 운영</b>했습니다.</p></div>
         </div>
       </div>
-      <div class="ppt-meta">
-        <div class="ppt-meta-title">매칭 AI 알고리즘 R&amp;D 자금 확보</div>
-        <div class="ppt-meta-sub">데이터 파이프라인 자산화 · 정부지원 <b>4건 100%</b> 선정</div>
+      <div class="result">
+          <div class="move-label"><span class="rn">iii.</span>무엇이 남았나</div>
+          <div class="kpi-ledger">
+            <div class="k"><div class="kn">DAU</div><div class="kt">우상향 · 체류 증가</div></div>
+            <div class="k"><div class="kn">완료↑</div><div class="kt">거래 도달율</div></div>
+            <div class="k"><div class="kn">응답↓</div><div class="kt">분쟁 처리 시간</div></div>
+            <div class="k"><div class="kn">교차↑</div><div class="kt">커뮤니티↔중고</div></div>
+          </div>
+        </div>
+      <div class="case-meta">
+        <div><div class="ml">함께 만든 사람</div><p>PO(본인) · Designer 1 · FE 1 · BE 1 · CS 운영 1. <b>본인 역할</b> — 더치트 연동 결정, 등록 폼 정보 구조, 분쟁·신고 5축 정책, UX 라이팅, 운영 SLA 합의.</p></div>
+        <div><div class="ml">이번에 안 한 결정</div><p>중고 에스크로(직접 결제). 운영 비용과 신뢰 사이에서 한 발 미뤘습니다. 지금은 <b>분쟁 응답 단축</b>이 더 빠른 ROI였습니다.</p></div>
       </div>
     </article>
+
+    <div class="pullquote">
+      <p class="q">"먼저 <b>무엇을 안 할지</b>를 정합니다. 전부 만들기보다, 가장 비싼 문제부터 푸는 합의가 운영 가능한 로드맵의 출발점입니다."</p>
+    </div>
+
+    <!-- CASE 05 -->
+    <article class="case reveal" id="case-5">
+      <div class="case-eyebrow"><span class="num-badge">05</span><span class="co">Workmate · GADA</span><span class="role">PO · PM</span><span class="yr">2022 — 2023</span></div>
+      <h2 class="case-title">청구·지급 ERP MVP — 엑셀 6명이 <em>3명</em>이 된 달.</h2>
+      <p class="case-headline">시스템 전체를 짓기 전에 가장 비싼 청구·지급만 잘라, 운영 인력을 절반으로 줄였습니다.</p>
+      <div class="chips">
+        <span class="chip"><b>−50%</b> 운영 인력</span>
+        <span class="chip"><b>6→3</b> 인/월</span>
+        <span class="chip"><b>100%</b> 데이터화</span>
+        <span class="chip"><b>0</b> 해고</span>
+      </div>
+      <div class="case-shots"><div class="plate-cap">Plates — 청구·지급 ERP</div><div class="plates land"><img src="images/wm_erp/1.jpg" loading="lazy" alt="ERP 메인"><img src="images/wm_erp/2.jpg" loading="lazy" alt="청구"><img src="images/wm_erp/3.jpg" loading="lazy" alt="지급 결재"><img src="images/wm_erp/4.jpg" loading="lazy" alt="정산"><img src="images/wm_erp/5.jpg" loading="lazy" alt=""><img src="images/wm_erp/6.jpg" loading="lazy" alt=""></div></div>
+      <div class="movements">
+        <div class="move">
+          <div class="move-label"><span class="rn">i.</span>왜 했나</div>
+          <div class="beat"><span class="bl">현상</span><p>청구·지급이 전부 수작업이라 직원 6명이 매달 매달려 있었고, 종이와 엑셀로 흐르는 돈은 데이터로 남지 않았습니다.</p></div>
+          <div class="beat"><span class="bl">트레이드오프</span><p>풀스코프 SCM을 한 번에 지으면 1년이 걸릴 일이었습니다. 그동안 <b>현금흐름의 통증은 그대로</b> 남습니다.</p></div>
+          <div class="beat"><span class="bl">그래서 이 방향</span><p>통증이 가장 큰 청구·지급만 잘라, <em>0.5개월 압축 사이클의 MVP</em>로 먼저 검증하기로 했습니다.</p></div>
+        </div>
+        <div class="move">
+          <div class="move-label"><span class="rn">ii.</span>어떻게 했나</div>
+          <div class="beat"><span class="bl">한 화면 정합</span><p>실수령→청구 자동생성→지급 결재→정산의 정합을 한 화면에 시각화해, 운영팀이 한 줄에서 조회·수정·결재를 끝내게 했습니다.</p></div>
+          <div class="beat"><span class="bl">핵심 레버</span><p>부서 간 핸드오프를 줄이는 일이 <b>곧 인력 절감</b>이었습니다.</p></div>
+          <div class="beat"><span class="bl">결정의 한 점</span><p>부서가 보는 청구서를 같은 그리드로 묶고 고유 컬럼은 접었습니다. <em>공통 입력 포맷 합의</em>가 ERP 정착의 핵심 조건이었습니다.</p></div>
+        </div>
+      </div>
+      <div class="result">
+          <div class="move-label"><span class="rn">iii.</span>무엇이 남았나</div>
+          <div class="kpi-ledger">
+            <div class="k"><div class="kn">6→3</div><div class="kt">운영 인력 (−50%)</div></div>
+            <div class="k"><div class="kn">100<span class="u">%</span></div><div class="kt">청구·지급 데이터화</div></div>
+            <div class="k"><div class="kn">0<span class="u">건</span></div><div class="kt">해고 · 전원 재배치</div></div>
+            <div class="k"><div class="kn">+18<span class="u">개월</span></div><div class="kt">잔여 인원 평균 근속</div></div>
+          </div>
+        </div>
+      <div class="case-meta">
+        <div><div class="ml">함께 만든 사람</div><p>PM(본인) · BE 2 · FE 1 · Designer 1 · 운영 3축 인터뷰. 전담 6명 중 3명은 영업·재고 트랙으로 재배치. <b>본인 역할</b> — 스코프 정의, 포맷 합의, MVP→SCM 로드맵.</p></div>
+        <div><div class="ml">이번에 안 한 결정</div><p>SCM 풀 스코프. 통증 1순위만 자르고 영업·재고는 다음 분기로 미뤘습니다. <b>한 단계씩 자르는 게 더 빨랐습니다.</b></p></div>
+      </div>
+    </article>
+
+    <!-- CASE 06 -->
+    <article class="case reveal" id="case-6">
+      <div class="case-eyebrow"><span class="num-badge">06</span><span class="co">Workmate · GADA</span><span class="role">PM → PO</span><span class="yr">2021 — 2024</span></div>
+      <h2 class="case-title">v2 → v4 3축 풀리뉴얼 — <em>50대 근로자</em>가 멈추지 않은 화면.</h2>
+      <p class="case-headline">부분 패치 6개월의 실패를 학습 삼아, 근로자·관리자·백오피스를 동시에 다시 지었습니다.</p>
+      <div class="chips">
+        <span class="chip"><b>3축</b> 동시 리뉴얼</span>
+        <span class="chip"><b>40.6%</b> 가입 "매우 쉬움"</span>
+        <span class="chip"><b>43.6%</b> 이수증 "매우 쉬움"</span>
+        <span class="chip"><b>PM→PO</b> 승격</span>
+      </div>
+      <div class="case-shots"><div class="plate-cap">Plates — 근로자앱 / 관리자앱 / 백오피스</div><div class="plates land"><img src="images/wm_worker_renewal/1.jpg" loading="lazy" alt="근로자앱"><img src="images/wm_worker_renewal/4.jpg" loading="lazy" alt="가입"><img src="images/wm_manager_renewal/3.jpg" loading="lazy" alt="관리자앱"><img src="images/wm_backoffice/2.jpg" loading="lazy" alt="백오피스"><img src="images/wm_worker_renewal/5.jpg" loading="lazy" alt=""><img src="images/wm_manager_renewal/1.jpg" loading="lazy" alt=""></div></div>
+      <div class="movements">
+        <div class="move">
+          <div class="move-label"><span class="rn">i.</span>왜 했나</div>
+          <div class="beat"><span class="bl">현상</span><p>주 사용자가 40~50대 건설 근로자였습니다. 큰 글자, 단순한 흐름, 흙 묻은 손으로도 누를 큰 버튼이 필요했습니다.</p></div>
+          <div class="beat"><span class="bl">진짜 병목</span><p>근로자·관리자·백오피스의 요구가 서로 충돌했고, <b>세 앱의 IA가 v2에서 이미 깨져</b> 있었습니다.</p></div>
+          <div class="beat"><span class="bl">판단을 바꾼 회고</span><p>처음 6개월은 부분 패치로 버텼지만 부작용만 늘어 <em>풀리뉴얼로 전환</em>했습니다. 이 판단이 v4의 출발점이었습니다.</p></div>
+        </div>
+        <div class="move">
+          <div class="move-label"><span class="rn">ii.</span>어떻게 했나</div>
+          <div class="beat"><span class="bl">충돌 해소 룰</span><p>세 사용자를 우선순위 1·2·3으로 줄 세우고, 요구가 충돌하면 <em>그 화면 앞에 가장 오래 앉는 사람</em>의 의견을 따랐습니다.</p></div>
+          <div class="beat"><span class="bl">일관성</span><p>세 트랙이 같은 디자인 토큰을 공유해, 동시 리뉴얼에서도 경험을 맞췄습니다.</p></div>
+          <div class="beat"><span class="bl">결정의 한 점</span><p>백오피스의 핵심은 <b>무엇을 노출하지 않을지</b> 정하는 일이었습니다. 화면을 새로 짜는 것보다 안 보이게 할 것을 정하는 게 더 어려웠습니다.</p></div>
+        </div>
+      </div>
+      <div class="result">
+          <div class="move-label"><span class="rn">iii.</span>무엇이 남았나</div>
+          <div class="kpi-ledger">
+            <div class="k"><div class="kn">40.6<span class="u">%</span></div><div class="kt">가입 "매우 쉬움"</div></div>
+            <div class="k"><div class="kn">43.6<span class="u">%</span></div><div class="kt">이수증 "매우 쉬움"</div></div>
+            <div class="k"><div class="kn">터치↓</div><div class="kt">관리자 등록 · DAU↑</div></div>
+            <div class="k"><div class="kn">PM→PO</div><div class="kt">그룹 운영 승격</div></div>
+          </div>
+        </div>
+      <div class="case-meta">
+        <div><div class="ml">함께 만든 사람 · 인계</div><p>PM(본인) → 후반 PO 승격 · FE 1 · BE 1 · QA 1 · Designer 1 × 3트랙 · 7개월. 승격 직후 후임 PM 2명에게 근로자·관리자 트랙을 위임하고 본인은 백오피스로 이동. <b>인계가 늦었으면 3축이 다시 깨졌습니다.</b></p></div>
+        <div><div class="ml">이번에 안 한 결정</div><p>한 앱씩 순차 리뉴얼. IA가 셋 다 깨진 상태라 순차로 가면 마지막 앱이 더 깨질 상황이었습니다. 충돌은 <b>우선순위 룰</b>로 풀었습니다.</p></div>
+      </div>
+    </article>
+
+    <!-- CASE 07 -->
+    <article class="case reveal" id="case-7">
+      <div class="case-eyebrow"><span class="num-badge">07</span><span class="co">Process · 2025 — Present</span><span class="role">CPO · Builder</span><span class="yr">AI × Cowork</span></div>
+      <h2 class="case-title">AI × CPO — <em>외주 없이</em> 직접 짓는 PM 워크플로.</h2>
+      <p class="case-headline">CPO가 1차 버전을 직접 만들어 검증하고, 정식 빌드는 팀에 위임합니다. 검증은 단축, 권한은 위임.</p>
+      <div class="chips">
+        <span class="chip"><b>1주→1일</b> 포트폴리오 빌드</span>
+        <span class="chip"><b>4건 100%</b> 정부지원 선정</span>
+        <span class="chip"><b>8명·122배포</b> 단일 화면 운영</span>
+        <span class="chip"><b>외주 없이</b> 직접 빌드</span>
+      </div>
+      <div class="case-shots"><div class="plate-cap">Plates — 사내 운영 대시보드 · 직접 빌드</div><div class="plates dash"><img src="images/af_dashboard/1.png" loading="lazy" alt="스케줄 간트 차트"><img src="images/af_dashboard/2.png" loading="lazy" alt="개요 대시보드"><img src="images/af_dashboard/3.png" loading="lazy" alt="팀 업무 현황"><img src="images/af_dashboard/4.png" loading="lazy" alt="이슈 트래커"></div></div>
+      <div class="movements">
+        <div class="move">
+          <div class="move-label"><span class="rn">i.</span>왜 했나</div>
+          <div class="beat"><span class="bl">문제 정의</span><p>CPO의 핵심은 의사결정과 실행 사이의 리드타임을 줄이는 일입니다. 기획·도구를 위임할수록 피드백 사이클이 길어집니다.</p></div>
+          <div class="beat"><span class="bl">진짜 병목</span><p>기성 도구(Notion·Asana·Monday)는 우리 워크플로에 핏이 안 맞았고, <b>외주 빌드는 4~8주</b>가 걸렸습니다.</p></div>
+          <div class="beat"><span class="bl">그래서 이 방향</span><p>첫 버전은 직접 만들고, <em>검증된 다음 팀이 정식 빌드를 가져가는</em> 방식으로 운영하기로 했습니다.</p></div>
+        </div>
+        <div class="move">
+          <div class="move-label"><span class="rn">ii.</span>어떻게 했나</div>
+          <div class="beat"><span class="bl">워크플로</span><p>기획→디자인→개발→운영 사이클에 Claude를 끼워, 한 사람이 1차 버전을 끝까지 만듭니다.</p></div>
+          <div class="beat"><span class="bl">적용 범위</span><p>사내 운영 대시보드, 이 포트폴리오, 정부지원 4건, 프로토타입 — 모두 <em>본인이 1차 버전</em>을 만든 뒤 팀에 위임했습니다.</p></div>
+          <div class="beat"><span class="bl">결정의 한 점</span><p>핵심은 외주를 줄이는 게 아니라 <b>검증된 첫 버전을 팀에 위임</b>하는 것입니다. 단축한 시간은 사용자 인터뷰와 의사결정에 다시 투입했습니다.</p></div>
+        </div>
+      </div>
+      <div class="result">
+          <div class="move-label"><span class="rn">iii.</span>무엇이 남았나</div>
+          <div class="kpi-ledger">
+            <div class="k"><div class="kn">1→1<span class="u">일</span></div><div class="kt">포트폴리오 (외주 1주)</div></div>
+            <div class="k"><div class="kn">4건</div><div class="kt">정부지원 100% 선정</div></div>
+            <div class="k"><div class="kn">8명</div><div class="kt">122배포 단일 화면</div></div>
+            <div class="k"><div class="kn">→팀</div><div class="kt">워크플로 가이드 전파</div></div>
+          </div>
+        </div>
+      <div class="case-meta">
+        <div><div class="ml">함께 만든 도구</div><p>CPO(본인) + Claude(Cowork·Artifact). 디자이너·개발자에게 검증된 첫 버전을 핸드오프하고, 정식 빌드는 팀에 위임. AI를 사람 대체가 아닌 <b>본인의 가속기</b>로 활용.</p></div>
+        <div><div class="ml">이번에 안 한 결정</div><p>풀스코프 외주. 본인이 빠른 1차 버전을 만들고, 디자인·개발·운영의 정식 사이클은 <b>팀이 가져갑니다.</b></p></div>
+      </div>
+    </article>
+
   </div>
 </section>
 
-    <div class="archive-eyebrow">아래 — 전체 프로젝트 아카이브 (어바웃피싱 5 + 웍스메이트 8 + 아키마켓 2) · 좌우 스크롤</div>
-  </div>
-</section>
-
-
-<!-- ============ ABOUTFISHING ============ -->
-<section id="aboutfishing">
-  <div class="section-head">
-    <div class="section-eyebrow" data-edit="companies.aboutfishing.eyebrow">Current · 2024.08 — 현재</div>
-    <h2 class="section-title"><span data-edit="companies.aboutfishing.name">어바웃피싱</span> <span class="quiet" data-edit="companies.aboutfishing.subname">/ AboutFishing</span></h2>
-    <p class="section-desc" data-edit="companies.aboutfishing.desc">
-      낚시 커뮤니티 + 커머스 슈퍼앱. 등기이사 · CPO · PO · PM으로 제품과 사업을 동시에 책임지고 있습니다.
-    </p>
-  </div>
-
-  <div class="company-block featured">
-    <div class="company-head">
-      <div class="company-id">
-        <div class="company-logo">A</div>
-        <div>
-          <div class="company-name" data-edit="companies.aboutfishing.cname">AboutFishing</div>
-          <div class="company-role" data-edit="companies.aboutfishing.role">등기이사 · CPO · PO · PM</div>
-        </div>
-      </div>
-      <div class="company-period">
-        <div class="badge">현재</div>
-        <div data-edit="companies.aboutfishing.period">2024.08 — Present (1년 9개월)</div>
-      </div>
+<!-- ───────── PROPOSALS ───────── -->
+<section class="band recess" id="proposals">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow"><span class="tick"></span>Proposals · 정부지원 4건 100% 선정</div>
+      <h2 class="title">자금은 <em>직접</em> 끌어왔습니다.</h2>
+      <p class="desc">외주 컨설팅 없이 사업계획서와 재무·R&amp;D 트랙을 직접 쓰고 발표·선정까지 마쳤습니다.</p>
     </div>
-
-    <div class="company-summary" data-edit="companies.aboutfishing.summary">
-      국내 낚시 인구를 위한 커뮤니티 × 커머스 슈퍼앱. <b>등기이사 · CPO</b>로서 홈·예약·쇼핑·커뮤니티·중고장터·머니·챔피언십·마이페이지·알림 등 9개 풀 도메인을 직접 총괄합니다.<br><br>
-      <b>매출 임팩트</b> — 2025 연매출 14.26억(KPI 97.6%), 2026 4월 단월 매출 1.43억(1→4월 +10×), 얼라이언스 예약 4개월 누적 3.63억(월 판매 건 +86×), MAU 3배 성장(29.6K→89.0K).<br><br>
-      <b>운영 정량 (1년 9개월간)</b> — 프로젝트 98건(완료 62 / 진행 15 / 계획 10) · 배포 122건 / <b>롤백 1건 (롤백률 0.8%)</b> · QA 검증율 94% · 이슈 930건 처리(운영 도달 28% — dev/stage에서 72% 차단) · 백로그 83건(자체 발의 95% / 대표 요청 4건). 슈퍼앱 9개 도메인을 동시에 돌리며 만든 **"적게 깨지는 운영"** 시그널.<br><br>
-      <b>외부 자산화</b> — 디자인 시스템 v3로 산출물 일관성, 창업도약패키지·TMAP 협업으로 자금·파트너십, 사내 일정관리 대시보드를 Claude로 직접 빌드해 8명 멤버 · 122 배포 · 9개 도메인을 단일 화면 운영.
-    </div>
-
-    <div class="company-tags">
-      <span class="tag">슈퍼앱</span>
-      <span class="tag">커뮤니티</span>
-      <span class="tag">커머스</span>
-      <span class="tag">예약 (얼라이언스)</span>
-      <span class="tag">중고장터</span>
-      <span class="tag">디자인 시스템</span>
-      <span class="tag">창업도약패키지</span>
-      <span class="tag">TMAP 협업</span>
-      <span class="tag">사내 도구 자체 빌드</span>
-    </div>
-
-    <!-- 서비스 설명 -->
-    <div class="service-section">
-      <h3 class="section-h">About · Service Definition</h3>
-      <div class="service-grid-mini">
-        <div>
-          <h4>What — 서비스 정체</h4>
-          <p>국내 낚시인 약 <b>800만 명</b> · 시장 규모 <b>4조원+</b>. 단순 커머스·커뮤니티가 아닌 <b>예약·쇼핑·중고·커뮤니티·머니·챔피언십을 한 앱</b>으로 묶어 사용자 시간 점유율을 잡습니다.</p>
-        </div>
-        <div>
-          <h4>Why — 시장 기회</h4>
-          <ul>
-            <li>시즌성·대회 문화·고관여 장비·세대별 락인이 모두 작용하는 독특한 도메인</li>
-            <li>오프라인 분산(선박 콜·낚시점 직거래) → O2O 통합 기회</li>
-            <li>SK텔레콤 TMAP 등 대형 모빌리티 파트너의 미진입 영역</li>
-          </ul>
-        </div>
-      </div>
-      <div class="service-meta-mini">
-        <div class="item"><div class="num">800만+</div><div class="label">국내 낚시 인구</div></div>
-        <div class="item"><div class="num">4조원+</div><div class="label">국내 낚시 시장 규모</div></div>
-        <div class="item"><div class="num">9개</div><div class="label">통합 도메인</div></div>
-      </div>
-    </div>
-
-    <!-- 페르소나 -->
-    <div class="service-section">
-      <h3 class="section-h">Target Personas</h3>
-      <div class="personas-mini">
-        <div class="persona-mini">
-          <div class="avatar">P1</div>
-          <h4>50대 베테랑 낚시인</h4>
-          <div class="meta">남 · 50대 · 월 3~4회 출조</div>
-          <div class="quote">"좋은 선상 정보가 어디 흩어져 있어. 카톡 예약은 여전히 불편해."</div>
-          <div class="entry"><b>진입</b> 예약 → 조황 → 커뮤니티</div>
-        </div>
-        <div class="persona-mini">
-          <div class="avatar">P2</div>
-          <h4>30대 신규 입문자</h4>
-          <div class="meta">남 · 30대 · 월 1~2회 / 가족 동반</div>
-          <div class="quote">"장비 하나 사려면 정보 찾는 데만 한 시간. 어디서 사야 할지도 모르겠고."</div>
-          <div class="entry"><b>진입</b> 커뮤니티 → 쇼핑 → 머니 락인</div>
-        </div>
-        <div class="persona-mini">
-          <div class="avatar">P3</div>
-          <h4>40대 가족 단위 주말 낚시객</h4>
-          <div class="meta">남 · 40대 · 분기 1~2회 / TMAP 사용자</div>
-          <div class="quote">"가족과 갈 만한 안전한 포인트, 하루 일정으로 갈 수 있는 곳을 원해."</div>
-          <div class="entry"><b>진입</b> 홈(TMAP) → 예약 → 커뮤니티</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 차트 -->
-    <div class="service-section">
-      <h3 class="section-h">Numbers · 1년 9개월</h3>
-      <div class="charts-grid">
-        <div class="chart-mini">
-          <h4>Monthly Revenue</h4>
-          <div class="chart-t">2025 → 2026 매출 추이</div>
-          <svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
-            <line x1="40" y1="170" x2="580" y2="170" stroke="#EDEAE0" stroke-width="1"/>
-            <line x1="40" y1="120" x2="580" y2="120" stroke="#EDEAE0" stroke-width="1" stroke-dasharray="2 4"/>
-            <line x1="40" y1="70"  x2="580" y2="70"  stroke="#EDEAE0" stroke-width="1" stroke-dasharray="2 4"/>
-            <text x="34" y="174" font-size="9" fill="#85817A" text-anchor="end">0</text>
-            <text x="34" y="124" font-size="9" fill="#85817A" text-anchor="end">100M</text>
-            <text x="34" y="74"  font-size="9" fill="#85817A" text-anchor="end">200M</text>
-            <g fill="#3182F6">
-              <rect x="50" y="159" width="22" height="11"/>
-              <rect x="80" y="160" width="22" height="10"/>
-              <rect x="110" y="125" width="22" height="45"/>
-              <rect x="140" y="120" width="22" height="50"/>
-              <rect x="170" y="105" width="22" height="65"/>
-              <rect x="200" y="78"  width="22" height="92"/>
-              <rect x="230" y="106" width="22" height="64"/>
-              <rect x="260" y="89"  width="22" height="81"/>
-              <rect x="290" y="33"  width="22" height="137"/>
-              <rect x="320" y="60"  width="22" height="110"/>
-              <rect x="350" y="106" width="22" height="64"/>
-              <rect x="380" y="146" width="22" height="24"/>
-            </g>
-            <g fill="#8E3A23">
-              <rect x="420" y="161" width="22" height="9"/>
-              <rect x="450" y="155" width="22" height="15"/>
-              <rect x="480" y="138" width="22" height="32"/>
-              <rect x="510" y="98"  width="22" height="72"/>
-            </g>
-            <text x="61"  y="187" font-size="9" fill="#85817A" text-anchor="middle">1</text>
-            <text x="241" y="187" font-size="9" fill="#85817A" text-anchor="middle">7</text>
-            <text x="380" y="187" font-size="9" fill="#85817A" text-anchor="middle">12</text>
-            <text x="430" y="187" font-size="9" fill="#85817A" text-anchor="middle">'26.1</text>
-            <text x="520" y="187" font-size="9" fill="#85817A" text-anchor="middle">4</text>
-          </svg>
-          <div class="chart-summary"><b>2025 연 14.26억 (KPI 97.6%)</b> · 2026 1→4월 +10× (14.5M → 143M)</div>
-        </div>
-
-        <div class="chart-mini">
-          <h4>Revenue Mix · 2025</h4>
-          <div class="chart-t">매출 채널 4분산</div>
-          <svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
-            <g transform="translate(140,100)">
-              <circle r="74" fill="none" stroke="#EDEAE0" stroke-width="32"/>
-              <circle r="74" fill="none" stroke="#3182F6" stroke-width="32"
-                stroke-dasharray="339 465" transform="rotate(-90)"/>
-              <circle r="74" fill="none" stroke="#7B61FF" stroke-width="32"
-                stroke-dasharray="93 465" stroke-dashoffset="-339" transform="rotate(-90)"/>
-              <circle r="74" fill="none" stroke="#10B981" stroke-width="32"
-                stroke-dasharray="12 465" stroke-dashoffset="-432" transform="rotate(-90)"/>
-              <circle r="74" fill="none" stroke="#FFB800" stroke-width="32"
-                stroke-dasharray="10 465" stroke-dashoffset="-444" transform="rotate(-90)"/>
-              <circle r="74" fill="none" stroke="#FF5050" stroke-width="32"
-                stroke-dasharray="9 465" stroke-dashoffset="-454" transform="rotate(-90)"/>
-              <text y="-2" font-size="18" font-weight="900" fill="#1A1814" text-anchor="middle" font-family="Inter">14.26억</text>
-              <text y="14" font-size="9" fill="#85817A" text-anchor="middle">2025 매출</text>
-            </g>
-            <g transform="translate(280,30)" font-size="11" font-family="Pretendard">
-              <rect x="0" y="0" width="10" height="10" fill="#3182F6" rx="2"/><text x="16" y="9" fill="#1A1814" font-weight="600">스마트스토어 73%</text>
-              <rect x="0" y="22" width="10" height="10" fill="#7B61FF" rx="2"/><text x="16" y="31" fill="#1A1814" font-weight="600">자사몰 20%</text>
-              <rect x="0" y="44" width="10" height="10" fill="#10B981" rx="2"/><text x="16" y="53" fill="#1A1814" font-weight="600">예약 2.5%</text>
-              <rect x="0" y="66" width="10" height="10" fill="#FFB800" rx="2"/><text x="16" y="75" fill="#1A1814" font-weight="600">대회 2.2%</text>
-              <rect x="0" y="88" width="10" height="10" fill="#FF5050" rx="2"/><text x="16" y="97" fill="#1A1814" font-weight="600">외부 2%</text>
-              <text x="0" y="125" font-size="10" fill="#85817A">스마트스토어 단일 의존을</text>
-              <text x="0" y="139" font-size="10" fill="#85817A">4채널 분산으로 — 리스크 ↓</text>
-            </g>
-          </svg>
-          <div class="chart-summary"><b>2026 예약(얼라이언스) 본격화</b> · 4개월 누적 3.63억 / 판매 건 86×</div>
-        </div>
-
-        <div class="chart-mini">
-          <h4>MAU Growth</h4>
-          <div class="chart-t">2026 Q1 — 3배 성장</div>
-          <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg">
-            <line x1="60" y1="150" x2="540" y2="150" stroke="#EDEAE0" stroke-width="1"/>
-            <g>
-              <rect x="100" y="105" width="80" height="45" fill="#3182F6" rx="4"/>
-              <text x="140" y="125" font-size="13" fill="#fff" text-anchor="middle" font-weight="800" font-family="Inter">29.6K</text>
-              <text x="140" y="170" font-size="10" fill="#85817A" text-anchor="middle">2026.01</text>
-            </g>
-            <g>
-              <rect x="240" y="107" width="80" height="43" fill="#3182F6" rx="4"/>
-              <text x="280" y="127" font-size="13" fill="#fff" text-anchor="middle" font-weight="800" font-family="Inter">28.7K</text>
-              <text x="280" y="170" font-size="10" fill="#85817A" text-anchor="middle">2026.02</text>
-            </g>
-            <g>
-              <rect x="380" y="20" width="80" height="130" fill="#8E3A23" rx="4"/>
-              <text x="420" y="48" font-size="16" fill="#fff" text-anchor="middle" font-weight="900" font-family="Inter">89K</text>
-              <text x="420" y="170" font-size="10" fill="#8E3A23" text-anchor="middle" font-weight="700">2026.03 ×3</text>
-            </g>
-            <path d="M 140 130 Q 280 130 420 90" stroke="#8E3A23" stroke-width="2" fill="none" stroke-dasharray="4 3" opacity="0.6"/>
-          </svg>
-          <div class="chart-summary"><b>3배 성장</b> · 신규 가입 4개월 누적 6,344명 · 재방문율 88.1% → 97.5%</div>
-        </div>
-
-        <div class="chart-mini">
-          <h4>ARPPU · Repeat · Money Lock-in</h4>
-          <div class="chart-t">자사몰 ARPPU +34% / 머니 락인 30%</div>
-          <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg">
-            <!-- 3 메트릭 비교 박스 -->
-            <g transform="translate(20,20)">
-              <rect width="170" height="140" rx="10" fill="#F8F6F0"/>
-              <text x="85" y="32" font-size="11" fill="#85817A" text-anchor="middle" font-weight="700">자사몰 ARPPU</text>
-              <text x="85" y="74" font-size="22" fill="#1A1814" text-anchor="middle" font-weight="900" font-family="Inter">+34%</text>
-              <text x="85" y="98" font-size="11" fill="#85817A" text-anchor="middle">2025 67,020</text>
-              <text x="85" y="114" font-size="11" fill="#3182F6" text-anchor="middle" font-weight="800">→ 2026 89,925원</text>
-            </g>
-            <g transform="translate(215,20)">
-              <rect width="170" height="140" rx="10" fill="#F0FDF4"/>
-              <text x="85" y="32" font-size="11" fill="#85817A" text-anchor="middle" font-weight="700">재방문율</text>
-              <text x="85" y="74" font-size="22" fill="#10B981" text-anchor="middle" font-weight="900" font-family="Inter">97.5%</text>
-              <text x="85" y="98" font-size="11" fill="#85817A" text-anchor="middle">2026.01 88.1%</text>
-              <text x="85" y="114" font-size="11" fill="#10B981" text-anchor="middle" font-weight="800">→ 03 97.5%</text>
-            </g>
-            <g transform="translate(410,20)">
-              <rect width="170" height="140" rx="10" fill="#FFF5F1"/>
-              <text x="85" y="32" font-size="11" fill="#85817A" text-anchor="middle" font-weight="700">매출 대비 머니 사용률</text>
-              <text x="85" y="74" font-size="22" fill="#8E3A23" text-anchor="middle" font-weight="900" font-family="Inter">28%</text>
-              <text x="85" y="98" font-size="11" fill="#85817A" text-anchor="middle">결제 락인 메커니즘</text>
-              <text x="85" y="114" font-size="11" fill="#8E3A23" text-anchor="middle" font-weight="800">발행 ≈ 사용 (99%)</text>
-            </g>
-          </svg>
-          <div class="chart-summary"><b>도메인별 적립률 차등화 후 결제 락인 30% 정착</b> · 어뷰징 의심 트랜잭션 자동 차단</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="archive-eyebrow">어바웃피싱 — 기타 프로젝트</div>
-    <div class="proj-grid" data-projects-of="aboutfishing">
-
-      <article class="proj" data-project-id="af_tmap">
-        <div class="proj-top">
-          <div class="proj-emoji">🗺️</div>
-          <span class="proj-tag collab">COLLAB</span>
-        </div>
-        <div class="proj-title">TMAP 협업 — 위치 기반 낚시 데이터</div>
-        <div class="proj-summary">SK텔레콤 TMAP과의 협업으로 낚시 포인트 / 선박 / 조황 데이터를 위치 기반으로 연동. 검색-예약-내비게이션 단일 흐름 설계.</div>
-        <div class="why-block">
-          <h4>기획 의도 / 목적</h4>
-          <p>낚시 사용자의 사용자 어려움 1순위는 ‘어디로 갈지 / 어떻게 도착할지’. 자체 지도/내비 구축 비용을 낮추면서 TMAP 사용자 풀에서 어바웃피싱 인지를 동시에 확보할 수 있는 협업 구조로 설계했습니다.</p>
-        </div>
-        <div class="kpi-block">
-          <h4>달성 / 진행 KPI</h4>
-          <ul class="kpi-list">
-            <li>TMAP 협업 본계약 체결</li>
-            <li>낚시 포인트 / 선박 데이터 양방향 연동 스펙 확정</li>
-            <li>검색→예약→내비게이션 단일 퍼널 설계 완료</li>
-          </ul>
-        </div>
-        <div class="proj-meta">
-          <span><b>유형</b> 외부협업</span>
-          <span><b>역할</b> CPO · PM</span>
-        </div>
-      </article>
-
-      <article class="proj" data-project-id="af_money">
-        <div class="proj-top">
-          <div class="proj-emoji">💰</div>
-          <span class="proj-tag new">NEW</span>
-        </div>
-        <div class="proj-title">머니 · 포인트맵 · 출석체크</div>
-        <div class="proj-summary">리텐션을 만드는 락인 장치. 포인트 적립/사용 정책과 출석체크·포인트맵 게이미피케이션.</div>
-        <div class="why-block">
-          <h4>기획 의도 / 목적</h4>
-          <p>리텐션을 위한 보상 곡선이 모호했고, 어뷰징 가능성이 높은 영역이었습니다. 가시성 + 안전성을 동시에 잡는 보상 설계가 필요했습니다.</p>
-        </div>
-        <div class="kpi-block">
-          <h4>달성 KPI</h4>
-          <ul class="kpi-list">
-            <li>출석 7일 연속 사용자 비율 증가</li>
-            <li>포인트 사용 → 결제 전환율 우상향</li>
-            <li>어뷰징 의심 트랜잭션 자동 차단 정책 가동</li>
-          </ul>
-        </div>
-        <div class="proj-detail">
-          <h4>핵심 기여</h4>
-          <ul>
-            <li>포인트 적립·소멸·전환 정책 수립 및 어뷰징 방어</li>
-            <li>출석체크 / 포인트맵 보상 곡선 설계</li>
-            <li>머니 카드 UI(블랙 카드 컴포넌트) 디자인 토큰화</li>
-          </ul>
-        </div>
-        <div class="proj-meta">
-          <span><b>도메인</b> Loyalty</span>
-          <span><b>역할</b> CPO · PO</span>
-        </div>
-      </article>
-
-      <article class="proj" data-project-id="af_championship">
-        <div class="proj-top">
-          <div class="proj-emoji">🏆</div>
-          <span class="proj-tag new">NEW</span>
-        </div>
-        <div class="proj-title">챔피언십 (낚시대회)</div>
-        <div class="proj-summary">오프라인 대회를 앱 안으로 — 참가신청, 실시간 순위, 시상까지 풀 사이클 운영.</div>
-        <div class="why-block">
-          <h4>기획 의도 / 목적</h4>
-          <p>오프라인 대회가 활발한 낚시 시장에서, 대회 참가/결과 입력/시상이 모두 카카오톡·엑셀로 흩어져 있었습니다. 한 곳에서 끝내는 운영 도구가 곧 사용자 락인 트리거.</p>
-        </div>
-        <div class="kpi-block">
-          <h4>달성 KPI</h4>
-          <ul class="kpi-list">
-            <li>대회 회차 운영 횟수 증가</li>
-            <li>대회 기간 DAU 스파이크 발생</li>
-          </ul>
-        </div>
-        <div class="proj-detail">
-          <h4>핵심 기여</h4>
-          <ul>
-            <li>대회 회차·종목·시상 룰 데이터 모델링</li>
-            <li>참가 → 결과 입력 → 검증 → 시상의 운영 시나리오 설계</li>
-          </ul>
-        </div>
-        <div class="proj-meta">
-          <span><b>도메인</b> Events</span>
-          <span><b>역할</b> PO</span>
-        </div>
-      </article>
-
-      <article class="proj" data-project-id="af_alarm">
-        <div class="proj-top"><div class="proj-emoji">🔔</div><span class="proj-tag ops">SYSTEM</span></div>
-        <div class="proj-title">알림 시스템 + 채널톡 CS 연동</div>
-        <div class="proj-summary">앱 푸시 / 인앱 알림 / 채널톡 CS를 한 정책으로 통합. 가다 Noti 시스템에서 검증한 카테고리·태그 모델을 어바웃피싱 도메인에 맞춰 재설계.</div>
-        <div class="why-block">
-          <h4>기획 의도 / 목적</h4>
-          <p>"중요한 알림"과 "마케팅 알림"이 같은 통로로 가면 사용자는 알림 자체를 끕니다. 도메인별(예약 변경, 결제 완료, 커뮤니티 댓글, 마케팅) 카테고리/태그를 명확히 정의해 사용자가 종류별로 끄고 켤 수 있게 만들었습니다. CS는 채널톡으로 통합해 운영팀의 응답 시간을 단축.</p>
-        </div>
-        <div class="kpi-block">
-          <h4>달성 KPI</h4>
-          <ul class="kpi-list">
-            <li>푸시 옵트아웃율 감소 (분리 설정 도입 후)</li>
-            <li>운영팀 CS 평균 응답시간 단축 (채널톡 통합)</li>
-            <li>알림 → 결제·예약 전환 트래픽 측정 가능 데이터화</li>
-          </ul>
-        </div>
-        <div class="proj-meta"><span><b>도메인</b> Notification / CS</span><span><b>역할</b> CPO · PM</span></div>
-      </article>
-
+    <div class="proposals">
+      <div class="prop"><div class="py">2025 · 어바웃피싱</div><h4>창업도약<br/>패키지</h4><p>중기부 · 단독 작성·선정<br/><b>운영·R&amp;D 자금</b> 확보</p></div>
+      <div class="prop"><div class="py">2021 · 웍스메이트</div><h4>TIPS<br/>프로그램</h4><p>중기부 · 약 100p 단독<br/><b>VC 후속 라운드</b> 신뢰</p></div>
+      <div class="prop"><div class="py">2022 · 웍스메이트</div><h4>NH 디지털<br/>챌린지플러스</h4><p>NH농협 · 단독 작성·선정<br/><b>P2P 대출</b>로 연결</p></div>
+      <div class="prop"><div class="py">2023 · 웍스메이트</div><h4>NIPA<br/>AI 바우처</h4><p>NIPA · 단독 작성·선정<br/><b>매칭 AI R&amp;D</b> 자금</p></div>
     </div>
   </div>
 </section>
 
-<!-- ============ 가다 (웍스메이트) ============ -->
-<section id="workmate">
-  <div class="section-head">
-    <div class="section-eyebrow" data-edit="companies.workmate.eyebrow">2020.12 — 2024.08 · 3년 8개월</div>
-    <h2 class="section-title"><span data-edit="companies.workmate.name">웍스메이트</span> <span class="quiet" data-edit="companies.workmate.subname">/ 가다</span></h2>
-    <p class="section-desc" data-edit="companies.workmate.desc">
-      건설 구인구직 O2O 플랫폼 ‘가다’. PM에서 PO로 성장하며 v2.0 → v4.0 리뉴얼과 신규 시스템 다수를 리드했습니다.
-    </p>
-  </div>
-
-  <div class="company-block">
-    <div class="company-head">
-      <div class="company-id">
-        <div class="company-logo gada">가</div>
-        <div>
-          <div class="company-name" data-edit="companies.workmate.cname">Workmate · GADA</div>
-          <div class="company-role" data-edit="companies.workmate.role">PO · PM (근로자앱 / 관리자앱 / 백오피스)</div>
-        </div>
-      </div>
-      <div class="company-period">
-        <div class="badge" style="background:var(--accent);">PREV</div>
-        <div data-edit="companies.workmate.period">2020.12 — 2024.08 (3년 8개월)</div>
-      </div>
+<!-- ───────── ARCHIVE ───────── -->
+<section class="band" id="archive">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:8px;">
+      <div class="eyebrow"><span class="tick"></span>Archive · 전체 프로젝트</div>
+      <h2 class="title">남은 도메인과 <em>기록</em>.</h2>
+      <p class="desc">케이스로 다루지 않은 도메인의 실제 화면과 결과입니다. 이미지를 누르면 크게 볼 수 있습니다.</p>
     </div>
 
-    <div class="company-summary" data-edit="companies.workmate.summary">
-      건설 근로자와 현장 관리자를 연결하는 O2O 매칭 플랫폼. 2020년 PM으로 합류해 근로자앱·관리자앱·백오피스 v2 → v4 리뉴얼을 100% 기여로 완수했고, 이후 PO로 승격해 PM·PD·QA 그룹을 운영했습니다. TIPS · NH 디지털챌린지플러스 · NIPA AI 바우처 등 정부지원 사업 제안서를 직접 작성해 모두 선정시켰습니다.
+    <div class="arch-head"><div class="ah">어바웃피싱 <span class="en">AboutFishing</span></div><div class="am">2024.08 — 현재</div></div>
+    <div class="arch-grid">
+      <article class="arch reveal">
+        <div class="at">Loyalty · CPO·PO</div>
+        <h4>머니 · 포인트맵 · 출석체크</h4>
+        <p class="as">리텐션을 묶는 보상 구조. 적립·소멸·전환 정책과 어뷰징 방어를 함께 설계했습니다.</p>
+        <ul class="ak"><li>출석 7일 연속 사용자 비율 증가</li><li>발행 대비 사용 99% — 결제 락인으로 검증</li><li>어뷰징 의심 거래 자동 차단</li></ul>
+        <div class="plate"><div class="plate-cap">Plates — 머니</div><div class="plates land"><img src="images/af_money/1.jpg" loading="lazy" alt="머니"><img src="images/af_money/2.jpg" loading="lazy" alt=""><img src="images/af_money/3.jpg" loading="lazy" alt=""></div></div>
+      </article>
+      <article class="arch reveal">
+        <div class="at">Notification · CPO·PM</div>
+        <h4>알림 + 채널톡 CS 통합</h4>
+        <p class="as">중요 알림과 마케팅을 분리해 옵트아웃을 줄이고, CS를 채널톡으로 통합했습니다.</p>
+        <ul class="ak"><li>도메인별 카테고리·태그로 분리 설정</li><li>푸시 옵트아웃율 감소</li><li>CS 평균 응답시간 단축</li></ul>
+        <div class="plate"><div class="plate-cap">Plates — 알림 / CS</div><div class="plates land"><img src="images/af_alarm/1.jpg" loading="lazy" alt="알림"><img src="images/af_alarm/2.jpg" loading="lazy" alt=""></div></div>
+      </article>
+      <article class="arch reveal solo">
+        <div class="at">Partnership · CPO 주도</div>
+        <h4>SK텔레콤 TMAP 협업</h4>
+        <p class="as">창업도약패키지 대기업 협업형 파트너로 SK텔레콤 TMAP과 위치 데이터를 연동해 검색→예약→길안내를 한 흐름으로 함께 설계했습니다. 자사 구축 대비 ROI가 높은 선박·조황 데이터를 근거로 대기업과의 협업을 이끌었습니다.</p>
+        <ul class="ak"><li>창업도약패키지 대기업 협업형으로 TMAP 데이터 연동 추진</li><li>검색→예약→길안내 단일 퍼널 설계</li><li>가족 단위 이동 흐름에서 낚시를 가성비 카테고리로 제안</li></ul>
+      </article>
     </div>
 
-    <div class="company-tags">
-      <span class="tag">건설 O2O</span>
-      <span class="tag">앱 리뉴얼</span>
-      <span class="tag">백오피스</span>
-      <span class="tag">ERP</span>
-      <span class="tag">데이터 분석</span>
-      <span class="tag">정부과제</span>
+    <div class="arch-head"><div class="ah">웍스메이트 <span class="en">Workmate · GADA</span></div><div class="am">2020.12 — 2024.08</div></div>
+    <div class="arch-grid">
+      <article class="arch reveal">
+        <div class="at">Partnership · PM</div>
+        <h4>P2P 대출 — 한화 EBC × 피플펀드</h4>
+        <p class="as">근로 성실도가 상환 성실도로 이어지는지 실데이터로 검증했습니다. 실작업은 0.5개월로 압축했습니다.</p>
+        <ul class="ak"><li>대상 300명 전원 상환 완료 · 이자율 6%</li><li>장기연체 0건</li><li>근로–상환 상관관계를 신규 금융상품 가설로 연결</li></ul>
+        <div class="plate"><div class="plate-cap">Plates — P2P</div><div class="plates land"><img src="images/wm_p2p/1.jpg" loading="lazy" alt="P2P"><img src="images/wm_p2p/2.jpg" loading="lazy" alt=""><img src="images/wm_p2p/3.jpg" loading="lazy" alt=""></div></div>
+      </article>
+      <article class="arch reveal">
+        <div class="at">New · PM</div>
+        <h4>Noti — 통합 알림 시스템</h4>
+        <p class="as">부서별로 흩어진 알림 도구를 통합하고, 문자에서 푸시로 전환해 비용을 줄였습니다.</p>
+        <ul class="ak"><li>문자 비중 감소 / 푸시 비중 증가</li><li>발송 데이터 100% 카테고리·태그화</li><li>매칭·마케팅 도구 통합 완료</li></ul>
+        <div class="plate"><div class="plate-cap">Plates — Noti</div><div class="plates land"><img src="images/wm_noti/1.jpg" loading="lazy" alt="Noti"><img src="images/wm_noti/2.jpg" loading="lazy" alt=""><img src="images/wm_noti/3.jpg" loading="lazy" alt=""></div></div>
+      </article>
+      <article class="arch reveal">
+        <div class="at">New Frame · PM</div>
+        <h4>A/B 테스트 프레임</h4>
+        <p class="as">PM의 직감을 가설–실험–결과–의사결정 사이클로 바꿨습니다.</p>
+        <ul class="ak"><li>단계별 이탈 분석 정착</li><li>이탈 후 재진입 10,730명 직접 추출</li><li>GA 밖 데이터 분석 가능</li></ul>
+        <div class="plate"><div class="plate-cap">Plates — A/B Test</div><div class="plates land"><img src="images/wm_abtest/1.jpg" loading="lazy" alt="A/B"><img src="images/wm_abtest/2.jpg" loading="lazy" alt=""><img src="images/wm_abtest/3.jpg" loading="lazy" alt=""></div></div>
+      </article>
+      <article class="arch reveal">
+        <div class="at">Research · PM</div>
+        <h4>Persona · Journey · UX Writing</h4>
+        <p class="as">인터뷰로 타겟을 정립하고, 흩어진 표현을 하나의 언어로 통일했습니다.</p>
+        <ul class="ak"><li>전사 사업 목표 정렬 기준 문서</li><li>플랫폼 전 영역 언어 일관성 확보</li><li>운영 CS 응대 표현 통일</li></ul>
+        <div class="plate"><div class="plate-cap">Plates — 페르소나 / UX 라이팅</div><div class="plates land"><img src="images/wm_persona/1.jpg" loading="lazy" alt="페르소나"><img src="images/wm_persona/2.jpg" loading="lazy" alt=""><img src="images/wm_uxwriting/1.jpg" loading="lazy" alt="UX 라이팅"></div></div>
+      </article>
+      <article class="arch reveal">
+        <div class="at">Process · PO</div>
+        <h4>백로그 운영 개선</h4>
+        <p class="as">접수를 슬랙 워크플로로 자동화해 요청 진입 장벽을 낮추고 도달 시간을 줄였습니다.</p>
+        <ul class="ak"><li>요청 접수 → PO 도달 시간 단축</li><li>긴급도·사이즈로 프로젝트/비정기 분기</li><li>분기 회고(3Ls) 정착</li></ul>
+        <div class="plate"><div class="plate-cap">Plates — 백로그</div><div class="plates land"><img src="images/wm_backlog/1.jpg" loading="lazy" alt="백로그"><img src="images/wm_backlog/2.jpg" loading="lazy" alt=""><img src="images/wm_backlog/3.jpg" loading="lazy" alt=""></div></div>
+      </article>
+      <article class="arch reveal">
+        <div class="at">Grant · Collab · PM</div>
+        <h4>TIPS 발췌 · 공제회 협업</h4>
+        <p class="as">TIPS 사업계획서를 약 100쪽 단독 집필했고, 공공기관과 9개월 협업했습니다.</p>
+        <ul class="ak"><li>TIPS 선정 (중기부, 2021)</li><li>공제회 요구사항 합치 → 기능 정의</li><li>정책 데이터(이수증·등급) 확보</li></ul>
+        <div class="plate"><div class="plate-cap">Plates — TIPS / 공제회</div><div class="plates land"><img src="images/wm_tips/1.jpg" loading="lazy" alt="TIPS"><img src="images/wm_tips/2.jpg" loading="lazy" alt=""><img src="images/wm_kjc/1.jpg" loading="lazy" alt="공제회"></div></div>
+      </article>
     </div>
 
-    <div class="archive-eyebrow">웍스메이트 — 기타 프로젝트</div>
-    <div class="proj-grid" data-projects-of="workmate">
-
-      <article class="proj" data-project-id="wm_noti">
-        <div class="proj-top"><div class="proj-emoji">🔔</div><span class="proj-tag new">NEW</span></div>
-        <div class="proj-title">Noti — 통합 알림 시스템</div>
-        <div class="proj-summary">매칭·마케팅·데이터팀이 같은 도구를 쓰도록 통합. SMS → PUSH 전환으로 발송 비용 절감.</div>
-        <div class="why-block">
-          <h4>기획 의도 / 목적</h4>
-          <p>각 부서가 알림을 따로 발송하면서 SMS 비용이 누적되고, 발송 데이터가 흩어져 있었습니다. 통합 알림 도구 + 카테고리/태그 데이터화로 비용·효율 두 가지를 동시에 잡았습니다.</p>
-        </div>
-        <div class="kpi-block">
-          <h4>달성 KPI</h4>
-          <ul class="kpi-list">
-            <li>SMS 발송 비중 ↓ / PUSH 비중 ↑</li>
-            <li>알림 발송 데이터 100% 카테고리·태그화</li>
-            <li>매칭·마케팅 부서 도구 통합 완료</li>
-          </ul>
-        </div>
-        <div class="proj-detail">
-          <h4>핵심 기여</h4>
-          <ul>
-            <li>MVP → 2단계 → 3단계 고도화 로드맵 설계 (4개월 MVP)</li>
-            <li>카테고리·태그 기반 발송 데이터화로 효율 측정 가능하게</li>
-            <li>SMS 비중 ↓ / PUSH 비중 ↑로 운영 비용 절감</li>
-          </ul>
-        </div>
-        <div class="proj-meta"><span><b>유형</b> 신규</span><span><b>역할</b> PM</span></div>
-      </article>
-
-      <article class="proj" data-project-id="wm_b2b">
-        <div class="proj-top"><div class="proj-emoji">🌐</div><span class="proj-tag new">NEW</span></div>
-        <div class="proj-title">B2B 웹페이지 신규 구축</div>
-        <div class="proj-summary">건설사·관리자 리드 수집 + PMF 측정. 인터뷰 기반 인사이트를 온라인 기능으로 빠르게 검증.</div>
-        <div class="why-block">
-          <h4>기획 의도 / 목적</h4>
-          <p>B2B 영역은 영업 1:1 미팅이 전부였고 Organic 채널이 없었습니다. 인터뷰 기반 가설을 페이지로 빠르게 검증하면서 동시에 리드를 모으는 두 가지 목표.</p>
-        </div>
-        <div class="kpi-block">
-          <h4>달성 KPI</h4>
-          <ul class="kpi-list">
-            <li>Organic 리드 수집 채널 신규 확보</li>
-            <li>관리자앱 사용 주체 인터뷰 인사이트 도출</li>
-          </ul>
-        </div>
-        <div class="proj-detail">
-          <h4>핵심 기여</h4>
-          <ul>
-            <li>Organic 리드 수집 채널 확보로 영업 연계</li>
-            <li>관리자앱 활성화 / 직영반장 사용자 어려움 인터뷰로 후속 로드맵 도출</li>
-          </ul>
-        </div>
-        <div class="proj-meta"><span><b>유형</b> 신규</span><span><b>역할</b> PM</span></div>
-      </article>
-
-      <article class="proj" data-project-id="wm_p2p">
-        <div class="proj-top"><div class="proj-emoji">🤝</div><span class="proj-tag collab">COLLAB</span></div>
-        <div class="proj-title">P2P 대출 — 한화 EBC × 피플펀드</div>
-        <div class="proj-summary">긱워커의 근로 성실도 ↔ 금융 상환 성실도 가설을 실데이터로 검증. 대상 300명 전원 상환 완료.</div>
-        <div class="why-block">
-          <h4>기획 의도 / 목적</h4>
-          <p>긱워커의 근로 이력이 금융 신용 데이터로 쓸 수 있는지 검증하는 실험. 성공하면 신규 금융상품 가설 → 새로운 수익원으로 연결할 수 있는 실데이터 트랙.</p>
-        </div>
-        <div class="kpi-block">
-          <h4>달성 KPI</h4>
-          <ul class="kpi-list">
-            <li>대상 300명 / 이자율 6% / 3개월 — 전원 상환 완료</li>
-            <li>장기연체 0건</li>
-            <li>근로 성실도 ↔ 상환율 상관관계 데이터 확보</li>
-          </ul>
-        </div>
-        <div class="proj-detail">
-          <h4>임팩트</h4>
-          <ul>
-            <li>대상 300명 / 이자율 6% / 3개월 / 원리금균등 — 전원 상환 완료</li>
-            <li>근로 이력 ↔ 상환율 상관관계 확인 → 신규 금융상품 가설로 연결</li>
-            <li>웍스메이트 실 기획·개발·디자인 0.5개월에 압축</li>
-          </ul>
-        </div>
-        <div class="proj-meta"><span><b>유형</b> 외부협업</span><span><b>역할</b> PM</span></div>
-      </article>
-
-      <article class="proj" data-project-id="wm_kjc">
-        <div class="proj-top"><div class="proj-emoji">🏛️</div><span class="proj-tag collab">COLLAB</span></div>
-        <div class="proj-title">건설 근로자 공제회 외부협업</div>
-        <div class="proj-summary">공공기관과의 사업협의부터 서비스 기획까지 9개월. 요구사항 합치 → 실제 기능 정의.</div>
-        <div class="why-block">
-          <h4>기획 의도 / 목적</h4>
-          <p>공공기관 협업은 가다의 신뢰도를 단기간에 끌어올리는 가장 좋은 트랙이고, 정책 데이터(이수증·기능인등급)를 직접 받을 수 있는 기회였습니다.</p>
-        </div>
-        <div class="proj-meta"><span><b>유형</b> 외부협업</span><span><b>역할</b> PM</span></div>
-      </article>
-
-      <article class="proj" data-project-id="wm_abtest">
-        <div class="proj-top"><div class="proj-emoji">🧪</div><span class="proj-tag new">NEW</span></div>
-        <div class="proj-title">A/B Test 프레임</div>
-        <div class="proj-summary">회원가입 전환 / 인증회원 전환 / 탈퇴·이탈 지표 개선을 위한 가설 검증 프레임 신규 구축.</div>
-        <div class="why-block">
-          <h4>기획 의도 / 목적</h4>
-          <p>지표 개선 안건이 PM 직감으로만 처리되고 있었습니다. 가설 → 실험 → 결과 → 의사결정 흐름을 정착시키는 게 목표.</p>
-        </div>
-        <div class="kpi-block">
-          <h4>달성 KPI</h4>
-          <ul class="kpi-list">
-            <li>이탈 후 재진입 유저 10,730명 DB 직접 추출 → GA 외 데이터 분석 가능</li>
-            <li>가설 검증 사이클 정착</li>
-          </ul>
-        </div>
-        <div class="proj-detail">
-          <h4>분석 사례</h4>
-          <ul>
-            <li>기본정보 → 계좌 / 이수증 등록 단계별 이탈 분석</li>
-            <li>이탈 후 재진입 유저(10,730명) DB 추출로 GA 외 데이터 확인</li>
-          </ul>
-        </div>
-        <div class="proj-meta"><span><b>유형</b> 신규 프레임</span><span><b>역할</b> PM</span></div>
-      </article>
-
-      <article class="proj" data-project-id="wm_persona">
-        <div class="proj-top"><div class="proj-emoji">👥</div><span class="proj-tag new">NEW</span></div>
-        <div class="proj-title">Persona / Journey Map</div>
-        <div class="proj-summary">근로자 · 관리자 · 건설사 FGI 기반 타겟 고객 정립. 사업 목적의 전사 정렬에 사용.</div>
-        <div class="why-block">
-          <h4>기획 의도 / 목적</h4>
-          <p>부서마다 ‘우리 고객’이 달라서 우선순위 충돌이 잦았습니다. 페르소나 + 저니맵을 공통 의사결정 기준으로 만들어 전사 Align.</p>
-        </div>
-        <div class="kpi-block">
-          <h4>달성 KPI</h4>
-          <ul class="kpi-list">
-            <li>전사 사업 목표 Align 완료</li>
-            <li>이후 비정기 발의 의사결정 기준으로 정착</li>
-          </ul>
-        </div>
-        <div class="proj-meta"><span><b>유형</b> 리서치</span><span><b>역할</b> PM (60%)</span></div>
-      </article>
-
-      <article class="proj" data-project-id="wm_uxwriting">
-        <div class="proj-top"><div class="proj-emoji">✍🏻</div><span class="proj-tag new">NEW</span></div>
-        <div class="proj-title">UX Writing</div>
-        <div class="proj-summary">페르소나 기반으로 플랫폼 언어를 통일. 브랜드 인식 / 사용자 이해 / 커뮤니케이션 효율 개선.</div>
-        <div class="why-block">
-          <h4>기획 의도 / 목적</h4>
-          <p>같은 기능에 부서마다 다른 표현이 쓰여 사용자 혼란이 많았습니다. 톤앤매너 통일로 학습 비용을 줄이는 게 목표.</p>
-        </div>
-        <div class="kpi-block">
-          <h4>달성 KPI</h4>
-          <ul class="kpi-list">
-            <li>플랫폼 전 영역 언어 일관성 확보</li>
-            <li>운영팀 CS 응대 표현 통일</li>
-          </ul>
-        </div>
-        <div class="proj-meta"><span><b>유형</b> 신규</span><span><b>역할</b> PM (70%)</span></div>
-      </article>
-
-      <article class="proj" data-project-id="wm_backlog">
-        <div class="proj-top"><div class="proj-emoji">📋</div><span class="proj-tag ops">PROCESS</span></div>
-        <div class="proj-title">백로그 운영 프로세스 개선</div>
-        <div class="proj-summary">개선전: 슬랙접수 → 스프레드시트 적재. 개선후: 슬랙 워크플로 → 슬랙 적재 → PO 자동 알림.</div>
-        <div class="why-block">
-          <h4>기획 의도 / 목적</h4>
-          <p>운영팀이 개선 요청을 적기 어려운 구조였고, 적재된 요청이 PO에게 늦게 전달됐습니다. ‘쉽게 접수 + 자동 알림’ 두 축으로 프로세스를 다시 짰습니다.</p>
-        </div>
-        <div class="kpi-block">
-          <h4>달성 KPI</h4>
-          <ul class="kpi-list">
-            <li>요청 접수 → PO 도달 시간 단축</li>
-            <li>3Ls 회고 정기화</li>
-          </ul>
-        </div>
-        <div class="proj-detail">
-          <h4>핵심 변화</h4>
-          <ul>
-            <li>운영 인력의 요청 접수 진입장벽 ↓</li>
-            <li>요청 — 진행여부 / 긴급도 판단 — 사이즈에 따라 프로젝트 / 비정기건 분기</li>
-            <li>론칭 후 3Ls 회고 정착 (Liked / Learned / Lacked)</li>
-          </ul>
-        </div>
-        <div class="proj-meta"><span><b>유형</b> 운영 개선</span><span><b>역할</b> PO</span></div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============ 아키마켓 ============ -->
-<section id="archi">
-  <div class="section-head">
-    <div class="section-eyebrow" data-edit="companies.archi.eyebrow">2019.11 — 2020.12 · 1년 1개월</div>
-    <h2 class="section-title"><span data-edit="companies.archi.name">아키마켓</span> <span class="quiet" data-edit="companies.archi.subname">/ ArchiMarket · ArchiMan</span></h2>
-    <p class="section-desc" data-edit="companies.archi.desc">
-      건설 인력 매칭 + 자재 커머스의 두 갈래를 동시에 다룬 첫 커리어. 기획 + B2B/B2C 운영을 함께 했습니다.
-    </p>
-  </div>
-
-  <div class="company-block">
-    <div class="company-head">
-      <div class="company-id">
-        <div class="company-logo archi">아</div>
-        <div>
-          <div class="company-name" data-edit="companies.archi.cname">ArchiMarket</div>
-          <div class="company-role" data-edit="companies.archi.role">서비스 기획자 · B2B/B2C 운영</div>
-        </div>
-      </div>
-      <div class="company-period">
-        <div class="badge" style="background:var(--good);">FIRST</div>
-        <div data-edit="companies.archi.period">2019.11 — 2020.12 (1년 1개월)</div>
-      </div>
-    </div>
-    <div class="company-summary" data-edit="companies.archi.summary">
-      ‘아키맨’(건설 기능공 매칭 O2O) + ‘아키마켓’(건축·인테리어 자재 O2O)을 함께 기획하고 운영했습니다. 스마트스토어 / 카페24 자사몰을 운영하며 SEO와 백링크, 상세페이지 카피·비주얼까지 풀스택으로 다뤘습니다.
-    </div>
-
-    <div class="proj-grid" data-projects-of="archi">
-      <article class="proj" data-project-id="ar_archiman">
-        <div class="proj-top"><div class="proj-emoji">🧰</div><span class="proj-tag new">NEW</span></div>
-        <div class="proj-title">아키맨 — 건설 기능공 매칭 O2O</div>
-        <div class="proj-summary">현장과 기능공을 연결하는 매칭 플랫폼 기획. 이후 가다(웍스메이트)에서 같은 도메인으로 깊이를 더함.</div>
-        <div class="proj-meta"><span><b>유형</b> 기획</span><span><b>역할</b> PM</span></div>
-      </article>
-      <article class="proj" data-project-id="ar_archimarket">
-        <div class="proj-top"><div class="proj-emoji">🏠</div><span class="proj-tag new">NEW</span></div>
-        <div class="proj-title">아키마켓 — 자재 커머스</div>
-        <div class="proj-summary">건축·인테리어 자재 O2O 플랫폼 기획. 자사몰 + 외부 채널(스마트스토어·카페24) 동시 운영.</div>
-        <div class="proj-meta"><span><b>유형</b> 기획·운영</span><span><b>역할</b> PM</span></div>
+    <div class="arch-head"><div class="ah">아키마켓 <span class="en">ArchiMarket</span></div><div class="am">2019.11 — 2020.12 · First</div></div>
+    <div class="arch-grid">
+      <article class="arch reveal solo" style="padding-bottom:26px;">
+        <div class="at">Foundation · 서비스 기획</div>
+        <h4>인력 매칭 + 자재 커머스 동시 기획</h4>
+        <p class="as">건설 기능공 매칭 '아키맨'과 자재 커머스 '아키마켓'을 함께 기획·운영했습니다. 이때의 경험이 이후 가다와 어바웃피싱으로 이어지는 O2O·마켓플레이스 사고의 출발점이 되었습니다. 스마트스토어·자사몰 B2C와 기업회원 B2B를 함께 운영하고 SEO·상세페이지까지 폭넓게 다뤘습니다.</p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ============ APPROACH ============ -->
-<section class="approach" id="approach">
-  <div class="approach-inner">
-    <div class="section-head">
-      <div class="section-eyebrow">How I Work</div>
-      <h2 class="section-title">제품을 만드는 방식</h2>
-      <p class="section-desc">팀, 데이터, 그리고 사용자 — 이 셋의 균형점에서 일합니다.</p>
+<!-- ───────── APPROACH ───────── -->
+<section class="band recess" id="approach">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow"><span class="tick"></span>How I Work</div>
+      <h2 class="title">일하는 <em>방식</em>.</h2>
+      <p class="desc">도메인이 바뀌어도 변하지 않는 세 가지 원칙.</p>
     </div>
-    <div class="approach-grid">
-      <div class="approach-card"><div class="ic">①</div><h3 data-edit="approach.a1.h">AI-First Build · 기획자가 직접 짓는다.</h3><p data-edit="approach.a1.p">기획·문서·도구를 외주하지 않고 Claude로 본인이 직접 1차 버전을 짓습니다. 검증된 후 정식 빌드는 팀에 위임. 의사결정 사이클 3~5배 단축이 KPI입니다. 본 포트폴리오·사내 운영 대시보드·정부지원 4건 사업계획서 모두 본인이 직접 빌드.</p></div>
-      <div class="approach-card"><div class="ic">②</div><h3 data-edit="approach.a2.h">목소리와 숫자, 같은 책상 위에</h3><p data-edit="approach.a2.p">FGI / 채널톡 VOC와 GA / Redash / DB raw 데이터를 함께 봅니다. ‘이탈 후 재진입’ 같이 GA로는 잡히지 않는 행동을 DB로 보강해 정책에 반영합니다.</p></div>
-      <div class="approach-card"><div class="ic">③</div><h3 data-edit="approach.a3.h">먼저 잘라낼 것부터.</h3><p data-edit="approach.a3.p">리소스·일정·정책의 제약은 늘 있고, 가장 멀리 가는 길은 무엇을 안 할지부터 정해집니다.</p></div>
-      <div class="approach-card"><div class="ic">④</div><h3 data-edit="approach.a4.h">PM이 팀과 멀면 이슈가 늦게 올라옵니다</h3><p data-edit="approach.a4.p">PM이 팀과 물리적·심리적으로 거리가 있으면 이슈가 늦게 올라옵니다. Daily Scrum + 주간 1:1 + 격주 커피챗을 루틴으로 박아, 의견이 모이는 자리를 매일 만듭니다.</p></div>
-      <div class="approach-card"><div class="ic">⑤</div><h3 data-edit="approach.a5.h">회고는 짧게, 세 줄로</h3><p data-edit="approach.a5.p">Liked · Learned · Lacked. v3 초기에 "근로자앱부터 끝낸다"고 정했다가 4주차에 3축 동시로 뒤집은 회고가 v4 출발점이었습니다. 잘한 회고가 아니라 <b>판단을 바꾼 회고</b>가 가장 큰 자산입니다.</p></div>
-      <div class="approach-card"><div class="ic">⑥</div><h3 data-edit="approach.a6.h">운영팀의 하루를 모르면 백오피스를 못 만듭니다</h3><p data-edit="approach.a6.p">운영팀이 하루를 어떻게 보내는지 모르면 백오피스·BO 화면을 만들 수 없습니다. 백로그·요청접수 프로세스부터 운영팀과 함께 다듬고, 그 다음에 화면을 설계합니다.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SKILLS ============ -->
-<section id="skills">
-  <div class="section-head">
-    <div class="section-eyebrow">Skills</div>
-    <h2 class="section-title">손에 익은 도구들</h2>
-  </div>
-
-  <div class="skills">
-    <div class="skill-card">
-      <h3><span class="ic">P</span><span data-edit="skills.s1.h">Product / Strategy</span></h3>
-      <div class="pill-list">
-        <span class="pill">Product Roadmap</span>
-        <span class="pill">PRD / 정책서</span>
-        <span class="pill">사업기획</span>
-        <span class="pill">정부 / 엑셀러레이터 제안서</span>
-        <span class="pill">백로그 운영</span>
-        <span class="pill">스프린트 / 회고 (3Ls)</span>
+    <div class="approach">
+      <div class="app-card reveal">
+        <div class="rn">I.</div>
+        <h3>가장 비싼 문제부터 푸다</h3>
+        <p>예산·인력·시간의 한계를 먼저 지도로 그립니다. 무엇을 안 만들지를 정하는 일이 먼저입니다. ERP는 청구·지급만, 예약은 외부 입점만 잘랐습니다.</p>
       </div>
-    </div>
-    <div class="skill-card">
-      <h3><span class="ic">U</span><span data-edit="skills.s2.h">UX Research / UI</span></h3>
-      <div class="pill-list">
-        <span class="pill">FGI · 1:1 인터뷰</span>
-        <span class="pill">설문 (Google Forms)</span>
-        <span class="pill">Persona</span>
-        <span class="pill">Journey Map</span>
-        <span class="pill">IA / 정보구조도</span>
-        <span class="pill">와이어프레임</span>
-        <span class="pill">프로토타입</span>
-        <span class="pill">UX writing</span>
+      <div class="app-card reveal">
+        <div class="rn">II.</div>
+        <h3>목소리와 숫자를 같은 책상에</h3>
+        <p>인터뷰·VOC와 GA·Redash·DB 원본을 함께 봅니다. '이탈 후 재진입'처럼 GA로 안 잡히는 행동은 DB로 보강해 정책에 반영합니다.</p>
       </div>
-    </div>
-    <div class="skill-card">
-      <h3><span class="ic">D</span><span data-edit="skills.s3.h">Data / Growth</span></h3>
-      <div class="pill-list">
-        <span class="pill">GA</span>
-        <span class="pill">Redash</span>
-        <span class="pill">SQL (raw 추출)</span>
-        <span class="pill">A/B Test</span>
-        <span class="pill">전환·이탈 분석</span>
-        <span class="pill">VOC 분석</span>
-      </div>
-    </div>
-    <div class="skill-card">
-      <h3><span class="ic">T</span><span data-edit="skills.s4.h">Tools</span></h3>
-      <div class="pill-list">
-        <span class="pill">Figma</span>
-        <span class="pill">Sketch</span>
-        <span class="pill">Zeplin</span>
-        <span class="pill">InVision</span>
-        <span class="pill">Moqups</span>
-        <span class="pill">Notion</span>
-        <span class="pill">Slack (Workflow)</span>
-        <span class="pill">Monday.com</span>
-        <span class="pill">Photoshop</span>
-        <span class="pill">PPT</span>
+      <div class="app-card reveal">
+        <div class="rn">III.</div>
+        <h3>외부 결정으로 증명한다</h3>
+        <p>성과는 말이 아니라 외부의 결정이 증명합니다. 대기업 협업(SK텔레콤 TMAP), 정부지원 4건 선정, 투자 유치까지 — 제 주장이 아닌 <b>계약·심사·자본</b>이 검증한 트랙입니다.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ PRESS / TIMELINE ============ -->
-<section id="career">
-  <div class="section-head">
-    <div class="section-eyebrow">Career Timeline · 6년</div>
-    <h2 class="section-title">전체 경력 흐름.</h2>
-    <p class="section-desc">기획자에서 PM·PO를 거쳐 CPO·등기이사까지 — 한 회사에서 직무가 어떻게 확장됐는지의 흐름입니다.</p>
-  </div>
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="when">2025.05</div>
-      <div class="what">어바웃피싱 — 등기이사 · CPO 선임</div>
-      <p>입사 9개월차에 등기이사 + CPO 동시 선임. 9개 도메인 슈퍼앱 제품·사업·운영을 모두 총괄.</p>
-    </div>
-    <div class="timeline-item">
-      <div class="when">2025.02</div>
-      <div class="what">어바웃피싱 — 기획실장 승진</div>
-      <p>입사 6개월차에 기획팀장 → 기획실장. 제품 전체 로드맵·KPI·외부 협상(SKT TMAP) 책임 확장.</p>
-    </div>
-    <div class="timeline-item">
-      <div class="when">2024.08</div>
-      <div class="what">어바웃피싱 — 기획팀장 입사</div>
-      <p>낚시 슈퍼앱 기획팀장으로 합류. 9개 도메인 통합 IA 설계 및 첫 매출 KPI 정의.</p>
-    </div>
-    <div class="timeline-item">
-      <div class="when">2024.08</div>
-      <div class="what">웍스메이트(가다) 퇴사</div>
-      <p>PM(2020.12)에서 PO(2023)로 승격하며 PD·QA 그룹을 운영. 3년 8개월간 v2→v4 풀리뉴얼·청구지급 ERP MVP·정부지원 3건을 리드한 뒤 마무리.</p>
-    </div>
-    <div class="timeline-item">
-      <div class="when">2023</div>
-      <div class="what">웍스메이트 — PM → PO 승격</div>
-      <p>근로자앱 v4 풀리뉴얼 후 PO로 승격. 후임 PM 2명에게 근로자·관리자앱 트랙을 위임하고, 본인은 백오피스·신규 priortization으로 영역 확장.</p>
-    </div>
-    <div class="timeline-item">
-      <div class="when">2020.12</div>
-      <div class="what">웍스메이트(가다) PM 입사</div>
-      <p>건설 일용직 구인구직 O2O 플랫폼 PM으로 합류. 근로자·관리자·백오피스 v2→v4 풀리뉴얼 100% 기여.</p>
-    </div>
-    <div class="timeline-item">
-      <div class="when">2019.11 — 2020.12</div>
-      <div class="what">아키마켓 — 기획자</div>
-      <p>건설 자재 커머스·기능공 매칭 풀스택 기획. 자사몰 + 외부 채널(스마트스토어·카페24) 동시 운영, SEO·백링크까지.</p>
-    </div>
-  </div>
-</section>
-
-<section id="press">
-  <div class="section-head">
-    <div class="section-eyebrow">Press &amp; 정부 선정</div>
-    <h2 class="section-title">인터뷰 · 사업 선정.</h2>
-    <p class="section-desc">언론 인터뷰, 정부지원 사업 선정 등 외부 검증 기록입니다.</p>
-  </div>
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="when">2025</div>
-      <div class="what">중소벤처기업부 창업도약패키지 선정 — 어바웃피싱</div>
-      <p>제안서 작성·발표 단독 리드. 사업 자금 확보 → R&amp;D · 마케팅 트랙 가동.</p>
-    </div>
-    <div class="timeline-item">
-      <div class="when">2023.09</div>
-      <div class="what">동아일보 인터뷰 — "건설 근로자 위한 웍스메이트 '기능인등급제 서비스 기획자' 이야기" <a href="https://www.donga.com/news/article/all/20230914/121180294/1" target="_blank" rel="noopener">↗</a></div>
-      <p>건설 근로자 페인포인트와 기능인등급제 도입 과정에 대한 기획자 인터뷰.</p>
-    </div>
-    <div class="timeline-item">
-      <div class="when">2023</div>
-      <div class="what">NIPA AI 바우처 선정 — 웍스메이트</div>
-      <p>매칭 AI 알고리즘 R&amp;D 트랙 단독 작성·선정.</p>
-    </div>
-    <div class="timeline-item">
-      <div class="when">2022</div>
-      <div class="what">NH 디지털챌린지플러스 선정 — 웍스메이트</div>
-      <p>건설 근로자 금융 데이터 활용 트랙. 한화 EBC·피플펀드 P2P 대출로 연결.</p>
-    </div>
-    <div class="timeline-item">
-      <div class="when">2021</div>
-      <div class="what">중소벤처기업부 TIPS 선정 — 웍스메이트</div>
-      <p>건설 일용직 매칭 R&amp;D 트랙 단독 작성. VC 후속 투자 라운드 신뢰도 강화.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CONTACT ============ -->
+<!-- ───────── CONTACT ───────── -->
 <section class="contact" id="contact">
-  <h2 data-edit="contact.h">함께 잘라낼 한 단계가 있다면, 연락 주십시오.</h2>
-  <p data-edit="contact.p">O2O · 슈퍼앱 · 마켓플레이스에서 — 가장 비싼 한 단계부터 같이 자릅니다. AI 시대의 CPO가 필요하시면, Claude로 같이 빌드합니다.</p>
-  <div class="contact-actions">
-    <a class="btn primary" href="mailto:banns0104@gmail.com">📩 banns0104@gmail.com</a>
-    <a class="btn ghost" href="tel:+821033333768">📱 +82 10-3333-3768</a>
-  </div>
-  <div class="contact-info">
-    <span>이력서 · 포트폴리오 모두 PDF 다운로드 가능</span>
-    <span><a href="resume.pdf" download style="color:#fff;text-decoration:underline;">이력서 PDF</a></span>
-    <span><a href="portfolio.pdf" download style="color:#fff;text-decoration:underline;">포트폴리오 PDF</a></span>
+  <div class="wrap">
+    <div class="eyebrow"><span class="tick"></span>Let's build</div>
+    <h2>다음 시장도,<br/><em>함께</em>.</h2>
+    <p>제약이 분명한 시장일수록 더 잘 풉니다. 함께 풀 문제가 있다면 언제든 연락 주세요.</p>
+    <div class="contact-actions">
+      <a href="mailto:banns0104@gmail.com" class="btn primary">이메일 보내기</a>
+      <a href="resume.html" class="btn">이력서</a>
+      <a href="career-statement.html" class="btn">경력기술서</a>
+      <a href="portfolio-deck.html" class="btn">포트폴리오 덱</a>
+    </div>
+    <div class="contact-ledger">
+      <div class="item"><div class="l">Email</div><div class="v">banns0104@gmail.com</div></div>
+      <div class="item"><div class="l">Phone</div><div class="v">010-3333-3768</div></div>
+      <div class="item"><div class="l">Based</div><div class="v">Seoul, Korea</div></div>
+      <div class="item"><div class="l">Status</div><div class="v it">Open</div></div>
+    </div>
   </div>
 </section>
 
-<footer class="foot">© 2026 Hyunil Seo · Built for GitHub Pages</footer>
+<footer class="foot wrap">
+  <div class="colophon">
+    <span>© Hyunil Seo · 2026</span>
+    <span>Last revised 2026.05</span>
+    <span>Set in Newsreader · Noto Serif KR · Pretendard</span>
+  </div>
+</footer>
 
-<!-- Firebase + editor -->
-<script src="firebase-config.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
-<script src="assets/editor.js"></script>
-
-<script>
-// 부드러운 스크롤
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{
-    const id = a.getAttribute('href');
-    if(id.length>1){
-      const t = document.querySelector(id);
-      if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); }
-    }
-  });
-});
-
-// 프로젝트별 이미지 갤러리 자동 삽입
-// 각 프로젝트의 이미지 폴더(images/<id>/)를 매핑해서 갤러리 렌더링
-const PROJECT_GALLERY = {
-  'af_startup_package': { count: 1, ext: 'svg', label: '사업 트랙 다이어그램' },
-  'af_tmap':            { count: 1, ext: 'svg', label: 'TMAP × 어바웃피싱 협업 구조' },
-  'af_home':            { count: 8, ext: 'jpg', label: '실제 화면 — 홈 / 스플래시 / 검색' },
-  'af_commerce':        { count: 8, ext: 'jpg', label: '실제 화면 — 쇼핑 / 상품 / 결제' },
-  'af_booking':         { count: 8, ext: 'jpg', label: '실제 화면 — 예약 / 선박 / 조황' },
-  'af_community':       { count: 8, ext: 'jpg', label: '실제 화면 — 커뮤니티 피드' },
-  'af_market':          { count: 8, ext: 'jpg', label: '실제 화면 — 중고장터' },
-  'af_money':           { count: 3, ext: 'jpg', label: '실제 화면 — 머니 / 포인트' },
-  'af_mypage':          { count: 8, ext: 'jpg', label: '실제 화면 — 마이페이지 / 가입' },
-  'af_alarm':           { count: 2, ext: 'jpg', label: '실제 화면 — 알림 / 채널톡 CS' },
-  'af_championship':    { count: 1, ext: 'svg', label: '챔피언십 시즌 다이어그램' },
-  'af_design_system':   { count: 1, ext: 'svg', label: '디자인 시스템 v3 토큰' },
-  'wm_worker_renewal':  { count: 6, ext: 'jpg', label: '근로자앱 화면 / 데이터' },
-  'wm_manager_renewal': { count: 6, ext: 'jpg', label: '관리자앱 리뉴얼 결과물' },
-  'wm_backoffice':      { count: 6, ext: 'jpg', label: '백오피스 (EOS) 결과물' },
-  'wm_erp':             { count: 6, ext: 'jpg', label: '청구·지급 ERP MVP 화면' },
-  'wm_noti':            { count: 6, ext: 'jpg', label: '알림 시스템 정책 / 화면' },
-  'wm_b2b':             { count: 1, ext: 'jpg', label: 'B2B 웹페이지' },
-  'wm_p2p':             { count: 3, ext: 'jpg', label: 'P2P 대출 협업 결과' },
-  'wm_kjc':             { count: 3, ext: 'jpg', label: '건설 근로자 공제회 협업' },
-  'wm_abtest':          { count: 3, ext: 'jpg', label: 'A/B 테스트 결과' },
-  'wm_persona':         { count: 6, ext: 'jpg', label: '페르소나 / 저니맵' },
-  'wm_uxwriting':       { count: 6, ext: 'jpg', label: 'UX writing 산출물' },
-  'wm_backlog':         { count: 6, ext: 'jpg', label: '백로그 운영 프로세스' },
-  'wm_tips':            { count: 6, ext: 'jpg', label: 'TIPS 사업계획서 발췌 페이지' },
-};
-function ensureGallery(card) {
-  const id = card.dataset.projectId;
-  if (!id || !PROJECT_GALLERY[id]) return;
-  if (card.querySelector('.images-block')) return;
-  const meta = PROJECT_GALLERY[id];
-  // iPhone 세로 캡쳐(af_* + jpg) vs 가로형/SVG
-  const isVertical = meta.ext === 'jpg' && id.startsWith('af_');
-  const gallery = document.createElement('div');
-  gallery.className = 'images-block ' + (isVertical ? 'is-vertical' : 'is-wide');
-  gallery.dataset.projectId = id;
-
-  let body;
-  if (isVertical) {
-    // 가로 한 줄: 큰 hero 1장 + 썸네일 7장 row
-    const heroSrc = `images/${id}/1.${meta.ext}`;
-    const cells = [];
-    const SLOTS = 7;            // 우측 썸네일 슬롯 7개 고정
-    const remaining = meta.count - 1;   // hero 제외 나머지
-    if (remaining > 0) {
-      const visible = Math.min(SLOTS, remaining);
-      const showAll = remaining <= SLOTS;
-      const overflow = remaining - SLOTS;
-      for (let s = 0; s < SLOTS; s++) {
-        const idx = 2 + s;
-        if (s < visible && (s < SLOTS - 1 || showAll || overflow <= 0)) {
-          if (idx <= meta.count) {
-            cells.push(`<div class="cell" data-idx="${idx}"><img src="images/${id}/${idx}.${meta.ext}" loading="lazy" alt="${meta.label} ${idx}"></div>`);
-          } else {
-            cells.push('<div class="cell" style="opacity:0;pointer-events:none;"></div>');
-          }
-        } else if (s === SLOTS - 1 && overflow > 0) {
-          // 마지막 슬롯에 +N
-          cells.push(`<div class="cell more" data-idx="${SLOTS + 1}" data-more="${overflow + 1}"></div>`);
-        } else {
-          // 캡쳐가 부족하면 빈 셀
-          cells.push('<div class="cell" style="opacity:0;pointer-events:none;"></div>');
-        }
-      }
-    }
-    const thumbs = cells.length ? `<div class="gallery-thumbs">${cells.join('')}</div>` : '';
-    body = `
-      <div class="gallery-mag">
-        <div class="gallery-hero" data-idx="1">
-          <img src="${heroSrc}" loading="lazy" alt="${meta.label} 1">
-        </div>
-        ${thumbs}
-      </div>
-    `;
-  } else {
-    // 가로형/SVG — 풀폭 hero + 작은 strip
-    const heroSrc = `images/${id}/1.${meta.ext}`;
-    let strip = '';
-    if (meta.count > 1) {
-      const stripImgs = [];
-      for (let i = 2; i <= meta.count; i++) {
-        stripImgs.push(`<img src="images/${id}/${i}.${meta.ext}" loading="lazy" alt="${meta.label} ${i}" data-idx="${i}">`);
-      }
-      strip = `<div class="gallery-strip">${stripImgs.join('')}</div>`;
-    }
-    body = `
-      <div class="gallery-hero" data-idx="1">
-        <img src="${heroSrc}" loading="lazy" alt="${meta.label} 1">
-      </div>
-      ${strip}
-    `;
-  }
-  gallery.innerHTML = `
-    <h4>${meta.label}<span class="gallery-count">${meta.count}장 · 클릭 시 풀스크린</span></h4>
-    <div class="gallery-wrap">${body}</div>
-  `;
-  const m = card.querySelector('.proj-meta');
-  if (m) card.insertBefore(gallery, m);
-  else card.appendChild(gallery);
-}
-document.querySelectorAll('.proj[data-project-id]').forEach(ensureGallery);
-
-/* === 라이트박스 (prev/next + 키보드) === */
-const lb = document.createElement('div');
-lb.id = 'imglb';
-lb.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:24px;z-index:9000;';
-lb.innerHTML = `
-  <button class="lb-close" style="position:absolute;top:20px;right:20px;width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,0.12);color:#fff;font-size:22px;cursor:pointer;backdrop-filter:blur(8px);">×</button>
-  <button class="lb-prev" style="position:absolute;left:24px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:none;background:rgba(255,255,255,0.12);color:#fff;font-size:22px;cursor:pointer;backdrop-filter:blur(8px);">‹</button>
-  <img style="max-width:90%;max-height:90vh;border-radius:8px;box-shadow:0 12px 60px rgba(0,0,0,0.6);">
-  <button class="lb-next" style="position:absolute;right:24px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:none;background:rgba(255,255,255,0.12);color:#fff;font-size:22px;cursor:pointer;backdrop-filter:blur(8px);">›</button>
-  <div class="lb-caption" style="position:absolute;bottom:24px;left:0;right:0;text-align:center;color:#fff;font-size:13px;font-weight:600;letter-spacing:-0.02em;"></div>
-`;
-document.body.appendChild(lb);
-
-let lbState = { projectId: null, idx: 1, max: 1, ext: 'jpg', label: '' };
-function lbOpen(projectId, idx) {
-  const meta = PROJECT_GALLERY[projectId];
-  if (!meta) return;
-  lbState = { projectId, idx, max: meta.count, ext: meta.ext, label: meta.label };
-  lbRender();
-  lb.style.display = 'flex';
-}
-function lbRender() {
-  const { projectId, idx, max, ext, label } = lbState;
-  lb.querySelector('img').src = `images/${projectId}/${idx}.${ext}`;
-  lb.querySelector('.lb-caption').textContent = `${label} · ${idx} / ${max}`;
-  lb.querySelector('.lb-prev').style.opacity = idx <= 1 ? 0.3 : 1;
-  lb.querySelector('.lb-next').style.opacity = idx >= max ? 0.3 : 1;
-}
-function lbClose(){ lb.style.display = 'none'; }
-function lbStep(d) {
-  const n = lbState.idx + d;
-  if (n < 1 || n > lbState.max) return;
-  lbState.idx = n; lbRender();
-}
-lb.querySelector('.lb-close').addEventListener('click', lbClose);
-lb.querySelector('.lb-prev').addEventListener('click', e => { e.stopPropagation(); lbStep(-1); });
-lb.querySelector('.lb-next').addEventListener('click', e => { e.stopPropagation(); lbStep(+1); });
-lb.addEventListener('click', e => { if (e.target === lb) lbClose(); });
-document.addEventListener('keydown', e => {
-  if (lb.style.display !== 'flex') return;
-  if (e.key === 'Escape') lbClose();
-  else if (e.key === 'ArrowLeft') lbStep(-1);
-  else if (e.key === 'ArrowRight') lbStep(+1);
-});
-
-// 모든 이미지 클릭 → 라이트박스
-document.addEventListener('click', e => {
-  const img = e.target.closest('.images-block img');
-  if (!img) return;
-  const block = img.closest('.images-block');
-  if (!block) return;
-  const projectId = block.dataset.projectId;
-  const idx = parseInt(img.dataset.idx) || parseInt(img.closest('[data-idx]')?.dataset.idx) || 1;
-  lbOpen(projectId, idx);
-});
-</script>
+<!-- ───────── LIGHTBOX ───────── -->
+<div id="imglb" aria-hidden="true">
+  <div class="lb-top">
+    <span class="lb-cap" id="lb-cap"></span>
+    <span class="lb-count" id="lb-count"></span>
+    <button class="lb-close" id="lb-close">닫기 ✕</button>
+  </div>
+  <div class="lb-stage" id="lb-stage">
+    <button class="lb-arrow prev" id="lb-prev" aria-label="이전">‹</button>
+    <img id="lb-img" src="" alt="" />
+    <button class="lb-arrow next" id="lb-next" aria-label="다음">›</button>
+  </div>
+  <div class="lb-strip" id="lb-strip"></div>
+</div>
 
 <script>
 (function(){
-  var bar = document.getElementById('nav-progress-bar');
-  if(!bar) return;
-  function update(){
-    var h = document.documentElement;
-    var p = (h.scrollTop || document.body.scrollTop) / (h.scrollHeight - h.clientHeight);
-    bar.style.width = Math.min(100, Math.max(0, p*100)) + '%';
-    // active section
-    var links = document.querySelectorAll('.nav-links a');
-    var cur = null;
-    document.querySelectorAll('section[id]').forEach(function(s){
-      var rect = s.getBoundingClientRect();
-      if(rect.top < 120) cur = s.id;
-    });
-    links.forEach(function(a){
-      var href = a.getAttribute('href');
-      a.classList.toggle('active', cur && href === '#' + cur);
+  var lb = document.getElementById('imglb');
+  var stage = document.getElementById('lb-stage');
+  var lbImg = document.getElementById('lb-img');
+  var lbCap = document.getElementById('lb-cap');
+  var lbCount = document.getElementById('lb-count');
+  var lbStrip = document.getElementById('lb-strip');
+  var group = [];     /* current set of <img> in the clicked gallery */
+  var idx = -1;
+  var caption = '';
+
+  function buildStrip(){
+    lbStrip.innerHTML = '';
+    group.forEach(function(src, i){
+      var t = document.createElement('img');
+      t.src = src;
+      if(i===idx) t.className = 'active';
+      t.addEventListener('click', function(e){ e.stopPropagation(); show(i); });
+      lbStrip.appendChild(t);
     });
   }
-  window.addEventListener('scroll', update, {passive:true});
-  window.addEventListener('resize', update);
-  update();
+  function unzoom(){ stage.classList.remove('zoomed'); lbImg.style.transform=''; lbImg.style.transformOrigin='center center'; }
+  function show(i){
+    if(i<0) i = group.length-1;
+    if(i>=group.length) i = 0;
+    idx = i;
+    unzoom();
+    lbImg.src = group[idx];
+    lbCap.textContent = caption;
+    lbCount.textContent = (idx+1) + ' / ' + group.length;
+    Array.prototype.forEach.call(lbStrip.children, function(c, k){ c.className = (k===idx?'active':''); });
+    var act = lbStrip.children[idx];
+    if(act && act.scrollIntoView) act.scrollIntoView({inline:'center', block:'nearest'});
+  }
+  function open(container, startSrc){
+    group = Array.prototype.map.call(container.querySelectorAll('img'), function(im){ return im.src; });
+    var capEl = container.parentElement.querySelector('.plate-cap');
+    caption = capEl ? capEl.childNodes[0].textContent.trim() : '';
+    idx = group.indexOf(startSrc); if(idx<0) idx = 0;
+    buildStrip();
+    show(idx);
+    lb.classList.add('open');
+  }
+  function close(){ lb.classList.remove('open'); unzoom(); }
+
+  /* delegate clicks on any plate image */
+  document.addEventListener('click', function(e){
+    var img = e.target.closest('.plates img');
+    if(!img) return;
+    var container = img.closest('.plates');
+    if(!container) return;
+    e.stopPropagation();
+    open(container, img.src);
+  });
+
+  document.getElementById('lb-prev').addEventListener('click', function(e){ e.stopPropagation(); show(idx-1); });
+  document.getElementById('lb-next').addEventListener('click', function(e){ e.stopPropagation(); show(idx+1); });
+  document.getElementById('lb-close').addEventListener('click', function(e){ e.stopPropagation(); close(); });
+
+  /* click-to-zoom with pan */
+  stage.addEventListener('click', function(e){
+    if(e.target !== lbImg) return;
+    if(stage.classList.contains('zoomed')){ unzoom(); return; }
+    stage.classList.add('zoomed');
+    var r = lbImg.getBoundingClientRect();
+    var ox = ((e.clientX - r.left)/r.width)*100;
+    var oy = ((e.clientY - r.top)/r.height)*100;
+    lbImg.style.transformOrigin = ox+'% '+oy+'%';
+    lbImg.style.transform = 'scale(2.2)';
+  });
+  stage.addEventListener('mousemove', function(e){
+    if(!stage.classList.contains('zoomed')) return;
+    var r = stage.getBoundingClientRect();
+    var ox = ((e.clientX - r.left)/r.width)*100;
+    var oy = ((e.clientY - r.top)/r.height)*100;
+    lbImg.style.transformOrigin = ox+'% '+oy+'%';
+  });
+
+  document.addEventListener('keydown', function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key==='Escape') close();
+    else if(e.key==='ArrowLeft') show(idx-1);
+    else if(e.key==='ArrowRight') show(idx+1);
+  });
+
+  var rev = document.querySelectorAll('.reveal');
+
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href');
+      if(id.length>1){ var t=document.querySelector(id); if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); } }
+    });
+  });
 })();
 </script>
+
+<script>
+/* ───────── IMAGE LOADING: skeleton wrap + fade-in ───────── */
+(function(){
+  var imgs=document.querySelectorAll('.plates img');
+  for(var i=0;i<imgs.length;i++){(function(img){
+    if(img.parentNode && img.parentNode.classList && img.parentNode.classList.contains('pframe')) return;
+    var f=document.createElement('span'); f.className='pframe';
+    img.parentNode.insertBefore(f,img); f.appendChild(img);
+    function ready(){f.classList.add('ready');}
+    function fail(){f.classList.add('err');f.classList.add('ready');}
+    if(img.complete && img.naturalWidth>0){ready();}
+    else { img.addEventListener('load',ready); img.addEventListener('error',fail); }
+  })(imgs[i]);}
+  document.querySelectorAll('.plates').forEach(function(p){
+    var n=p.querySelectorAll('img').length;
+    var cap=p.parentNode.querySelector('.plate-cap');
+    if(cap && n>1 && !cap.querySelector('.hint')){ var s=document.createElement('span'); s.className='hint'; s.textContent='\uC804\uCCB4 '+n+'\uC7A5 \u00B7 \uD074\uB9AD\uD558\uC5EC \uD655\uB300'; cap.appendChild(s); }
+  });
+})();
+</script>
+
+<script>
+/* ───────── MOTION: scroll reveal + count-up + plate stagger ───────── */
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revEls = [].slice.call(document.querySelectorAll('.reveal, .sec-head, .contact'));
+  var plateEls = [].slice.call(document.querySelectorAll('.plates'));
+  var numEls = [].slice.call(document.querySelectorAll('.stat-num, .kpi-ledger .kn'));
+  if(reduce){
+    revEls.forEach(function(e){e.classList.add('in');});
+    plateEls.forEach(function(e){e.classList.add('shown');});
+    return;
+  }
+  document.documentElement.classList.add('anim');
+  var bar=document.getElementById('progress-bar');
+  /* split cover headline into word-mask spans */
+  (function(){
+    var h1=document.querySelector('.cover h1'); if(!h1) return;
+    var nodes=Array.prototype.slice.call(h1.childNodes), out=[], idx=0;
+    function word(node,isText,text){var w=document.createElement('span');w.className='wr';var i=document.createElement('span');i.style.transitionDelay=(idx*0.06)+'s';idx++;if(isText){i.textContent=text;}else{i.appendChild(node.cloneNode(true));}w.appendChild(i);return w;}
+    nodes.forEach(function(n){
+      if(n.nodeType===3){ n.textContent.split(/(\s+)/).forEach(function(p){ if(p==='')return; if(/^\s+$/.test(p)){out.push(document.createTextNode(p));} else {out.push(word(n,true,p));} }); }
+      else if(n.tagName==='BR'){ out.push(n.cloneNode()); }
+      else { out.push(word(n,false)); }
+    });
+    h1.innerHTML=''; out.forEach(function(c){h1.appendChild(c);});
+    requestAnimationFrame(function(){requestAnimationFrame(function(){h1.classList.add('words-in');});});
+    setTimeout(function(){h1.classList.add('words-in');},450);
+    setTimeout(function(){h1.classList.add('reveal-done');},1700);
+  })();
+  function fmt(v,dec,comma){var s=v.toFixed(dec);if(comma){var p=s.split('.');p[0]=p[0].replace(/\B(?=(\d{3})+(?!\d))/g,',');s=p.join('.');}return s;}
+  function countUp(el){
+    var node=el.firstChild; if(!node||node.nodeType!==3) return;
+    var raw=node.textContent.trim();
+    if(!/^[+\-]?[\d,]+(\.\d+)?$/.test(raw)) return;
+    var sign=/^[+\-]/.test(raw)?raw[0]:''; var ns=raw.replace(/^[+\-]/,'');
+    var comma=ns.indexOf(',')>=0; var dec=(ns.split('.')[1]||'').length;
+    var target=parseFloat(ns.replace(/,/g,'')); if(isNaN(target)) return;
+    var dur=1100,t0=null;
+    function step(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/dur);var e=1-Math.pow(1-p,3);node.textContent=sign+fmt(target*e,dec,comma);if(p<1)requestAnimationFrame(step);else node.textContent=sign+fmt(target,dec,comma);}
+    node.textContent=sign+fmt(0,dec,comma); requestAnimationFrame(step);
+  }
+  var ticking=false;
+  function check(){
+    ticking=false;
+    var vh=window.innerHeight, trig=vh*0.88;
+    if(bar){var de=document.documentElement;var sp=de.scrollTop||document.body.scrollTop||0;bar.style.width=Math.max(0,Math.min(1,sp/((de.scrollHeight-de.clientHeight)||1)))*100+'%';}
+    for(var i=revEls.length-1;i>=0;i--){var r=revEls[i].getBoundingClientRect();if(r.top<trig){revEls[i].classList.add('in');revEls.splice(i,1);}}
+    for(var j=plateEls.length-1;j>=0;j--){var p=plateEls[j],pr=p.getBoundingClientRect();if(pr.top<trig){var im=p.querySelectorAll('.pframe');for(var k=0;k<im.length;k++){im[k].style.animationDelay=(k*0.05)+'s';}p.classList.add('shown');plateEls.splice(j,1);}}
+    for(var m=numEls.length-1;m>=0;m--){var nr=numEls[m].getBoundingClientRect();if(nr.top<vh*0.96){countUp(numEls[m]);numEls.splice(m,1);}}
+  }
+  function onScroll(){ if(!ticking){ticking=true;requestAnimationFrame(check);} }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+  window.addEventListener('load', check);
+  check();
+  // settle: re-check a few times after layout/fonts settle
+  var settle=0, si=setInterval(function(){check();if(++settle>6)clearInterval(si);},250);
+  // hard safety: nothing stays hidden past 4s
+  setTimeout(function(){
+    while(revEls.length){revEls.pop().classList.add('in');}
+    while(plateEls.length){plateEls.pop().classList.add('shown');}
+    while(numEls.length){countUp(numEls.pop());}
+  },4000);
+})();
+</script>
+
 </body>
 </html>
