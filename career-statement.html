@@ -50,6 +50,8 @@ section.s{margin-top:52px;}
 
 /* KPI grid */
 .kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);}
+.kpi-grid.five{grid-template-columns:repeat(5,1fr);}
+.kpi-grid.five .num{font-size:25px;letter-spacing:-0.026em;}
 .kpi-cell{padding:22px 26px;border-right:1px solid var(--line);}
 .kpi-cell:first-child{padding-left:0;}
 .kpi-cell:last-child{border-right:none;padding-right:0;}
@@ -179,11 +181,12 @@ section.s{margin-top:52px;}
         오프라인의 제약을 소프트웨어로 푸는 일을 7년 했습니다. 건설에서 낚시로 시장이 바뀌어도 방식은 같습니다. 현장의 목소리와 데이터로 문제를 진단하고, 작은 버전으로 빠르게 검증한 뒤, 운영·자금·파트너십을 한 사이클로 묶습니다. <b>어바웃피싱 2025 연매출 14.26억(KPI 97.6%)</b>, <b>예약 단월 865건</b>, <b>가다 ERP로 운영 인력 절반 절감</b>, <b>정부·엑셀러레이터 4건 단독 선정</b>, <b>SK텔레콤 TMAP 협업</b>까지 자금과 신뢰, 파트너십을 한 트랙에서 잡았습니다.
       </div>
     </div>
-    <div class="kpi-grid">
+    <div class="kpi-grid five">
       <div class="kpi-cell feat"><div class="num">14.26<span class="u">억</span></div><div class="label">2025 연매출 · KPI 97.6%</div></div>
       <div class="kpi-cell"><div class="num">865<span class="u">건</span></div><div class="label">예약 단월 판매 (2월 10건 → +86×)</div></div>
       <div class="kpi-cell"><div class="num">89,925<span class="u">원</span></div><div class="label">자사몰 ARPPU (+34%)</div></div>
       <div class="kpi-cell"><div class="num">6→3<span class="u"> 인</span></div><div class="label">청구·지급 운영 인력 절감</div></div>
+      <div class="kpi-cell feat"><div class="num">AI</div><div class="label">기획·추천 프로세스 혁신 (Gemini · 직접 빌드)</div></div>
     </div>
   </section>
 
@@ -343,10 +346,36 @@ section.s{margin-top:52px;}
         </div>
       </div>
 
+      <div class="proj-item">
+        <h4>AI 추천·예약 서비스 — Gemini · GCP 실서비스</h4>
+        <div class="role-period"><span>CPO · Builder</span><span>설계 + 직접 구현</span><span>AI · 트랜잭션</span></div>
+        <div class="desc">고관여·고단가 상품일수록 "탐색"이 예약 전환의 최대 벽이었습니다. 한 줄 대화로 어종·지역·예산을 말하면 <b>나를 위한 선박을 추천받고 그 자리에서 예약</b>까지 잇는 서비스를 실제 동작하는 형태로 구현했습니다.</div>
+        <div class="bullet-block">
+          <span class="bullet-h">구현</span>
+          <ul>
+            <li><b>Gemini API</b>로 자연어 해석, <b>GCP</b>에서 자사 선박·조황·예약 DB를 끌어와 실데이터 기반 추천 생성</li>
+            <li>추천 카드에 잔여석·요금·바로예약을 붙여 대화가 곧 결제 동선이 되게 설계</li>
+            <li>요금 비교·포인트 지도·입문 가이드를 같은 흐름에 통합</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="proj-item">
+        <h4>AI 기획 파이프라인 — 업무 프로세스 자동화</h4>
+        <div class="role-period"><span>CPO · Builder</span><span>운영 중</span><span>Process · AI</span></div>
+        <div class="desc">기획 한 건에도 백로그→요구사항→PRD→정책 확인→스토리보드→프로토타입→핸드오프가 줄줄이 붙어 산출물에만 며칠이 들었습니다. 전 과정에 AI를 붙여 <b>공수와 기간을 크게 줄였고, 간단한 기획은 프로토타입까지 직접 빌드</b>했습니다.</div>
+        <div class="bullet-block">
+          <span class="bullet-h">핵심</span>
+          <ul>
+            <li>각 단계 초안을 AI가 만들고 정책 판단·최종 검증은 사람이 담당</li>
+            <li>기존 정책·수정점을 자동 비교해 빠뜨림 방지, PRD·스토리보드를 템플릿화해 핸드오프 정합 유지</li>
+            <li>반복 산출물은 AI에 위임, 단축한 시간은 의사결정·사용자 검증에 재투입</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
   </section>
-
-  <!-- Experience 2 -->
   <section class="s">
     <div class="s-head"><span class="label">Experience <span class="scope">02 · Previous</span></span><span class="num">§ 03</span></div>
 
