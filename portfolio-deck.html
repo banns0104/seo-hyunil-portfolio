@@ -729,6 +729,25 @@ em,.ix,.iss,.rn{font-family:'Cormorant Garamond','Noto Serif KR',Georgia,serif!i
 
 </deck-stage>
 
+<a id="deck-exit" href="portfolio.html" title="닫기 (ESC)" aria-label="덱 닫기">✕</a>
+<style>
+#deck-exit{position:fixed;top:20px;right:22px;z-index:9999;width:46px;height:46px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;text-decoration:none;
+  background:rgba(20,18,14,0.55);color:#F4F1E8;font-size:20px;line-height:1;
+  border:1px solid rgba(255,255,255,0.22);backdrop-filter:blur(6px);
+  transition:background .15s,transform .15s;font-family:var(--sans);}
+#deck-exit:hover{background:rgba(30,90,64,0.92);transform:scale(1.06);}
+@media print{#deck-exit{display:none;}}
+</style>
+<script>
+(function(){
+  // ESC → 포트폴리오로 닫기 (덱에서 빠져나오는 명시적 경로)
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ window.location.href = 'portfolio.html'; }
+  });
+})();
+</script>
+
 <script src="deck-stage.js"></script>
 <script src="assets/analytics.js"></script>
 </body>
