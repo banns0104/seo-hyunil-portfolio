@@ -50,6 +50,7 @@ html{ -webkit-text-size-adjust:100%; }
 html,body{
   font-family:var(--sans);
   font-size:16px;line-height:1.72;letter-spacing:-0.005em;
+  word-break:keep-all;
   color:var(--body);background:var(--paper);
   -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
   font-feature-settings:"kern" 1,"ss01" 1;
