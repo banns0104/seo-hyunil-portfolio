@@ -33,6 +33,12 @@ body{background:var(--paper-2);}
 
 /* Hero */
 .r-hero{border-bottom:2px solid var(--ink);padding-bottom:30px;margin-bottom:34px;}
+.r-hero-grid{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;}
+.r-hero-photo{width:132px;flex:0 0 auto;}
+.r-hero-photo img{width:132px;height:168px;object-fit:cover;object-position:center 28%;display:block;
+  border:1px solid var(--line);padding:5px;background:var(--card);
+  filter:grayscale(0.18) contrast(1.02);}
+@media (max-width:560px){.r-hero-grid{grid-template-columns:1fr;align-items:start;}.r-hero-photo{order:-1;width:108px;}.r-hero-photo img{width:108px;height:138px;}}
 .r-hero .eyebrow{margin-bottom:22px;}
 .r-hero h1{font-family:var(--serif);font-size:54px;font-weight:560;color:var(--ink);letter-spacing:-0.026em;line-height:1.02;margin-bottom:14px;}
 .r-hero h1 .en{font-style:italic;font-weight:420;color:var(--quiet);font-size:0.5em;margin-left:12px;}
@@ -142,20 +148,25 @@ section.s{margin-top:48px;}
       <a class="btn ghost" href="portfolio.html">← 포트폴리오</a>
       <a class="btn ghost" href="career-statement.html">경력기술서</a>
       <a class="btn ghost" href="portfolio-deck.html">덱</a>
-      <a class="btn primary" href="pdf/resume.pdf" download title="이력서 PDF 다운로드">PDF 다운로드</a>
+      <a class="btn primary" href="pdf/resume.pdf" download="서현일_이력서.pdf" type="application/pdf" title="이력서 PDF 다운로드">PDF 다운로드</a>
     </div>
   </div>
 </div>
 
-<main class="page">
+<main class="page" data-edit-root>
 
   <!-- Hero -->
   <header class="r-hero">
+    <div class="r-hero-grid">
+      <div class="r-hero-main">
     <div class="eyebrow"><span class="tick"></span>Résumé · Product Leadership · 2026</div>
     <h1>서현일 <span class="en">Hyunil Seo</span></h1>
     <div class="role">
       7년차 <b>PM · PO · CPO</b> · 슈퍼앱 9개 도메인 총괄 · 결제·정산 정책 · 외부 파트너십 협상
       <span class="light">단일 도메인 기획 → 전 도메인 총괄 → 사업 의사결정·자금집행까지, 책임 범위를 단계적으로 확장한 어바웃피싱 등기이사·CPO</span>
+    </div>
+      </div>
+      <div class="r-hero-photo" data-no-edit><img src="images/profile/headshot.png" alt="서현일 프로필 사진" /></div>
     </div>
 
     <p class="r-lede">
@@ -173,7 +184,7 @@ section.s{margin-top:48px;}
   <!-- Highlights -->
   <section class="s">
     <div class="s-head"><span class="label">Highlights</span><span class="num">§ 01</span></div>
-    <div class="metrics metrics-4">
+    <div class="metrics metrics-4" data-edit-list="highlights">
       <div class="metric"><div class="num">14.26<span class="u">억</span></div><div class="lbl">2025 연매출 · 어바웃피싱<em>사업 KPI 97.6% 달성</em></div></div>
       <div class="metric"><div class="num">865<span class="u">건</span></div><div class="lbl">예약 단월 판매<em>2월 10건 → 3월 +86×</em></div></div>
       <div class="metric"><div class="num">89,925<span class="u">원</span></div><div class="lbl">자사몰 ARPPU<em>전년 대비 +34%</em></div></div>
@@ -184,6 +195,7 @@ section.s{margin-top:48px;}
   <!-- Experience -->
   <section class="s">
     <div class="s-head"><span class="label">Experience</span><span class="num">§ 02</span></div>
+    <div data-edit-list="experience">
 
     <div class="exp-item">
       <div class="exp-side">
@@ -266,12 +278,13 @@ section.s{margin-top:48px;}
         </ul>
       </div>
     </div>
+    </div>
   </section>
 
   <!-- Skills -->
   <section class="s">
     <div class="s-head"><span class="label">Capabilities</span><span class="num">§ 03</span></div>
-    <div class="skills">
+    <div class="skills" data-edit-list="skills">
       <div class="sk">
         <h3><span class="ch">I.</span>Product · Strategy</h3>
         <div class="sk-list"><span class="tag">Product Roadmap</span><span class="tag">PRD · 정책서</span><span class="tag">사업기획</span><span class="tag">정부과제 제안서</span><span class="tag">백로그 운영</span><span class="tag">스프린트 · 회고</span></div>
@@ -294,14 +307,16 @@ section.s{margin-top:48px;}
   <!-- Education -->
   <section class="s">
     <div class="s-head"><span class="label">Education</span><span class="num">§ 04</span></div>
+    <div data-edit-list="education">
     <div class="edu-row"><div class="when">2017 — 2019</div><div class="what"><strong>경희대학교</strong> · 경영학과</div></div>
     <div class="edu-row"><div class="when">2008 — 2016</div><div class="what"><strong>중앙대학교</strong> · 노어학과</div></div>
+    </div>
   </section>
 
   <!-- Philosophy -->
   <section class="s">
     <div class="s-head"><span class="label">How I Work</span><span class="num">§ 05</span></div>
-    <div class="philo">
+    <div class="philo" data-edit-list="howiwork">
       <div class="p"><span class="n">01</span><span><b>제품의 책임은 무겁게, 팀의 시간은 가볍게.</b> 책임자가 무한 책임을 지더라도, 팀원이 같은 무게로 일하지 않도록 권한을 분리해 설계합니다.</span></div>
       <div class="p"><span class="n">02</span><span>의견이 모이는 자리를 매일 만듭니다. <b>친밀감보다 심리적 안전감이 먼저</b>입니다.</span></div>
       <div class="p"><span class="n">03</span><span>PM의 일은 정답을 내리는 게 아니라 <b>좋은 결정 환경을 만드는 일</b>입니다.</span></div>
@@ -342,5 +357,7 @@ section.s{margin-top:48px;}
 </script>
 
 <script src="assets/analytics.js"></script>
+<script src="cms/firebase-config.js"></script>
+<script src="cms/edit-engine.js"></script>
 </body>
 </html>

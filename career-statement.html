@@ -160,12 +160,12 @@ section.s{margin-top:52px;}
       <a class="btn ghost" href="resume.html">← 이력서</a>
       <a class="btn ghost" href="portfolio.html">포트폴리오</a>
       <a class="btn ghost" href="portfolio-deck.html">덱</a>
-      <a class="btn primary" href="pdf/career-statement.pdf" download title="경력기술서 PDF 다운로드">PDF 다운로드</a>
+      <a class="btn primary" href="pdf/career-statement.pdf" download="서현일_경력기술서.pdf" type="application/pdf" title="경력기술서 PDF 다운로드">PDF 다운로드</a>
     </div>
   </div>
 </div>
 
-<main class="page">
+<main class="page" data-edit-root>
 
   <header class="cs-hero">
     <div class="eyebrow"><span class="tick"></span>경력기술서 · Senior · CPO · Head of Product</div>
@@ -283,10 +283,7 @@ section.s{margin-top:52px;}
       </ul>
     </div>
 
-    <div class="proj-list">
-
-      <div class="proj-item">
-        <h4>2025 사업 운영 — 연매출 14.26억 달성</h4>
+    <div class="proj-list" data-edit-list="af-projects"> — 연매출 14.26억 달성</h4>
         <div class="role-period"><span>CPO</span><span>2024.12 — 2025.12</span><span>전 도메인</span></div>
         <div class="bullet-block">
           <span class="bullet-h">문제 · 원인</span>
@@ -490,10 +487,7 @@ section.s{margin-top:52px;}
       </ul>
     </div>
 
-    <div class="proj-list">
-
-      <div class="proj-item">
-        <h4>근로자앱 v2 → v4 풀 리뉴얼</h4>
+    <div class="proj-list" data-edit-list="wm-projects"> → v4 풀 리뉴얼</h4>
         <div class="role-period"><span>PM 주도</span><span>7개월</span><span>공동 6인</span></div>
         <div class="bullet-block">
           <span class="bullet-h">문제 · 원인</span>
@@ -688,7 +682,7 @@ section.s{margin-top:52px;}
       </div>
     </div>
 
-    <div class="proj-list">
+    <div class="proj-list" data-edit-list="archi-projects">
       <div class="proj-item">
         <h4>아키맨 — 건설 기능공 매칭 O2O</h4>
         <div class="role-period"><span>서비스 기획</span><span>전체 기획</span></div>
@@ -709,8 +703,10 @@ section.s{margin-top:52px;}
   <!-- Education -->
   <section class="s">
     <div class="s-head"><span class="label">Education</span><span class="num">§ 05</span></div>
+    <div data-edit-list="cs-education">
     <div class="edu-row"><div class="when">2017.03 — 2019.02</div><div><strong>경희대학교</strong> · 경영학과</div></div>
     <div class="edu-row"><div class="when">2008.03 — 2016.02</div><div><strong>중앙대학교</strong> · 노어학과</div></div>
+    </div>
   </section>
 
   <!-- Awards -->
@@ -769,5 +765,7 @@ section.s{margin-top:52px;}
 </script>
 
 <script src="assets/analytics.js"></script>
+<script src="cms/firebase-config.js"></script>
+<script src="cms/edit-engine.js"></script>
 </body>
 </html>

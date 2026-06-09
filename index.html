@@ -342,7 +342,7 @@ section.band{padding:92px 0;}
 .mh-dl .ar{font-size:12px;color:var(--accent);}
 </style>
 </head>
-<body>
+<body data-edit-root>
 
 <div id="progress" class="no-print"><span id="progress-bar"></span></div>
 
@@ -359,10 +359,10 @@ section.band{padding:92px 0;}
     </div>
     <div class="mh-cta">
       <span class="mh-dl">PDF<span class="ar">↓</span></span>
-      <a href="pdf/resume.pdf" download title="이력서 PDF 다운로드" class="btn ghost">이력서</a>
-      <a href="pdf/career-statement.pdf" download title="경력기술서 PDF 다운로드" class="btn ghost">경력기술서</a>
-      <a href="pdf/portfolio-deck.pdf" download title="포트폴리오 덱 PDF 다운로드" class="btn ghost">덱</a>
-      <a href="pdf/portfolio.pdf" download title="포트폴리오 PDF 다운로드" class="btn primary">포트폴리오</a>
+      <a href="pdf/resume.pdf" download="서현일_이력서.pdf" type="application/pdf" title="이력서 PDF 다운로드" class="btn ghost">이력서</a>
+      <a href="pdf/career-statement.pdf" download="서현일_경력기술서.pdf" type="application/pdf" title="경력기술서 PDF 다운로드" class="btn ghost">경력기술서</a>
+      <a href="pdf/portfolio-deck.pdf" download="서현일_포트폴리오덱.pdf" type="application/pdf" title="포트폴리오 덱 PDF 다운로드" class="btn ghost">덱</a>
+      <a href="pdf/portfolio.pdf" download="서현일_포트폴리오.pdf" type="application/pdf" title="포트폴리오 PDF 다운로드" class="btn primary">포트폴리오</a>
     </div>
   </div>
 </nav>
@@ -486,7 +486,7 @@ section.band{padding:92px 0;}
 
 <!-- ───────── CASES ───────── -->
 <section class="band cases" id="cases" style="padding-top:40px;">
-  <div class="wrap">
+  <div class="wrap" data-edit-list="cases">
 
     <!-- CASE 01 -->
     <article class="case reveal" id="case-1">
@@ -873,7 +873,7 @@ section.band{padding:92px 0;}
       <h2 class="title">자금은 <em>직접</em> 끌어왔습니다.</h2>
       <p class="desc">외주 컨설팅 없이 사업계획서와 재무·R&amp;D 트랙을 직접 쓰고 발표·선정까지 마쳤습니다.</p>
     </div>
-    <div class="proposals">
+    <div class="proposals" data-edit-list="proposals">
       <div class="prop"><div class="py">2025 · 어바웃피싱</div><h4>창업도약<br/>패키지</h4><p>중기부 · 단독 작성·선정<br/><b>운영·R&amp;D 자금</b> 확보</p></div>
       <div class="prop"><div class="py">2021 · 웍스메이트</div><h4>TIPS<br/>프로그램</h4><p>중기부 · 약 100p 단독<br/><b>VC 후속 라운드</b> 신뢰</p></div>
       <div class="prop"><div class="py">2022 · 웍스메이트</div><h4>NH 디지털<br/>챌린지플러스</h4><p>NH농협 · 단독 작성·선정<br/><b>P2P 대출</b>로 연결</p></div>
@@ -892,7 +892,7 @@ section.band{padding:92px 0;}
     </div>
 
     <div class="arch-head"><div class="ah">어바웃피싱 <span class="en">AboutFishing</span></div><div class="am">2024.08 — 현재</div></div>
-    <div class="arch-grid">
+    <div class="arch-grid" data-edit-list="arch-af">
       <article class="arch reveal">
         <div class="at">Loyalty · CPO·PO</div>
         <h4>머니 · 출석체크 — 결제를 묶는 리텐션 보상</h4>
@@ -917,7 +917,7 @@ section.band{padding:92px 0;}
     </div>
 
     <div class="arch-head"><div class="ah">웍스메이트 <span class="en">Workmate · GADA</span></div><div class="am">2020.12 — 2024.08</div></div>
-    <div class="arch-grid">
+    <div class="arch-grid" data-edit-list="arch-wm">
       <article class="arch reveal">
         <div class="at">Partnership · PM</div>
         <h4>P2P 대출 — 한화 EBC × 피플펀드</h4>
@@ -993,7 +993,7 @@ section.band{padding:92px 0;}
       <h2 class="title">일하는 <em>방식</em>.</h2>
       <p class="desc">도메인이 바뀌어도 변하지 않는 세 가지 원칙.</p>
     </div>
-    <div class="approach">
+    <div class="approach" data-edit-list="approach">
       <div class="app-card reveal">
         <div class="rn">I.</div>
         <h3>가장 비싼 문제부터 푸다</h3>
@@ -1290,5 +1290,7 @@ section.band{padding:92px 0;}
 </script>
 
 <script src="assets/analytics.js"></script>
+<script src="cms/firebase-config.js"></script>
+<script src="cms/edit-engine.js"></script>
 </body>
 </html>
